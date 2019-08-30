@@ -1,0 +1,2040 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C1E9D4E0E7471B66EC8404 /* Pods_activeTANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4393CB05B9C9CD8DAB2D7A5B /* Pods_activeTANUITests.framework */; };
+		5A005D31056B7ABC259CB402 /* Pods_activeTANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEB2E5EDBE5AB9F6AF563A3 /* Pods_activeTANTests.framework */; };
+		BD045C7122957503001058C5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD045C7022957503001058C5 /* UIViewControllerExtension.swift */; };
+		BD0B83A922F0336700DA66F6 /* SelectTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */; };
+		BD0B83B322FB266100DA66F6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */; };
+		BD0FA11D22FD7B8300780C6A /* Custom.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0FA11C22FD7B8300780C6A /* Custom.xcassets */; };
+		BD12C985228D57D0005D70D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12C984228D57D0005D70D4 /* UIViewExtension.swift */; };
+		BD1F57E7228C153C000D5B27 /* QrCodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F57E6228C153C000D5B27 /* QrCodeHandler.swift */; };
+		BD1F57E9228C28EF000D5B27 /* NoBankingQrCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F57E8228C28EF000D5B27 /* NoBankingQrCodeError.swift */; };
+		BD51E9C7228D973200AEEE68 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51E9C6228D973200AEEE68 /* DefaultButton.swift */; };
+		BD51E9C9228D9E5000AEEE68 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51E9C8228D9E5000AEEE68 /* UIColorExtension.swift */; };
+		BD51E9CB228D9F5800AEEE68 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51E9CA228D9F5800AEEE68 /* UIButtonExtension.swift */; };
+		BD51E9D0228DA1E300AEEE68 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD51E9CF228DA1E300AEEE68 /* Colors.plist */; };
+		BD51E9D2228DA29300AEEE68 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51E9D1228DA29300AEEE68 /* Utils.swift */; };
+		BD51E9D4228DA43400AEEE68 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51E9D3228DA43400AEEE68 /* RuntimeError.swift */; };
+		BD51E9D6228EA9FB00AEEE68 /* CRC16Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51E9D5228EA9FB00AEEE68 /* CRC16Checksum.swift */; };
+		BD6651CB2289AA4200BC1773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6651CA2289AA4200BC1773 /* AppDelegate.swift */; };
+		BD6651D02289AA4200BC1773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6651CE2289AA4200BC1773 /* Main.storyboard */; };
+		BD6651D22289AA4300BC1773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6651D12289AA4300BC1773 /* Assets.xcassets */; };
+		BD6651D52289AA4300BC1773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6651D32289AA4300BC1773 /* LaunchScreen.storyboard */; };
+		BD6651E02289AA4300BC1773 /* activeTANTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6651DF2289AA4300BC1773 /* activeTANTests.swift */; };
+		BD6651EB2289AA4300BC1773 /* activeTANUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6651EA2289AA4300BC1773 /* activeTANUITests.swift */; };
+		BD6817AD22B8C5840086D71C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817AC22B8C5840086D71C /* MenuViewController.swift */; };
+		BD6817BE22C25BA90086D71C /* SecurityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817BD22C25BA80086D71C /* SecurityHandler.swift */; };
+		BD6817C422C3C5FB0086D71C /* HHDkm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817C322C3C5FB0086D71C /* HHDkm.swift */; };
+		BD6817C622C3CBF50086D71C /* BankingKeyComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817C522C3CBF50086D71C /* BankingKeyComponents.swift */; };
+		BD6817C822C4A4600086D71C /* FieldEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817C722C4A4600086D71C /* FieldEncoding.swift */; };
+		BD6817CE22C4F31C0086D71C /* api_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = BD6817CD22C4F31C0086D71C /* api_key.pem */; };
+		BD6817D022CA3A550086D71C /* HowToInitializeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817CF22CA3A550086D71C /* HowToInitializeViewController.swift */; };
+		BD6817D222CA3D900086D71C /* HowToSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817D122CA3D900086D71C /* HowToSlide.swift */; };
+		BD6817D422CA3DB00086D71C /* HowToSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD6817D322CA3DB00086D71C /* HowToSlide.xib */; };
+		BD6817D622CB7D260086D71C /* InitializeTokenStep0ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817D522CB7D260086D71C /* InitializeTokenStep0ViewController.swift */; };
+		BD6817D822CB7F060086D71C /* BankingQrCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817D722CB7F060086D71C /* BankingQrCodeScannerViewController.swift */; };
+		BD6817DB22CB920A0086D71C /* BankingQrCodeListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817DA22CB920A0086D71C /* BankingQrCodeListener.swift */; };
+		BD6817E122CB97B60086D71C /* InitializeTokenStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817E022CB97B60086D71C /* InitializeTokenStep1ViewController.swift */; };
+		BD6817E322CCABC90086D71C /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD6817E222CCABC90086D71C /* Config.plist */; };
+		BD6817E522CCC60F0086D71C /* InitializeTokenContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817E422CCC60F0086D71C /* InitializeTokenContainerController.swift */; };
+		BD6817E722CCCC800086D71C /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817E622CCCC800086D71C /* GeneralError.swift */; };
+		BD6817E922CCD8220086D71C /* InitializeTokenStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817E822CCD8220086D71C /* InitializeTokenStep2ViewController.swift */; };
+		BD6817EB22CE25BB0086D71C /* InitializeTokenStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817EA22CE25BB0086D71C /* InitializeTokenStep3ViewController.swift */; };
+		BD6817ED22CE2AB10086D71C /* TanGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817EC22CE2AB10086D71C /* TanGenerator.swift */; };
+		BD6817F222CE39250086D71C /* activeTAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD6817F022CE39250086D71C /* activeTAN.xcdatamodeld */; };
+		BD6817F522CE41100086D71C /* BankingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817F422CE41100086D71C /* BankingToken.swift */; };
+		BD6817FB22CF4F6B0086D71C /* BankingTokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817FA22CF4F6B0086D71C /* BankingTokenRepository.swift */; };
+		BD6817FD22CF59DC0086D71C /* DKCharset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817FC22CF59DC0086D71C /* DKCharset.swift */; };
+		BD7DB3EA2316D6FB00E5CF25 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD7DB3E92316D6FB00E5CF25 /* Config.plist */; };
+		BD7DB3EC2316D73F00E5CF25 /* Custom.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD7DB3EB2316D73F00E5CF25 /* Custom.strings */; };
+		BD9E56E322E071E300AE8DC4 /* TokenSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56E222E071E300AE8DC4 /* TokenSettingsViewController.swift */; };
+		BD9E56E522E0995100AE8DC4 /* StringEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56E422E0995100AE8DC4 /* StringEditViewController.swift */; };
+		BD9E56E722E5A16100AE8DC4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56E622E5A16100AE8DC4 /* MainViewController.swift */; };
+		BD9E56E922E5D6CB00AE8DC4 /* HHDuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56E822E5D6CB00AE8DC4 /* HHDuc.swift */; };
+		BD9E56EB22E5D8FE00AE8DC4 /* VisualisationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56EA22E5D8FE00AE8DC4 /* VisualisationClass.swift */; };
+		BD9E56ED22E5E0AE00AE8DC4 /* DataElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56EC22E5E0AE00AE8DC4 /* DataElementType.swift */; };
+		BD9E56EF22E727EE00AE8DC4 /* LuhnChecksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56EE22E727EE00AE8DC4 /* LuhnChecksum.swift */; };
+		BD9E56F122E72B8500AE8DC4 /* XorChecksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56F022E72B8500AE8DC4 /* XorChecksum.swift */; };
+		BD9E56F322E9A41600AE8DC4 /* VerifyTransactionDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56F222E9A41600AE8DC4 /* VerifyTransactionDetailsController.swift */; };
+		BD9E56F522EB002800AE8DC4 /* VerifyTransactionDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56F422EB002800AE8DC4 /* VerifyTransactionDetailsCell.swift */; };
+		BD9E56F722EB0B8300AE8DC4 /* VisDataBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E56F622EB0B8300AE8DC4 /* VisDataBuffer.swift */; };
+		BDA1CC882302E09200A09040 /* IntrinsicSizeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA1CC872302E09200A09040 /* IntrinsicSizeTableView.swift */; };
+		BDA1CC9A2303EBDC00A09040 /* api_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = BDA1CC992303EBDC00A09040 /* api_key.pem */; };
+		BDA1CCA22303F12C00A09040 /* Custom.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA1CCA12303F12C00A09040 /* Custom.xcassets */; };
+		BDA1CCAA2303FE5F00A09040 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA1CCA92303FE5F00A09040 /* Colors.plist */; };
+		BDE80D86230C1C6000A26D33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDE80D88230C1C6000A26D33 /* Localizable.strings */; };
+		BDE80D8A230C1D8800A26D33 /* Custom.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDE80D8C230C1D8800A26D33 /* Custom.strings */; };
+		BDE80D97230D985700A26D33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDE80D99230D985700A26D33 /* InfoPlist.strings */; };
+		BDE80D9C230D9D7100A26D33 /* HowToSlidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE80D9B230D9D7100A26D33 /* HowToSlidesViewController.swift */; };
+		BDE80DA0230DA34700A26D33 /* MenuHowToSlidesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE80D9F230DA34700A26D33 /* MenuHowToSlidesController.swift */; };
+		BDF14C7C22DF128C00010A8C /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF14C7B22DF128C00010A8C /* MenuDetailViewController.swift */; };
+		BDF14C7E22DF173100010A8C /* MenuElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF14C7D22DF173100010A8C /* MenuElement.swift */; };
+		D4278450FE9C9211C371FBE3 /* Pods_activeTAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20A19FEB97B55805438029F /* Pods_activeTAN.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD6651DC2289AA4300BC1773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD6651BF2289AA4200BC1773 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD6651C62289AA4200BC1773;
+			remoteInfo = activeTAN;
+		};
+		BD6651E72289AA4300BC1773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD6651BF2289AA4200BC1773 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD6651C62289AA4200BC1773;
+			remoteInfo = activeTAN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0801BAE833509E31FE08B021 /* Pods-activeTANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.release.xcconfig"; sourceTree = "<group>"; };
+		090C44B7FCC4FE54ECB33CFD /* Pods-activeTAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.debug.xcconfig"; sourceTree = "<group>"; };
+		10E50DE4DA6D7A63920EEA3F /* Pods-activeTANUITests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
+		1AE150AE947CB1F663E362C6 /* Pods-activeTAN.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod release.xcconfig"; sourceTree = "<group>"; };
+		1CC3CEBCAA044C7C3F662B77 /* Pods-activeTANUITests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
+		2B5EF3B566355245454D4138 /* Pods-activeTANTests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs debug.xcconfig"; sourceTree = "<group>"; };
+		2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod debug.xcconfig"; sourceTree = "<group>"; };
+		39374CFD360B9359B5B872AB /* Pods-activeTANUITests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs debug.xcconfig"; sourceTree = "<group>"; };
+		4393CB05B9C9CD8DAB2D7A5B /* Pods_activeTANUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D39CE7549E2AC2EF77E1B96 /* Pods-activeTANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.release.xcconfig"; sourceTree = "<group>"; };
+		5EC1937911CD1978ABE49E43 /* Pods-activeTANTests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod release.xcconfig"; sourceTree = "<group>"; };
+		64995C4B5BF5F3716465C414 /* Pods-activeTAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.release.xcconfig"; sourceTree = "<group>"; };
+		6794A45127D952CCD005C168 /* Pods-activeTAN.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs debug.xcconfig"; sourceTree = "<group>"; };
+		679A6661EDBF0F64EA1B1255 /* Pods-activeTANUITests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs release.xcconfig"; sourceTree = "<group>"; };
+		6CFAA21934AE7784F3F5840E /* Pods-activeTANTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.debug.xcconfig"; sourceTree = "<group>"; };
+		70ACCCB272B6FEFC2EB00635 /* Pods-activeTANTests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs release.xcconfig"; sourceTree = "<group>"; };
+		7A57276EF5E6D216CEBA9B69 /* Pods-activeTANUITests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod release.xcconfig"; sourceTree = "<group>"; };
+		7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod release.xcconfig"; sourceTree = "<group>"; };
+		7E3321A1C173CBCE2E023F14 /* Pods-activeTANTests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
+		931EFEE6B1F2F586ED958AA8 /* Pods-activeTAN.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs release.xcconfig"; sourceTree = "<group>"; };
+		948F5987EFB769B0660AA6E5 /* Pods-activeTANUITests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs release.xcconfig"; sourceTree = "<group>"; };
+		9FA71AC7DBC1EE4C719D5049 /* Pods-activeTANUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0D859DE2D9A9A87A7D8871 /* Pods-activeTANTests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
+		B20A19FEB97B55805438029F /* Pods_activeTAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B323E253800DD89481459CDD /* Pods-activeTANTests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs release.xcconfig"; sourceTree = "<group>"; };
+		BAB7574C3CB77F316D14CFD5 /* Pods-activeTANUITests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod release.xcconfig"; sourceTree = "<group>"; };
+		BD045C7022957503001058C5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTokenViewController.swift; sourceTree = "<group>"; };
+		BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BD0FA11C22FD7B8300780C6A /* Custom.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Custom.xcassets; sourceTree = "<group>"; };
+		BD12C984228D57D0005D70D4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		BD1F57E6228C153C000D5B27 /* QrCodeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeHandler.swift; sourceTree = "<group>"; };
+		BD1F57E8228C28EF000D5B27 /* NoBankingQrCodeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBankingQrCodeError.swift; sourceTree = "<group>"; };
+		BD51E9C6228D973200AEEE68 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		BD51E9C8228D9E5000AEEE68 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		BD51E9CA228D9F5800AEEE68 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		BD51E9CF228DA1E300AEEE68 /* Colors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
+		BD51E9D1228DA29300AEEE68 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		BD51E9D3228DA43400AEEE68 /* RuntimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
+		BD51E9D5228EA9FB00AEEE68 /* CRC16Checksum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRC16Checksum.swift; sourceTree = "<group>"; };
+		BD6651C72289AA4200BC1773 /* activeTAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = activeTAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6651CA2289AA4200BC1773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD6651CF2289AA4200BC1773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD6651D12289AA4300BC1773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD6651D42289AA4300BC1773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD6651D62289AA4300BC1773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6651DB2289AA4300BC1773 /* activeTANTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = activeTANTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6651DF2289AA4300BC1773 /* activeTANTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activeTANTests.swift; sourceTree = "<group>"; };
+		BD6651E12289AA4300BC1773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6651E62289AA4300BC1773 /* activeTANUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = activeTANUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6651EA2289AA4300BC1773 /* activeTANUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activeTANUITests.swift; sourceTree = "<group>"; };
+		BD6651EC2289AA4300BC1773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6817AC22B8C5840086D71C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BD6817BD22C25BA80086D71C /* SecurityHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityHandler.swift; sourceTree = "<group>"; };
+		BD6817C322C3C5FB0086D71C /* HHDkm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHDkm.swift; sourceTree = "<group>"; };
+		BD6817C522C3CBF50086D71C /* BankingKeyComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingKeyComponents.swift; sourceTree = "<group>"; };
+		BD6817C722C4A4600086D71C /* FieldEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldEncoding.swift; sourceTree = "<group>"; };
+		BD6817CD22C4F31C0086D71C /* api_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_key.pem; sourceTree = "<group>"; };
+		BD6817CF22CA3A550086D71C /* HowToInitializeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToInitializeViewController.swift; sourceTree = "<group>"; };
+		BD6817D122CA3D900086D71C /* HowToSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToSlide.swift; sourceTree = "<group>"; };
+		BD6817D322CA3DB00086D71C /* HowToSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HowToSlide.xib; sourceTree = "<group>"; };
+		BD6817D522CB7D260086D71C /* InitializeTokenStep0ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTokenStep0ViewController.swift; sourceTree = "<group>"; };
+		BD6817D722CB7F060086D71C /* BankingQrCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingQrCodeScannerViewController.swift; sourceTree = "<group>"; };
+		BD6817DA22CB920A0086D71C /* BankingQrCodeListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingQrCodeListener.swift; sourceTree = "<group>"; };
+		BD6817E022CB97B60086D71C /* InitializeTokenStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTokenStep1ViewController.swift; sourceTree = "<group>"; };
+		BD6817E222CCABC90086D71C /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		BD6817E422CCC60F0086D71C /* InitializeTokenContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTokenContainerController.swift; sourceTree = "<group>"; };
+		BD6817E622CCCC800086D71C /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
+		BD6817E822CCD8220086D71C /* InitializeTokenStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTokenStep2ViewController.swift; sourceTree = "<group>"; };
+		BD6817EA22CE25BB0086D71C /* InitializeTokenStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTokenStep3ViewController.swift; sourceTree = "<group>"; };
+		BD6817EC22CE2AB10086D71C /* TanGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanGenerator.swift; sourceTree = "<group>"; };
+		BD6817F122CE39250086D71C /* activeTAN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = activeTAN.xcdatamodel; sourceTree = "<group>"; };
+		BD6817F422CE41100086D71C /* BankingToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingToken.swift; sourceTree = "<group>"; };
+		BD6817FA22CF4F6B0086D71C /* BankingTokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingTokenRepository.swift; sourceTree = "<group>"; };
+		BD6817FC22CF59DC0086D71C /* DKCharset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKCharset.swift; sourceTree = "<group>"; };
+		BD7DB3E92316D6FB00E5CF25 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		BD7DB3EB2316D73F00E5CF25 /* Custom.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Custom.strings; sourceTree = "<group>"; };
+		BD9E56E222E071E300AE8DC4 /* TokenSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSettingsViewController.swift; sourceTree = "<group>"; };
+		BD9E56E422E0995100AE8DC4 /* StringEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEditViewController.swift; sourceTree = "<group>"; };
+		BD9E56E622E5A16100AE8DC4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BD9E56E822E5D6CB00AE8DC4 /* HHDuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHDuc.swift; sourceTree = "<group>"; };
+		BD9E56EA22E5D8FE00AE8DC4 /* VisualisationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualisationClass.swift; sourceTree = "<group>"; };
+		BD9E56EC22E5E0AE00AE8DC4 /* DataElementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataElementType.swift; sourceTree = "<group>"; };
+		BD9E56EE22E727EE00AE8DC4 /* LuhnChecksum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuhnChecksum.swift; sourceTree = "<group>"; };
+		BD9E56F022E72B8500AE8DC4 /* XorChecksum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XorChecksum.swift; sourceTree = "<group>"; };
+		BD9E56F222E9A41600AE8DC4 /* VerifyTransactionDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTransactionDetailsController.swift; sourceTree = "<group>"; };
+		BD9E56F422EB002800AE8DC4 /* VerifyTransactionDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTransactionDetailsCell.swift; sourceTree = "<group>"; };
+		BD9E56F622EB0B8300AE8DC4 /* VisDataBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisDataBuffer.swift; sourceTree = "<group>"; };
+		BDA1CC872302E09200A09040 /* IntrinsicSizeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicSizeTableView.swift; sourceTree = "<group>"; };
+		BDA1CC992303EBDC00A09040 /* api_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = api_key.pem; sourceTree = "<group>"; };
+		BDA1CCA12303F12C00A09040 /* Custom.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Custom.xcassets; sourceTree = "<group>"; };
+		BDA1CCA92303FE5F00A09040 /* Colors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
+		BDE80D87230C1C6000A26D33 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BDE80D89230C1C7100A26D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BDE80D8B230C1D8800A26D33 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Custom.strings; sourceTree = "<group>"; };
+		BDE80D8D230C1D8D00A26D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Custom.strings; sourceTree = "<group>"; };
+		BDE80D98230D985700A26D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BDE80D9A230D985C00A26D33 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BDE80D9B230D9D7100A26D33 /* HowToSlidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToSlidesViewController.swift; sourceTree = "<group>"; };
+		BDE80D9F230DA34700A26D33 /* MenuHowToSlidesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHowToSlidesController.swift; sourceTree = "<group>"; };
+		BDF14C7B22DF128C00010A8C /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
+		BDF14C7D22DF173100010A8C /* MenuElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuElement.swift; sourceTree = "<group>"; };
+		C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod debug.xcconfig"; sourceTree = "<group>"; };
+		CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod debug.xcconfig"; sourceTree = "<group>"; };
+		CFEB2E5EDBE5AB9F6AF563A3 /* Pods_activeTANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs debug.xcconfig"; sourceTree = "<group>"; };
+		EDC271C2ACAC26EFB1D56DDB /* Pods-activeTAN.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod debug.xcconfig"; sourceTree = "<group>"; };
+		F51EFF2775DAB0F6E59BE90E /* Pods-activeTANTests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod release.xcconfig"; sourceTree = "<group>"; };
+		FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD6651C42289AA4200BC1773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4278450FE9C9211C371FBE3 /* Pods_activeTAN.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6651D82289AA4300BC1773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A005D31056B7ABC259CB402 /* Pods_activeTANTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6651E32289AA4300BC1773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C1E9D4E0E7471B66EC8404 /* Pods_activeTANUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		007D1F67FED447A5B14B6851 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				090C44B7FCC4FE54ECB33CFD /* Pods-activeTAN.debug.xcconfig */,
+				64995C4B5BF5F3716465C414 /* Pods-activeTAN.release.xcconfig */,
+				6CFAA21934AE7784F3F5840E /* Pods-activeTANTests.debug.xcconfig */,
+				5D39CE7549E2AC2EF77E1B96 /* Pods-activeTANTests.release.xcconfig */,
+				9FA71AC7DBC1EE4C719D5049 /* Pods-activeTANUITests.debug.xcconfig */,
+				0801BAE833509E31FE08B021 /* Pods-activeTANUITests.release.xcconfig */,
+				EDC271C2ACAC26EFB1D56DDB /* Pods-activeTAN.efd prod debug.xcconfig */,
+				6794A45127D952CCD005C168 /* Pods-activeTAN.efd qs debug.xcconfig */,
+				1AE150AE947CB1F663E362C6 /* Pods-activeTAN.efd prod release.xcconfig */,
+				931EFEE6B1F2F586ED958AA8 /* Pods-activeTAN.efd qs release.xcconfig */,
+				AD0D859DE2D9A9A87A7D8871 /* Pods-activeTANTests.efd prod debug.xcconfig */,
+				7E3321A1C173CBCE2E023F14 /* Pods-activeTANTests.efd qs debug.xcconfig */,
+				F51EFF2775DAB0F6E59BE90E /* Pods-activeTANTests.efd prod release.xcconfig */,
+				70ACCCB272B6FEFC2EB00635 /* Pods-activeTANTests.efd qs release.xcconfig */,
+				10E50DE4DA6D7A63920EEA3F /* Pods-activeTANUITests.efd prod debug.xcconfig */,
+				1CC3CEBCAA044C7C3F662B77 /* Pods-activeTANUITests.efd qs debug.xcconfig */,
+				BAB7574C3CB77F316D14CFD5 /* Pods-activeTANUITests.efd prod release.xcconfig */,
+				679A6661EDBF0F64EA1B1255 /* Pods-activeTANUITests.efd qs release.xcconfig */,
+				2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */,
+				EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */,
+				7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */,
+				FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */,
+				CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */,
+				2B5EF3B566355245454D4138 /* Pods-activeTANTests.var qs debug.xcconfig */,
+				5EC1937911CD1978ABE49E43 /* Pods-activeTANTests.var prod release.xcconfig */,
+				B323E253800DD89481459CDD /* Pods-activeTANTests.var qs release.xcconfig */,
+				C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */,
+				39374CFD360B9359B5B872AB /* Pods-activeTANUITests.var qs debug.xcconfig */,
+				7A57276EF5E6D216CEBA9B69 /* Pods-activeTANUITests.var prod release.xcconfig */,
+				948F5987EFB769B0660AA6E5 /* Pods-activeTANUITests.var qs release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD0FA11022FD617D00780C6A /* mandanten */ = {
+			isa = PBXGroup;
+			children = (
+				BD0FA11122FD618500780C6A /* EFD */,
+				BD0FA17022FD9CD700780C6A /* VAR */,
+			);
+			path = mandanten;
+			sourceTree = "<group>";
+		};
+		BD0FA11122FD618500780C6A /* EFD */ = {
+			isa = PBXGroup;
+			children = (
+				BD6817CD22C4F31C0086D71C /* api_key.pem */,
+				BD6817E222CCABC90086D71C /* Config.plist */,
+				BD0FA11C22FD7B8300780C6A /* Custom.xcassets */,
+				BD51E9CF228DA1E300AEEE68 /* Colors.plist */,
+				BDE80D8C230C1D8800A26D33 /* Custom.strings */,
+			);
+			path = EFD;
+			sourceTree = "<group>";
+		};
+		BD0FA17022FD9CD700780C6A /* VAR */ = {
+			isa = PBXGroup;
+			children = (
+				BDA1CC992303EBDC00A09040 /* api_key.pem */,
+				BDA1CCA12303F12C00A09040 /* Custom.xcassets */,
+				BDA1CCA92303FE5F00A09040 /* Colors.plist */,
+				BD7DB3E92316D6FB00E5CF25 /* Config.plist */,
+				BD7DB3EB2316D73F00E5CF25 /* Custom.strings */,
+			);
+			path = VAR;
+			sourceTree = "<group>";
+		};
+		BD1F57E3228C1502000D5B27 /* tangenerator */ = {
+			isa = PBXGroup;
+			children = (
+				BD6817BF22C36B310086D71C /* persistence */,
+				BD1F57EA228C2CCE000D5B27 /* activetan */,
+				BD1F57E4228C151B000D5B27 /* gui */,
+			);
+			path = tangenerator;
+			sourceTree = "<group>";
+		};
+		BD1F57E4228C151B000D5B27 /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				BDE80D9E230DA32200A26D33 /* initialization */,
+				BDE80D9D230DA2FC00A26D33 /* menu */,
+				BD6817D922CB80390086D71C /* support */,
+				BDE80D9B230D9D7100A26D33 /* HowToSlidesViewController.swift */,
+				BD6817CF22CA3A550086D71C /* HowToInitializeViewController.swift */,
+				BD6817D122CA3D900086D71C /* HowToSlide.swift */,
+				BD6817D322CA3DB00086D71C /* HowToSlide.xib */,
+				BD1F57E5228C1523000D5B27 /* qrscanner */,
+				BD9E56E622E5A16100AE8DC4 /* MainViewController.swift */,
+				BD9E56F222E9A41600AE8DC4 /* VerifyTransactionDetailsController.swift */,
+				BD9E56F422EB002800AE8DC4 /* VerifyTransactionDetailsCell.swift */,
+				BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */,
+				BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */,
+			);
+			path = gui;
+			sourceTree = "<group>";
+		};
+		BD1F57E5228C1523000D5B27 /* qrscanner */ = {
+			isa = PBXGroup;
+			children = (
+				BD1F57E6228C153C000D5B27 /* QrCodeHandler.swift */,
+				BD6817D722CB7F060086D71C /* BankingQrCodeScannerViewController.swift */,
+				BD6817DA22CB920A0086D71C /* BankingQrCodeListener.swift */,
+			);
+			path = qrscanner;
+			sourceTree = "<group>";
+		};
+		BD1F57EA228C2CCE000D5B27 /* activetan */ = {
+			isa = PBXGroup;
+			children = (
+				BD51E9D5228EA9FB00AEEE68 /* CRC16Checksum.swift */,
+				BD6817C322C3C5FB0086D71C /* HHDkm.swift */,
+				BD9E56E822E5D6CB00AE8DC4 /* HHDuc.swift */,
+				BD6817C722C4A4600086D71C /* FieldEncoding.swift */,
+				BD6817EC22CE2AB10086D71C /* TanGenerator.swift */,
+				BD6817FC22CF59DC0086D71C /* DKCharset.swift */,
+				BD9E56EA22E5D8FE00AE8DC4 /* VisualisationClass.swift */,
+				BD9E56EC22E5E0AE00AE8DC4 /* DataElementType.swift */,
+				BD9E56EE22E727EE00AE8DC4 /* LuhnChecksum.swift */,
+				BD9E56F022E72B8500AE8DC4 /* XorChecksum.swift */,
+				BD9E56F622EB0B8300AE8DC4 /* VisDataBuffer.swift */,
+			);
+			path = activetan;
+			sourceTree = "<group>";
+		};
+		BD6651BE2289AA4200BC1773 = {
+			isa = PBXGroup;
+			children = (
+				BD6651C92289AA4200BC1773 /* activeTAN */,
+				BD6651DE2289AA4300BC1773 /* activeTANTests */,
+				BD6651E92289AA4300BC1773 /* activeTANUITests */,
+				BD6651C82289AA4200BC1773 /* Products */,
+				007D1F67FED447A5B14B6851 /* Pods */,
+				D2EF53B65D7D3A3AEFB4B63D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BD6651C82289AA4200BC1773 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD6651C72289AA4200BC1773 /* activeTAN.app */,
+				BD6651DB2289AA4300BC1773 /* activeTANTests.xctest */,
+				BD6651E62289AA4300BC1773 /* activeTANUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD6651C92289AA4200BC1773 /* activeTAN */ = {
+			isa = PBXGroup;
+			children = (
+				BD0FA11022FD617D00780C6A /* mandanten */,
+				BD1F57E3228C1502000D5B27 /* tangenerator */,
+				BD6651CA2289AA4200BC1773 /* AppDelegate.swift */,
+				BD6651CE2289AA4200BC1773 /* Main.storyboard */,
+				BD6651D12289AA4300BC1773 /* Assets.xcassets */,
+				BD6651D32289AA4300BC1773 /* LaunchScreen.storyboard */,
+				BD6651D62289AA4300BC1773 /* Info.plist */,
+				BD51E9D1228DA29300AEEE68 /* Utils.swift */,
+				BD51E9D3228DA43400AEEE68 /* RuntimeError.swift */,
+				BD6817E622CCCC800086D71C /* GeneralError.swift */,
+				BD1F57E8228C28EF000D5B27 /* NoBankingQrCodeError.swift */,
+				BD6817F022CE39250086D71C /* activeTAN.xcdatamodeld */,
+				BDE80D88230C1C6000A26D33 /* Localizable.strings */,
+				BDE80D99230D985700A26D33 /* InfoPlist.strings */,
+			);
+			path = activeTAN;
+			sourceTree = "<group>";
+		};
+		BD6651DE2289AA4300BC1773 /* activeTANTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD6651DF2289AA4300BC1773 /* activeTANTests.swift */,
+				BD6651E12289AA4300BC1773 /* Info.plist */,
+			);
+			path = activeTANTests;
+			sourceTree = "<group>";
+		};
+		BD6651E92289AA4300BC1773 /* activeTANUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD6651EA2289AA4300BC1773 /* activeTANUITests.swift */,
+				BD6651EC2289AA4300BC1773 /* Info.plist */,
+			);
+			path = activeTANUITests;
+			sourceTree = "<group>";
+		};
+		BD6817BF22C36B310086D71C /* persistence */ = {
+			isa = PBXGroup;
+			children = (
+				BD6817F322CE41030086D71C /* coredata */,
+				BD6817C022C36B610086D71C /* keychain */,
+			);
+			path = persistence;
+			sourceTree = "<group>";
+		};
+		BD6817C022C36B610086D71C /* keychain */ = {
+			isa = PBXGroup;
+			children = (
+				BD6817BD22C25BA80086D71C /* SecurityHandler.swift */,
+				BD6817C522C3CBF50086D71C /* BankingKeyComponents.swift */,
+			);
+			path = keychain;
+			sourceTree = "<group>";
+		};
+		BD6817D922CB80390086D71C /* support */ = {
+			isa = PBXGroup;
+			children = (
+				BD12C984228D57D0005D70D4 /* UIViewExtension.swift */,
+				BD51E9C8228D9E5000AEEE68 /* UIColorExtension.swift */,
+				BD51E9C6228D973200AEEE68 /* DefaultButton.swift */,
+				BD51E9CA228D9F5800AEEE68 /* UIButtonExtension.swift */,
+				BD045C7022957503001058C5 /* UIViewControllerExtension.swift */,
+				BDF14C7D22DF173100010A8C /* MenuElement.swift */,
+				BDA1CC872302E09200A09040 /* IntrinsicSizeTableView.swift */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		BD6817F322CE41030086D71C /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				BD6817F422CE41100086D71C /* BankingToken.swift */,
+				BD6817FA22CF4F6B0086D71C /* BankingTokenRepository.swift */,
+			);
+			path = coredata;
+			sourceTree = "<group>";
+		};
+		BDE80D9D230DA2FC00A26D33 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				BD9E56E222E071E300AE8DC4 /* TokenSettingsViewController.swift */,
+				BD6817AC22B8C5840086D71C /* MenuViewController.swift */,
+				BDF14C7B22DF128C00010A8C /* MenuDetailViewController.swift */,
+				BD9E56E422E0995100AE8DC4 /* StringEditViewController.swift */,
+				BDE80D9F230DA34700A26D33 /* MenuHowToSlidesController.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		BDE80D9E230DA32200A26D33 /* initialization */ = {
+			isa = PBXGroup;
+			children = (
+				BD6817E422CCC60F0086D71C /* InitializeTokenContainerController.swift */,
+				BD6817D522CB7D260086D71C /* InitializeTokenStep0ViewController.swift */,
+				BD6817E022CB97B60086D71C /* InitializeTokenStep1ViewController.swift */,
+				BD6817E822CCD8220086D71C /* InitializeTokenStep2ViewController.swift */,
+				BD6817EA22CE25BB0086D71C /* InitializeTokenStep3ViewController.swift */,
+			);
+			path = initialization;
+			sourceTree = "<group>";
+		};
+		D2EF53B65D7D3A3AEFB4B63D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B20A19FEB97B55805438029F /* Pods_activeTAN.framework */,
+				CFEB2E5EDBE5AB9F6AF563A3 /* Pods_activeTANTests.framework */,
+				4393CB05B9C9CD8DAB2D7A5B /* Pods_activeTANUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD6651C62289AA4200BC1773 /* activeTAN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD6651EF2289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTAN" */;
+			buildPhases = (
+				ADB2ABA13920884AC2E1DB9C /* [CP] Check Pods Manifest.lock */,
+				BD6651C32289AA4200BC1773 /* Sources */,
+				BD6651C42289AA4200BC1773 /* Frameworks */,
+				BD6651C52289AA4200BC1773 /* Resources */,
+				4919FF69A1A8EE6586B98AE0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = activeTAN;
+			productName = activeTAN;
+			productReference = BD6651C72289AA4200BC1773 /* activeTAN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD6651DA2289AA4300BC1773 /* activeTANTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD6651F22289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANTests" */;
+			buildPhases = (
+				604462241C6D3864C8AB9294 /* [CP] Check Pods Manifest.lock */,
+				BD6651D72289AA4300BC1773 /* Sources */,
+				BD6651D82289AA4300BC1773 /* Frameworks */,
+				BD6651D92289AA4300BC1773 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD6651DD2289AA4300BC1773 /* PBXTargetDependency */,
+			);
+			name = activeTANTests;
+			productName = activeTANTests;
+			productReference = BD6651DB2289AA4300BC1773 /* activeTANTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD6651E52289AA4300BC1773 /* activeTANUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD6651F52289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANUITests" */;
+			buildPhases = (
+				9FC654C06AB56648DC548B5C /* [CP] Check Pods Manifest.lock */,
+				BD6651E22289AA4300BC1773 /* Sources */,
+				BD6651E32289AA4300BC1773 /* Frameworks */,
+				BD6651E42289AA4300BC1773 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD6651E82289AA4300BC1773 /* PBXTargetDependency */,
+			);
+			name = activeTANUITests;
+			productName = activeTANUITests;
+			productReference = BD6651E62289AA4300BC1773 /* activeTANUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD6651BF2289AA4200BC1773 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "EFDIS AG Bankensoftware";
+				TargetAttributes = {
+					BD6651C62289AA4200BC1773 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					BD6651DA2289AA4300BC1773 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BD6651C62289AA4200BC1773;
+					};
+					BD6651E52289AA4300BC1773 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BD6651C62289AA4200BC1773;
+					};
+				};
+			};
+			buildConfigurationList = BD6651C22289AA4200BC1773 /* Build configuration list for PBXProject "activeTAN" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = BD6651BE2289AA4200BC1773;
+			productRefGroup = BD6651C82289AA4200BC1773 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD6651C62289AA4200BC1773 /* activeTAN */,
+				BD6651DA2289AA4300BC1773 /* activeTANTests */,
+				BD6651E52289AA4300BC1773 /* activeTANUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD6651C52289AA4200BC1773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD51E9D0228DA1E300AEEE68 /* Colors.plist in Resources */,
+				BD6817D422CA3DB00086D71C /* HowToSlide.xib in Resources */,
+				BD6651D52289AA4300BC1773 /* LaunchScreen.storyboard in Resources */,
+				BD6651D22289AA4300BC1773 /* Assets.xcassets in Resources */,
+				BD6651D02289AA4200BC1773 /* Main.storyboard in Resources */,
+				BD0FA11D22FD7B8300780C6A /* Custom.xcassets in Resources */,
+				BDE80D8A230C1D8800A26D33 /* Custom.strings in Resources */,
+				BDE80D86230C1C6000A26D33 /* Localizable.strings in Resources */,
+				BD7DB3EA2316D6FB00E5CF25 /* Config.plist in Resources */,
+				BDA1CCAA2303FE5F00A09040 /* Colors.plist in Resources */,
+				BD6817CE22C4F31C0086D71C /* api_key.pem in Resources */,
+				BD7DB3EC2316D73F00E5CF25 /* Custom.strings in Resources */,
+				BDE80D97230D985700A26D33 /* InfoPlist.strings in Resources */,
+				BDA1CC9A2303EBDC00A09040 /* api_key.pem in Resources */,
+				BDA1CCA22303F12C00A09040 /* Custom.xcassets in Resources */,
+				BD6817E322CCABC90086D71C /* Config.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6651D92289AA4300BC1773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6651E42289AA4300BC1773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4919FF69A1A8EE6586B98AE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SPFakeBar/SPFakeBar.framework",
+				"${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework",
+				"${BUILT_PRODUCTS_DIR}/ZXingObjC/ZXingObjC.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPFakeBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPStorkController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZXingObjC.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		604462241C6D3864C8AB9294 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-activeTANTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC654C06AB56648DC548B5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-activeTANUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADB2ABA13920884AC2E1DB9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-activeTAN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD6651C32289AA4200BC1773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6817ED22CE2AB10086D71C /* TanGenerator.swift in Sources */,
+				BD6817DB22CB920A0086D71C /* BankingQrCodeListener.swift in Sources */,
+				BD12C985228D57D0005D70D4 /* UIViewExtension.swift in Sources */,
+				BD51E9CB228D9F5800AEEE68 /* UIButtonExtension.swift in Sources */,
+				BD9E56F722EB0B8300AE8DC4 /* VisDataBuffer.swift in Sources */,
+				BD0B83B322FB266100DA66F6 /* WelcomeViewController.swift in Sources */,
+				BD51E9D2228DA29300AEEE68 /* Utils.swift in Sources */,
+				BD6817EB22CE25BB0086D71C /* InitializeTokenStep3ViewController.swift in Sources */,
+				BD9E56F522EB002800AE8DC4 /* VerifyTransactionDetailsCell.swift in Sources */,
+				BD51E9C9228D9E5000AEEE68 /* UIColorExtension.swift in Sources */,
+				BD6817E722CCCC800086D71C /* GeneralError.swift in Sources */,
+				BD51E9C7228D973200AEEE68 /* DefaultButton.swift in Sources */,
+				BD6817C822C4A4600086D71C /* FieldEncoding.swift in Sources */,
+				BD9E56E522E0995100AE8DC4 /* StringEditViewController.swift in Sources */,
+				BD51E9D6228EA9FB00AEEE68 /* CRC16Checksum.swift in Sources */,
+				BD9E56F322E9A41600AE8DC4 /* VerifyTransactionDetailsController.swift in Sources */,
+				BD6817AD22B8C5840086D71C /* MenuViewController.swift in Sources */,
+				BD6817E122CB97B60086D71C /* InitializeTokenStep1ViewController.swift in Sources */,
+				BD1F57E9228C28EF000D5B27 /* NoBankingQrCodeError.swift in Sources */,
+				BD9E56E922E5D6CB00AE8DC4 /* HHDuc.swift in Sources */,
+				BD9E56E322E071E300AE8DC4 /* TokenSettingsViewController.swift in Sources */,
+				BD9E56ED22E5E0AE00AE8DC4 /* DataElementType.swift in Sources */,
+				BD6817BE22C25BA90086D71C /* SecurityHandler.swift in Sources */,
+				BD6817F522CE41100086D71C /* BankingToken.swift in Sources */,
+				BDE80DA0230DA34700A26D33 /* MenuHowToSlidesController.swift in Sources */,
+				BDF14C7C22DF128C00010A8C /* MenuDetailViewController.swift in Sources */,
+				BD9E56E722E5A16100AE8DC4 /* MainViewController.swift in Sources */,
+				BD6651CB2289AA4200BC1773 /* AppDelegate.swift in Sources */,
+				BD6817E922CCD8220086D71C /* InitializeTokenStep2ViewController.swift in Sources */,
+				BD9E56F122E72B8500AE8DC4 /* XorChecksum.swift in Sources */,
+				BD045C7122957503001058C5 /* UIViewControllerExtension.swift in Sources */,
+				BD6817FD22CF59DC0086D71C /* DKCharset.swift in Sources */,
+				BD6817D622CB7D260086D71C /* InitializeTokenStep0ViewController.swift in Sources */,
+				BD6817FB22CF4F6B0086D71C /* BankingTokenRepository.swift in Sources */,
+				BD1F57E7228C153C000D5B27 /* QrCodeHandler.swift in Sources */,
+				BD6817C622C3CBF50086D71C /* BankingKeyComponents.swift in Sources */,
+				BD6817C422C3C5FB0086D71C /* HHDkm.swift in Sources */,
+				BD9E56EB22E5D8FE00AE8DC4 /* VisualisationClass.swift in Sources */,
+				BD9E56EF22E727EE00AE8DC4 /* LuhnChecksum.swift in Sources */,
+				BD51E9D4228DA43400AEEE68 /* RuntimeError.swift in Sources */,
+				BD6817E522CCC60F0086D71C /* InitializeTokenContainerController.swift in Sources */,
+				BD6817D822CB7F060086D71C /* BankingQrCodeScannerViewController.swift in Sources */,
+				BD6817D022CA3A550086D71C /* HowToInitializeViewController.swift in Sources */,
+				BDF14C7E22DF173100010A8C /* MenuElement.swift in Sources */,
+				BD6817D222CA3D900086D71C /* HowToSlide.swift in Sources */,
+				BD6817F222CE39250086D71C /* activeTAN.xcdatamodeld in Sources */,
+				BD0B83A922F0336700DA66F6 /* SelectTokenViewController.swift in Sources */,
+				BDE80D9C230D9D7100A26D33 /* HowToSlidesViewController.swift in Sources */,
+				BDA1CC882302E09200A09040 /* IntrinsicSizeTableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6651D72289AA4300BC1773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6651E02289AA4300BC1773 /* activeTANTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6651E22289AA4300BC1773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6651EB2289AA4300BC1773 /* activeTANUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD6651DD2289AA4300BC1773 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD6651C62289AA4200BC1773 /* activeTAN */;
+			targetProxy = BD6651DC2289AA4300BC1773 /* PBXContainerItemProxy */;
+		};
+		BD6651E82289AA4300BC1773 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD6651C62289AA4200BC1773 /* activeTAN */;
+			targetProxy = BD6651E72289AA4300BC1773 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD6651CE2289AA4200BC1773 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD6651CF2289AA4200BC1773 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD6651D32289AA4300BC1773 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD6651D42289AA4300BC1773 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BDE80D88230C1C6000A26D33 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDE80D87230C1C6000A26D33 /* de */,
+				BDE80D89230C1C7100A26D33 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BDE80D8C230C1D8800A26D33 /* Custom.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDE80D8B230C1D8800A26D33 /* de */,
+				BDE80D8D230C1D8D00A26D33 /* en */,
+			);
+			name = Custom.strings;
+			sourceTree = "<group>";
+		};
+		BDE80D99230D985700A26D33 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDE80D98230D985700A26D33 /* en */,
+				BDE80D9A230D985C00A26D33 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD0FA0F822FD601500780C6A /* EFD QS Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_ENVIRONMENT = qs;
+				CONFIGURATION_MANDANT = EFD;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "EFD QS Debug";
+		};
+		BD0FA0F922FD601500780C6A /* EFD QS Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6794A45127D952CCD005C168 /* Pods-activeTAN.efd qs debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/*/*",
+					"mandanten/*/*/*",
+					"mandanten/*/*/*/*",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
+				INFOPLIST_FILE = activeTAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS.debug";
+				PRODUCT_NAME = "$(TARGET_NAME) Test";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "EFD QS Debug";
+		};
+		BD0FA0FA22FD601500780C6A /* EFD QS Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3321A1C173CBCE2E023F14 /* Pods-activeTANTests.efd qs debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
+			};
+			name = "EFD QS Debug";
+		};
+		BD0FA0FB22FD601500780C6A /* EFD QS Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CC3CEBCAA044C7C3F662B77 /* Pods-activeTANUITests.efd qs debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = activeTAN;
+			};
+			name = "EFD QS Debug";
+		};
+		BD0FA0FC22FD602200780C6A /* EFD QS Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_ENVIRONMENT = qs;
+				CONFIGURATION_MANDANT = EFD;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "EFD QS Release";
+		};
+		BD0FA0FD22FD602200780C6A /* EFD QS Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931EFEE6B1F2F586ED958AA8 /* Pods-activeTAN.efd qs release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/*/*",
+					"mandanten/*/*/*",
+					"mandanten/*/*/*/*",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
+				INFOPLIST_FILE = activeTAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS";
+				PRODUCT_NAME = "$(TARGET_NAME) Test";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "EFD QS Release";
+		};
+		BD0FA0FE22FD602200780C6A /* EFD QS Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70ACCCB272B6FEFC2EB00635 /* Pods-activeTANTests.efd qs release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
+			};
+			name = "EFD QS Release";
+		};
+		BD0FA0FF22FD602200780C6A /* EFD QS Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 679A6661EDBF0F64EA1B1255 /* Pods-activeTANUITests.efd qs release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = activeTAN;
+			};
+			name = "EFD QS Release";
+		};
+		BD0FA15E22FD9B0B00780C6A /* VAR Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_ENVIRONMENT = prod;
+				CONFIGURATION_MANDANT = VAR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "VAR Prod Debug";
+		};
+		BD0FA15F22FD9B0B00780C6A /* VAR Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/*/*",
+					"mandanten/*/*/*",
+					"mandanten/*/*/*/*",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
+				INFOPLIST_FILE = activeTAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "VAR Prod Debug";
+		};
+		BD0FA16022FD9B0B00780C6A /* VAR Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
+			};
+			name = "VAR Prod Debug";
+		};
+		BD0FA16122FD9B0B00780C6A /* VAR Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = activeTAN;
+			};
+			name = "VAR Prod Debug";
+		};
+		BD0FA16222FD9B1600780C6A /* VAR QS Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_ENVIRONMENT = qs;
+				CONFIGURATION_MANDANT = VAR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "VAR QS Debug";
+		};
+		BD0FA16322FD9B1600780C6A /* VAR QS Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FA842N8S4U;
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/*/*",
+					"mandanten/*/*/*",
+					"mandanten/*/*/*/*",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
+				INFOPLIST_FILE = activeTAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS.debug;
+				PRODUCT_NAME = "$(TARGET_NAME) Test";
+				PROVISIONING_PROFILE_SPECIFIER = "VAR activeTAN Test";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "VAR QS Debug";
+		};
+		BD0FA16422FD9B1600780C6A /* VAR QS Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5EF3B566355245454D4138 /* Pods-activeTANTests.var qs debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
+			};
+			name = "VAR QS Debug";
+		};
+		BD0FA16522FD9B1600780C6A /* VAR QS Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39374CFD360B9359B5B872AB /* Pods-activeTANUITests.var qs debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = activeTAN;
+			};
+			name = "VAR QS Debug";
+		};
+		BD0FA16622FD9B1E00780C6A /* VAR Prod Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_ENVIRONMENT = prod;
+				CONFIGURATION_MANDANT = VAR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "VAR Prod Release";
+		};
+		BD0FA16722FD9B1E00780C6A /* VAR Prod Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/*/*",
+					"mandanten/*/*/*",
+					"mandanten/*/*/*/*",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
+				INFOPLIST_FILE = activeTAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "VAR Prod Release";
+		};
+		BD0FA16822FD9B1E00780C6A /* VAR Prod Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC1937911CD1978ABE49E43 /* Pods-activeTANTests.var prod release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
+			};
+			name = "VAR Prod Release";
+		};
+		BD0FA16922FD9B1E00780C6A /* VAR Prod Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A57276EF5E6D216CEBA9B69 /* Pods-activeTANUITests.var prod release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = activeTAN;
+			};
+			name = "VAR Prod Release";
+		};
+		BD0FA16A22FD9B2800780C6A /* VAR QS Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_ENVIRONMENT = qs;
+				CONFIGURATION_MANDANT = VAR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "VAR QS Release";
+		};
+		BD0FA16B22FD9B2800780C6A /* VAR QS Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/*/*",
+					"mandanten/*/*/*",
+					"mandanten/*/*/*/*",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
+				INFOPLIST_FILE = activeTAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS;
+				PRODUCT_NAME = "$(TARGET_NAME) Test";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "VAR QS Release";
+		};
+		BD0FA16C22FD9B2800780C6A /* VAR QS Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B323E253800DD89481459CDD /* Pods-activeTANTests.var qs release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
+			};
+			name = "VAR QS Release";
+		};
+		BD0FA16D22FD9B2800780C6A /* VAR QS Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948F5987EFB769B0660AA6E5 /* Pods-activeTANUITests.var qs release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = activeTAN;
+			};
+			name = "VAR QS Release";
+		};
+		BD6651ED2289AA4300BC1773 /* EFD Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_ENVIRONMENT = prod;
+				CONFIGURATION_MANDANT = EFD;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "EFD Prod Debug";
+		};
+		BD6651EE2289AA4300BC1773 /* EFD Prod Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_ENVIRONMENT = prod;
+				CONFIGURATION_MANDANT = EFD;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "EFD Prod Release";
+		};
+		BD6651F02289AA4300BC1773 /* EFD Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDC271C2ACAC26EFB1D56DDB /* Pods-activeTAN.efd prod debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FA842N8S4U;
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/*/*",
+					"mandanten/*/*/*",
+					"mandanten/*/*/*/*",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
+				INFOPLIST_FILE = activeTAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.debug";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Prod Debug";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "EFD Prod Debug";
+		};
+		BD6651F12289AA4300BC1773 /* EFD Prod Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE150AE947CB1F663E362C6 /* Pods-activeTAN.efd prod release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FA842N8S4U;
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/*/*",
+					"mandanten/*/*/*",
+					"mandanten/*/*/*/*",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
+				INFOPLIST_FILE = activeTAN/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "EFDIS Provisioning Profile";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "EFD Prod Release";
+		};
+		BD6651F32289AA4300BC1773 /* EFD Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD0D859DE2D9A9A87A7D8871 /* Pods-activeTANTests.efd prod debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
+			};
+			name = "EFD Prod Debug";
+		};
+		BD6651F42289AA4300BC1773 /* EFD Prod Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F51EFF2775DAB0F6E59BE90E /* Pods-activeTANTests.efd prod release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
+			};
+			name = "EFD Prod Release";
+		};
+		BD6651F62289AA4300BC1773 /* EFD Prod Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10E50DE4DA6D7A63920EEA3F /* Pods-activeTANUITests.efd prod debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = activeTAN;
+			};
+			name = "EFD Prod Debug";
+		};
+		BD6651F72289AA4300BC1773 /* EFD Prod Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAB7574C3CB77F316D14CFD5 /* Pods-activeTANUITests.efd prod release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN47Z93R96;
+				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = activeTAN;
+			};
+			name = "EFD Prod Release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD6651C22289AA4200BC1773 /* Build configuration list for PBXProject "activeTAN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6651ED2289AA4300BC1773 /* EFD Prod Debug */,
+				BD0FA15E22FD9B0B00780C6A /* VAR Prod Debug */,
+				BD0FA0F822FD601500780C6A /* EFD QS Debug */,
+				BD0FA16222FD9B1600780C6A /* VAR QS Debug */,
+				BD6651EE2289AA4300BC1773 /* EFD Prod Release */,
+				BD0FA16622FD9B1E00780C6A /* VAR Prod Release */,
+				BD0FA0FC22FD602200780C6A /* EFD QS Release */,
+				BD0FA16A22FD9B2800780C6A /* VAR QS Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "EFD Prod Release";
+		};
+		BD6651EF2289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTAN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6651F02289AA4300BC1773 /* EFD Prod Debug */,
+				BD0FA15F22FD9B0B00780C6A /* VAR Prod Debug */,
+				BD0FA0F922FD601500780C6A /* EFD QS Debug */,
+				BD0FA16322FD9B1600780C6A /* VAR QS Debug */,
+				BD6651F12289AA4300BC1773 /* EFD Prod Release */,
+				BD0FA16722FD9B1E00780C6A /* VAR Prod Release */,
+				BD0FA0FD22FD602200780C6A /* EFD QS Release */,
+				BD0FA16B22FD9B2800780C6A /* VAR QS Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "EFD Prod Release";
+		};
+		BD6651F22289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6651F32289AA4300BC1773 /* EFD Prod Debug */,
+				BD0FA16022FD9B0B00780C6A /* VAR Prod Debug */,
+				BD0FA0FA22FD601500780C6A /* EFD QS Debug */,
+				BD0FA16422FD9B1600780C6A /* VAR QS Debug */,
+				BD6651F42289AA4300BC1773 /* EFD Prod Release */,
+				BD0FA16822FD9B1E00780C6A /* VAR Prod Release */,
+				BD0FA0FE22FD602200780C6A /* EFD QS Release */,
+				BD0FA16C22FD9B2800780C6A /* VAR QS Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "EFD Prod Release";
+		};
+		BD6651F52289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6651F62289AA4300BC1773 /* EFD Prod Debug */,
+				BD0FA16122FD9B0B00780C6A /* VAR Prod Debug */,
+				BD0FA0FB22FD601500780C6A /* EFD QS Debug */,
+				BD0FA16522FD9B1600780C6A /* VAR QS Debug */,
+				BD6651F72289AA4300BC1773 /* EFD Prod Release */,
+				BD0FA16922FD9B1E00780C6A /* VAR Prod Release */,
+				BD0FA0FF22FD602200780C6A /* EFD QS Release */,
+				BD0FA16D22FD9B2800780C6A /* VAR QS Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "EFD Prod Release";
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD6817F022CE39250086D71C /* activeTAN.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD6817F122CE39250086D71C /* activeTAN.xcdatamodel */,
+			);
+			currentVersion = BD6817F122CE39250086D71C /* activeTAN.xcdatamodel */;
+			path = activeTAN.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BD6651BF2289AA4200BC1773 /* Project object */;
+}

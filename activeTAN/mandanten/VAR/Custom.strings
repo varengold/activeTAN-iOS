@@ -1,0 +1,59 @@
+/* 
+  Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+
+  This file is part of the activeTAN app for iOS.
+
+  The activeTAN app is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  The activeTAN app is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  
+  You should have received a copy of the GNU General Public License
+  along with the activeTAN app.  If not, see <http://www.gnu.org/licenses/>.
+*/
+"bank_name"="Varengold Bank AG";
+"imprint" = "<p>
+<b>Varengold Bank AG</b><br/>
+Gro&szlig;e Elbstra&szlig;e 14<br/>
+22767 Hamburg
+</p>
+<p>
+Tel.: <a href=\"tel:+49406686490\">+49 40 66&#x2009;86&#x2009;49&#x2009;0</a><br/>
+Fax: +49 40 66&#x2009;86&#x2009;49&#x2009;49<br/>
+E-Mail: <a href=\"mailto:info@varengold.de\">info@varengold.de</a><br/>
+Internet: <a href=\"https://www.varengold.de/\">www.varengold.de</a>
+</p>
+<p>
+<b>Vorstand</b><br/>
+Dr. Bernhard Fuhrmann<br/>
+Frank Otten
+</p>
+<p>
+<b>Aufsichtsrat</b><br/>
+Dr. Karl-Heinz Lemnitzer (Vorsitzender)<br/>
+<i>Steuerberater und Wirtschaftsprüfer</i>
+</p>
+<p>
+Michael Stephen Murphy (Stellv. Vorsitzender)<br/>
+<i>Investmentbanker</i>
+</p>
+<p>
+Vasil Stefanov<br/>
+<i>Geschäftsführer</i>
+</p>
+<p>
+<b>Register</b><br/>
+Amtsgericht Hamburg, HRB&nbsp;73684
+</p>
+<p>
+<b>Corporate Governance</b><br/>
+Die Varengold Bank AG ist bei der Bundesanstalt für Finanzdienstleistungsaufsicht
+(BaFin, Graurheindorfer Str. 108, 53117 Bonn; Tel.: 0228 / 4108 – 0)
+unter der Nummer 109&#x2009;520 registriert und auf der Internetseite
+<a href=\"https://www.bafin.de/\">www.bafin.de</a> veröffentlicht.
+</p>";
