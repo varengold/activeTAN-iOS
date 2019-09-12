@@ -16,5 +16,5 @@
   You should have received a copy of the GNU General Public License
   along with the activeTAN app.  If not, see <http://www.gnu.org/licenses/>.
 */
-NSCameraUsageDescription="The camera is required to read QR codes.";
-NSFaceIDUsageDescription="For additional protection, access to the device authentication mechanism is needed.";
+NSCameraUsageDescription="The QR code on your activation letter will activate this app. For the purpose of TAN generation, order details (for example IBAN and amount) are transmitted via a QR code for checking in this app. QR codes are read using the camera.";
+NSFaceIDUsageDescription="This app wants verify your identity on every TAN generation using Face ID.";
