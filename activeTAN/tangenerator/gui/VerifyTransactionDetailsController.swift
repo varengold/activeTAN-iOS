@@ -39,6 +39,8 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
     @IBOutlet weak var labelATC : UILabel!
     @IBOutlet weak var textATC : UILabel!
     @IBOutlet weak var textATCContainer : UIView!
+    @IBOutlet weak var textExhaust : UILabel!
+    @IBOutlet weak var textExhaustContainer : UIView!
     @IBOutlet weak var confirmButton : UIButton!
     @IBOutlet weak var dataElementsTable : IntrinsicSizeTableView!
     @IBOutlet weak var outputContainerHeight : NSLayoutConstraint!
@@ -87,6 +89,10 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
         labelATC.text = Utils.localizedString("labelATC")
         labelATC.adjustsFontSizeToFitWidth = true
         textATC.adjustsFontSizeToFitWidth = true
+        
+        textExhaustContainer.layer.cornerRadius = 8
+        textExhaustContainer.clipsToBounds = true
+        textExhaustContainer.isHidden = true
         
         instructionTAN.adjustsFontSizeToFitWidth = true
         
@@ -282,13 +288,22 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
         
         self.textTAN.text = tan
         self.textTANContainer.popIn()
-        
         self.outputContainerHeight.constant = self.textTANContainer.frame.height + outputElementDistance
         
         if textATCContainer != nil {
             self.textATC.text = getFormattedTransactionCounter(token: bankingToken!)
             self.textATCContainer.popIn()
-            self.outputContainerHeight.constant = self.textTANContainer.frame.height + outputElementDistance + self.textATCContainer.frame.height + outputElementDistance
+            self.outputContainerHeight.constant += self.textATCContainer.frame.height + outputElementDistance
+        }
+        
+        if BankingTokenRepository.isExhausted(bankingToken: bankingToken!) {
+            self.textExhaust.text = Utils.localizedString("exhausted_generator_description")
+            self.textExhaustContainer.popIn()
+            self.outputContainerHeight.constant += self.textExhaustContainer.frame.height + outputElementDistance
+        } else if BankingTokenRepository.isSoonExhausted(bankingToken: bankingToken!) {
+            self.textExhaust.text = Utils.localizedString("soon_exhausted_generator_description")
+            self.textExhaustContainer.popIn()
+            self.outputContainerHeight.constant += self.textExhaustContainer.frame.height + outputElementDistance
         }
         
         self.stickyFooter.isHidden = true

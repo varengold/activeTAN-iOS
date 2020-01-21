@@ -840,6 +840,8 @@ Confirm your input in online banking. The order is released.";
 "button_confirm_delete_token" = "Delete TAN generator";
 "button_cancel_delete_token" = "Cancel";
 "invalidated_key_description"="For your security, this TAN generator cannot be used anymore, because the lock screen has been disabled. Please lock the TAN generator in online banking and start a new initializaion process.";
+"exhausted_generator_description"="This TAN generator has produced the maximum number of TANs and cannot be used anymore. Please start a new initialization process.";
+"soon_exhausted_generator_description"="This TAN generator has almost produced the maximum number of TANs. Then it will no longer be possible to use it. Please start a new initializaion process soon.";
 "do_protect_usage_description"="Request Face ID, Touch ID or code for usage";
 
 "invalid_banking_qr"="Invalid banking QR code";

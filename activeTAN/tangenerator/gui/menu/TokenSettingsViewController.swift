@@ -24,7 +24,8 @@ class TokenSettingsViewController : UITableViewController {
     
     var bankingToken : BankingToken?
     
-    @IBOutlet weak var labelUnusableToken : UILabel!
+    @IBOutlet weak var labelExhaustedToken : UILabel!
+    @IBOutlet weak var labelInvalidKey : UILabel!
     @IBOutlet weak var labelTokenName : UILabel!
     @IBOutlet weak var valueTokenName : UILabel!
     @IBOutlet weak var labelTokenId : UILabel!
@@ -38,7 +39,8 @@ class TokenSettingsViewController : UITableViewController {
     
     @IBOutlet weak var confirmDeviceCredentialsToUseSwitch : UISwitch!
     
-    var tokenUsable : Bool = false
+    var hasInvalidKey : Bool = false
+    var isExhausted : Bool = false
     
     static let tokenNameMaxLength : Int = 30
     
@@ -54,7 +56,8 @@ class TokenSettingsViewController : UITableViewController {
         labelProtectUsage.text = Utils.localizedString("protect_usage")
         labelDeleteToken.text = Utils.localizedString("delete_token")
         
-        labelUnusableToken.text = Utils.localizedString("invalidated_key_description")
+        labelInvalidKey.text = Utils.localizedString("invalidated_key_description")
+        labelExhaustedToken.text = Utils.localizedString("exhausted_generator_description")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,9 +72,8 @@ class TokenSettingsViewController : UITableViewController {
             return
         }
         
-        if BankingTokenRepository.isUsable(bankingToken: _bankingToken){
-            tokenUsable = true
-        }
+        hasInvalidKey = BankingTokenRepository.hasValidKey(bankingToken: _bankingToken)
+        isExhausted = BankingTokenRepository.isExhausted(bankingToken: _bankingToken)
         
         valueTokenName.text = _bankingToken.name
         valueTokenId.text = _bankingToken.formattedSerialNumber()
@@ -160,7 +162,11 @@ class TokenSettingsViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // Hide table view cell with invalidated key message, if token is usable
-        if tokenUsable && indexPath.section == 3 && indexPath.row == 1 {
+        if hasInvalidKey && indexPath.section == 3 && indexPath.row == 1 {
+            // Workaround for table views with static content: set height of cell to 0 if cell shouldn't be displayed
+            return 0
+        }
+        if !isExhausted && indexPath.section == 3 && indexPath.row == 2 {
             // Workaround for table views with static content: set height of cell to 0 if cell shouldn't be displayed
             return 0
         }

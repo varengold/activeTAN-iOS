@@ -22,7 +22,10 @@ import UIKit
 import CoreData
 
 class BankingTokenRepository {
-
+    
+    static let maxTransactionCounter : UInt16 = 0xffff
+    static let transactionCounterWarnAfter : UInt16 = maxTransactionCounter - 100
+    
     static var managedContext : NSManagedObjectContext {
         let appDelegate: AppDelegate
         if Thread.current.isMainThread {
@@ -79,7 +82,7 @@ class BankingTokenRepository {
         return filteredTokens
     }
     
-    static func isUsable(bankingToken : BankingToken) -> Bool{
+    static func hasValidKey(bankingToken : BankingToken) -> Bool{
         do {
             let encryptedKey = try SecurityHandler.loadFromKeychain(key: bankingToken.keyAlias!)
             let algorithm : SecKeyAlgorithm = SecurityHandler.enclaveAlgorithm
@@ -91,6 +94,18 @@ class BankingTokenRepository {
         } catch{
             return false
         }
+    }
+    
+    static func isExhausted(bankingToken : BankingToken) -> Bool{
+        return bankingToken.transactionCounter >= maxTransactionCounter
+    }
+    
+    static func isSoonExhausted(bankingToken : BankingToken) -> Bool{
+        return bankingToken.transactionCounter > transactionCounterWarnAfter && !isExhausted(bankingToken: bankingToken)
+    }
+    
+    static func isUsable(bankingToken : BankingToken) -> Bool{
+        return hasValidKey(bankingToken: bankingToken) && !isExhausted(bankingToken: bankingToken)
     }
     
     static func deleteToken(keyAlias: String) throws {
