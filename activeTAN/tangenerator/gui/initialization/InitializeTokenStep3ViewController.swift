@@ -19,7 +19,7 @@
 
 import UIKit
 
-class InitializeTokenStep3ViewController : UIViewController {
+class InitializeTokenStep3ViewController : ScrollStickyFooterViewController {
 
     @IBOutlet weak var containerView : UIView!
     @IBOutlet weak var titleLabel : UILabel!
@@ -37,30 +37,31 @@ class InitializeTokenStep3ViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.titleLabel.text = NSLocalizedString("initialization", comment: "")
+        self.titleLabel.text = Utils.localizedString("initialization")
         
-        self.descriptionLabel.text = NSLocalizedString("initialization_portal_scanned", comment: "")
+        self.descriptionLabel.text = Utils.localizedString("initialization_portal_scanned")
         self.descriptionLabel.adjustsFontSizeToFitWidth = true
         
-        self.hintLabel.text = NSLocalizedString("enter_initial_tan", comment: "") + "\n\n" + NSLocalizedString("initialization_completed", comment: "")
+        self.hintLabel.text = Utils.localizedString("enter_initial_tan") + "\n\n" + Utils.localizedString("initialization_completed")
         self.hintLabel.adjustsFontSizeToFitWidth = true
         
-        labelTan.text = NSLocalizedString("initial_tan", comment: "")
+        labelTan.text = Utils.localizedString("initial_tan")
         labelTan.adjustsFontSizeToFitWidth = true
         textTan.text = TanGenerator.formatTAN(tan: initialTAN!)
+        textTan.adjustsFontSizeToFitWidth = true
         
         tanContainer.layer.cornerRadius = 8
         tanContainer.clipsToBounds = true
         
-        actionButton?.setTitle(NSLocalizedString("initialization_action_finished", comment: ""), for: .normal)
-        actionButton?.hide()
+        actionButton?.setTitle(Utils.localizedString("initialization_action_finished"), for: .normal)
+        stickyFooter?.hide()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
-            self.actionButton?.fadeIn()
+            self.stickyFooter?.fadeIn()
         })
     }
 }

@@ -19,7 +19,7 @@
 
 import UIKit
 
-class InitializeTokenStep1ViewController : UIViewController{
+class InitializeTokenStep1ViewController : ScrollStickyFooterViewController{
     
     // MARK: Properties
     
@@ -65,21 +65,22 @@ class InitializeTokenStep1ViewController : UIViewController{
         
         self.containerView.isHidden = true
         
-        self.titleLabel.text = NSLocalizedString("initialization", comment: "")
+        self.titleLabel.text = Utils.localizedString("initialization")
         
-        self.descriptionLabel.text = NSLocalizedString("initialization_letter_scanned", comment: "")
+        self.descriptionLabel.text = Utils.localizedString("initialization_letter_scanned")
         self.descriptionLabel.adjustsFontSizeToFitWidth = true
         
         self.serialNumberContainer.layer.cornerRadius = 8
         self.serialNumberContainer.clipsToBounds = true
-        self.labelSerialNumber.text = NSLocalizedString("label_serial_number", comment: "")
+        self.labelSerialNumber.text = Utils.localizedString("label_serial_number")
+        self.labelSerialNumber.adjustsFontSizeToFitWidth = true
         self.serialNumber.adjustsFontSizeToFitWidth = true
         
-        self.hintLabel.text = NSLocalizedString("enter_serial_number", comment: "") + "\n\n" + NSLocalizedString("go_to_scan_qr_code", comment: "")
+        self.hintLabel.text = Utils.localizedString("enter_serial_number") + "\n\n" + Utils.localizedString("go_to_scan_qr_code")
         self.hintLabel.adjustsFontSizeToFitWidth = true
 
-        self.actionButton.hide()
-        self.actionButton.setTitle(NSLocalizedString("next_step", comment: ""), for: .normal)
+        self.stickyFooter.hide()
+        self.actionButton.setTitle(Utils.localizedString("next_step"), for: .normal)
         
         doStartProcess()
     }
@@ -140,7 +141,7 @@ extension InitializeTokenStep1ViewController {
                 DispatchQueue.main.async {
                     self.doShowTokenId()
                     Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
-                        self.actionButton.fadeIn()
+                        self.stickyFooter.fadeIn()
                     })
                 }
             }
@@ -248,19 +249,19 @@ extension InitializeTokenStep1ViewController {
         // Instead of cancelling the ongoing process or restarting the whole process,
         // the user may repeat the letter QR code scanning.
         let alert = UIAlertController(
-            title: NSLocalizedString("initialization_failed_title", comment: ""),
-            message: NSLocalizedString("initialization_failed_unknown_reason", comment: ""),
+            title: Utils.localizedString("initialization_failed_title"),
+            message: Utils.localizedString("initialization_failed_unknown_reason"),
             preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(
-            title: NSLocalizedString("repeat", comment: ""),
+            title: Utils.localizedString("repeat"),
             style: .default,
             handler: { action in
                 self.initializeTokenContainer.popViewController(animated: true)
         }))
         
         alert.addAction(UIAlertAction(
-            title: NSLocalizedString("alert_cancel", comment: ""),
+            title: Utils.localizedString("alert_cancel"),
             style: .destructive,
             handler: {action in
                 self.initializeTokenContainer.leaveInitializationViews()

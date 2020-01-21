@@ -19,23 +19,27 @@
 
 import UIKit
 
-extension UIViewController {
-
-    // Makes navigation bar background completely invisible
-    func hideNavigationBar(){
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+class ScrollStickyFooterViewController : UIViewController {
+    
+    @IBOutlet weak var scrollView : UIScrollView!
+    @IBOutlet weak var stickyFooter : StickyFooter!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if scrollView.contentSize.height + stickyFooter.frame.height > scrollView.frame.height {
+            stickyFooter.blurBackground()
+            if let bottomConstraint = scrollView.constraintWithIdentifier("bottom") {
+                bottomConstraint.constant = stickyFooter.frame.height
+            }
+        }else{
+            stickyFooter.unblurBackground()
+            resetBottomPadding()
+        }
     }
     
-    func showNavigationBar(){
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        self.navigationController?.navigationBar.shadowImage = nil
-    }
-    
-    func localizeBackButton(){
-        let backItem = UIBarButtonItem()
-        backItem.title = Utils.localizedString("nav_button_back")
-        self.navigationItem.backBarButtonItem = backItem
+    func resetBottomPadding(){
+        if let bottomConstraint = scrollView.constraintWithIdentifier("bottom") {
+            bottomConstraint.constant = 0
+        }
     }
 }

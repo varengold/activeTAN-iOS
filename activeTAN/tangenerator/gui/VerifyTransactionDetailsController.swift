@@ -22,7 +22,7 @@ import SPStorkController
 import SPFakeBar
 import LocalAuthentication
 
-class VerifyTransactionDetailsController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UITableViewDataSource, UITableViewDelegate {
 
     var rawHHDuc : [UInt8]?
     var hhduc : HHDuc?
@@ -41,6 +41,8 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
     @IBOutlet weak var textATCContainer : UIView!
     @IBOutlet weak var confirmButton : UIButton!
     @IBOutlet weak var dataElementsTable : IntrinsicSizeTableView!
+    @IBOutlet weak var outputContainerHeight : NSLayoutConstraint!
+    private let outputElementDistance = CGFloat(30)
     
     let navBar = SPFakeBarView(style: .stork)
     
@@ -63,10 +65,10 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
         
         self.topConstraint.constant = self.navBar.height + self.topConstraint.constant
         
-        self.navBar.titleLabel.text = NSLocalizedString("verify_transaction_details_title", comment: "")
-        self.navBar.leftButton.setTitle(NSLocalizedString("nav_button_back", comment: ""), for: .normal)
+        self.navBar.titleLabel.text = Utils.localizedString("verify_transaction_details_title")
+        self.navBar.leftButton.setTitle(Utils.localizedString("nav_button_back"), for: .normal)
         self.navBar.leftButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
-        self.navBar.rightButton.setTitle(NSLocalizedString("verify_transaction_nav_button_done", comment: ""), for: .normal)
+        self.navBar.rightButton.setTitle(Utils.localizedString("verify_transaction_nav_button_done"), for: .normal)
         self.navBar.rightButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
         self.navBar.rightButton.isHidden = true
         
@@ -75,18 +77,21 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
         textTANContainer.layer.cornerRadius = 8
         textTANContainer.clipsToBounds = true
         textTANContainer.isHidden = true
-        labelTAN.text = NSLocalizedString("labelTAN", comment: "")
+        labelTAN.text = Utils.localizedString("labelTAN")
         labelTAN.adjustsFontSizeToFitWidth = true
+        textTAN.adjustsFontSizeToFitWidth = true
         
         textATCContainer.layer.cornerRadius = 8
         textATCContainer.clipsToBounds = true
         textATCContainer.isHidden = true
-        labelATC.text = NSLocalizedString("labelATC", comment: "")
+        labelATC.text = Utils.localizedString("labelATC")
         labelATC.adjustsFontSizeToFitWidth = true
+        textATC.adjustsFontSizeToFitWidth = true
         
         instructionTAN.adjustsFontSizeToFitWidth = true
         
-        self.confirmButton.setTitle(NSLocalizedString("confirm_transaction_details", comment: ""), for: .normal)
+        confirmButton.setTitle(Utils.localizedString("confirm_transaction_details"), for: .normal)
+        confirmButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         guard let _rawHHDuc = rawHHDuc else {
             self.navigationController?.popViewController(animated: false)
@@ -111,14 +116,14 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
             self.textATCContainer.removeFromSuperview()
             // TODO
         } else{
-            visualisationClass.text = NSLocalizedString("synchronize_tan_generator", comment: "")
+            visualisationClass.text = Utils.localizedString("synchronize_tan_generator")
             // TODO
         }
         
         if (hhduc?.getDataElementTypes().isEmpty)! {
-            instructionTAN.text = NSLocalizedString("verify_transaction_without_details", comment: "")
+            instructionTAN.text = Utils.localizedString("verify_transaction_without_details")
         } else{
-            instructionTAN.text = NSLocalizedString("verify_transaction_with_details", comment: "")
+            instructionTAN.text = Utils.localizedString("verify_transaction_with_details")
         }
         
         
@@ -148,8 +153,8 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
     }
     
     private func showDismissalAlert(){
-        let alert = UIAlertController(title: NSLocalizedString("unsupported_data_format_title", comment: ""), message: NSLocalizedString("unsupported_data_format_message", comment: ""), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("alert_ok", comment: ""), style: .default, handler: { action in
+        let alert = UIAlertController(title: Utils.localizedString("unsupported_data_format_title"), message: Utils.localizedString("unsupported_data_format_message"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Utils.localizedString("alert_ok"), style: .default, handler: { action in
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true, completion: nil)
@@ -166,7 +171,7 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
     }
     
     private func getString(_ name : String) -> String {
-        return NSLocalizedString(name, comment: "")
+        return Utils.localizedString(name)
     }
     
     private func computeTan(token : BankingToken) throws -> Int {
@@ -194,8 +199,8 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
             onTokenSelected()
         } else{
             // No token available
-            let alert = UIAlertController(title: NSLocalizedString("no_tokens_available_title", comment: ""), message: NSLocalizedString("no_tokens_available_message", comment: ""), preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("alert_ok", comment: ""), style: .default, handler: { action in
+            let alert = UIAlertController(title: Utils.localizedString("no_tokens_available_title"), message: Utils.localizedString("no_tokens_available_message"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: Utils.localizedString("alert_ok"), style: .default, handler: { action in
             }))
             self.present(alert, animated: true, completion: nil)
         }
@@ -255,8 +260,8 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
     }
     
     private func showAuthFailedAlert(){
-        let alert = UIAlertController(title: NSLocalizedString("device_auth_failed", comment: ""), message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("alert_ok", comment: ""), style: .default, handler: nil))
+        let alert = UIAlertController(title: Utils.localizedString("device_auth_failed"), message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Utils.localizedString("alert_ok"), style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -278,13 +283,17 @@ class VerifyTransactionDetailsController : UIViewController, UITableViewDataSour
         self.textTAN.text = tan
         self.textTANContainer.popIn()
         
+        self.outputContainerHeight.constant = self.textTANContainer.frame.height + outputElementDistance
+        
         if textATCContainer != nil {
             self.textATC.text = getFormattedTransactionCounter(token: bankingToken!)
             self.textATCContainer.popIn()
+            self.outputContainerHeight.constant = self.textTANContainer.frame.height + outputElementDistance + self.textATCContainer.frame.height + outputElementDistance
         }
         
-        self.confirmButton.isHidden = true
-        self.instructionTAN.isHidden = true
+        self.stickyFooter.isHidden = true
+        self.view.layoutIfNeeded()
+        resetBottomPadding()
         
         self.navBar.leftButton.isHidden = true
         self.navBar.rightButton.isHidden = false
@@ -348,7 +357,9 @@ extension VerifyTransactionDetailsController {
         }
         
         cell.labelLabel?.text = getString(dataElementType: type)
+        cell.labelLabel?.adjustsFontSizeToFitWidth = true
         cell.valueLabel?.text = value
+        cell.valueLabel?.adjustsFontSizeToFitWidth = true
         return cell
     }
     

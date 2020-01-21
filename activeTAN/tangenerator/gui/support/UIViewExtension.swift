@@ -41,5 +41,19 @@ extension UIView {
                         self.alpha = 1
                         self.transform = CGAffineTransform.identity
         })
-    }    
+    }
+    
+    func hide(){
+        self.alpha = 0
+    }
+    
+    func fadeIn() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.alpha = 1
+        })
+    }
+    
+    func constraintWithIdentifier(_ identifier: String) -> NSLayoutConstraint? {
+        return self.constraints.first { $0.identifier == identifier }
+    }
 }

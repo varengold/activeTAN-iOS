@@ -32,7 +32,7 @@ class InitializeTokenContainerController : UINavigationController {
             if checkRequirements() {
                 // Requirements have been fulfilled.
                 // It is unknown why the initialization has failed.
-                _reasonKey = NSLocalizedString("initialization_failed_unknown_reason", comment: "")
+                _reasonKey = Utils.localizedString("initialization_failed_unknown_reason")
             } else {
                 // This method has been called by checkRequirements()
                 // with an appropriate reason.
@@ -41,13 +41,13 @@ class InitializeTokenContainerController : UINavigationController {
         }
         
         let alert = UIAlertController(
-            title: NSLocalizedString("initialization_failed_title", comment: ""),
-            message: NSLocalizedString(_reasonKey, comment: ""),
+            title: Utils.localizedString("initialization_failed_title"),
+            message: Utils.localizedString(_reasonKey),
             preferredStyle: .alert)
         
         if processShouldBeRepeated {
             alert.addAction(UIAlertAction(
-                title: NSLocalizedString("repeat", comment: ""),
+                title: Utils.localizedString("repeat"),
                 style: .default,
                 handler: { action in
                     onRepetition()
@@ -55,7 +55,7 @@ class InitializeTokenContainerController : UINavigationController {
         }
         
         alert.addAction(UIAlertAction(
-            title: NSLocalizedString("alert_cancel", comment: ""),
+            title: Utils.localizedString("alert_cancel"),
             style: .destructive,
             handler: {action in
                 self.leaveInitializationViews()

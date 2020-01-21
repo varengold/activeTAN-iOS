@@ -73,6 +73,7 @@ class MainViewController : BankingQrCodeScannerViewController, BankingQrCodeList
         if BankingTokenRepository.getAllUsable().count == 0 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Welcome")
+            controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: false, completion: nil)
         } else{
             NotificationCenter.default.addObserver(self, selector: #selector(resumeScan), name: .resumeScan, object: nil)
@@ -127,10 +128,10 @@ extension MainViewController {
     
     func onKeyMaterial(hhdkm: [UInt8]) {
         if hhdkm.count >= 1 && KeyMaterialType(rawValue: hhdkm[0])! == KeyMaterialType.LETTER {
-            let alert = UIAlertController(title: NSLocalizedString("additional_letter_qr_code", comment: ""), message: NSLocalizedString("add_additional_token", comment: ""), preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: Utils.localizedString("additional_letter_qr_code"), message: Utils.localizedString("add_additional_token"), preferredStyle: .actionSheet)
             
             alert.addAction(UIAlertAction(
-                title: NSLocalizedString("button_cancel_add_additional_token", comment: ""),
+                title: Utils.localizedString("button_cancel_add_additional_token"),
                 style: .cancel,
                 handler: { action in
                     
@@ -138,7 +139,7 @@ extension MainViewController {
             }))
             
             alert.addAction(UIAlertAction(
-                title: NSLocalizedString("button_continue_add_additional_token", comment: ""),
+                title: Utils.localizedString("button_continue_add_additional_token"),
                 style: .default,
                 handler: { action in
                     
@@ -163,12 +164,12 @@ extension MainViewController {
         print("Invalid banking qr code: \(detailReason)")
         
         let alert = UIAlertController(
-            title: NSLocalizedString("invalid_banking_qr", comment: ""),
+            title: Utils.localizedString("invalid_banking_qr"),
             message: nil,
             preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(
-            title: NSLocalizedString("repeat", comment: ""),
+            title: Utils.localizedString("repeat"),
             style: .default,
             handler: { action in
                 self.startScan()

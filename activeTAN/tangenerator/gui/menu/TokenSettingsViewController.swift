@@ -183,15 +183,15 @@ class TokenSettingsViewController : UITableViewController {
     
     private func deleteTokenAlert(){
         let alert = UIAlertController(
-            title: String.localizedStringWithFormat(NSLocalizedString("message_delete_token_confirmation", comment: "Message delete token")),
+            title: String.localizedStringWithFormat(Utils.localizedString("message_delete_token_confirmation")),
             message: nil,
             preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(
-            title: String.localizedStringWithFormat(NSLocalizedString("button_cancel_delete_token", comment: "Cancel deletion")),
+            title: String.localizedStringWithFormat(Utils.localizedString("button_cancel_delete_token")),
             style: .cancel,
             handler: nil))
         alert.addAction(UIAlertAction(
-            title: String.localizedStringWithFormat(NSLocalizedString("button_confirm_delete_token", comment: "Confirm deletion")),
+            title: String.localizedStringWithFormat(Utils.localizedString("button_confirm_delete_token")),
             style: .destructive,
             handler: { action in
             

@@ -19,23 +19,20 @@
 
 import UIKit
 
-extension UIViewController {
-
-    // Makes navigation bar background completely invisible
-    func hideNavigationBar(){
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+class StickyFooter : UIView {
+    
+    var blurEffectView : UIVisualEffectView?
+    
+    func blurBackground(){
+        blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.prominent))
+        blurEffectView!.frame = self.bounds
+        blurEffectView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(blurEffectView!)
+        self.sendSubviewToBack(blurEffectView!)
     }
     
-    func showNavigationBar(){
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        self.navigationController?.navigationBar.shadowImage = nil
+    func unblurBackground(){
+        blurEffectView?.removeFromSuperview()
     }
     
-    func localizeBackButton(){
-        let backItem = UIBarButtonItem()
-        backItem.title = Utils.localizedString("nav_button_back")
-        self.navigationItem.backBarButtonItem = backItem
-    }
 }

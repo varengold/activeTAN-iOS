@@ -21,8 +21,8 @@ import UIKit
 
 class MenuDetailViewController : UIViewController {
 
+    var textView : UITextView!
     var text: String?
-    var textLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +34,8 @@ class MenuDetailViewController : UIViewController {
     }
     
     private func createTextLabel() {
-        textLabel = UILabel(frame: view.bounds)
-        textLabel.numberOfLines = 0 // multiline text
-        textLabel.lineBreakMode = .byWordWrapping
+        textView = UITextView(frame: view.bounds)
+        textView.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         
         do {
             // Interpret text as html
@@ -63,36 +62,25 @@ class MenuDetailViewController : UIViewController {
             }
             mattrStr.endEditing()
             
-            textLabel.attributedText = mattrStr
+            textView.attributedText = mattrStr
         } catch let error {
             print("Error presenting settings detail view text: \(error)")
             return
         }
         
-        // Add label to view (within ScrollView)
+        textView.isEditable = false
         
-        let scrollView = UIScrollView()
-        scrollView.isScrollEnabled = true
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(textLabel)
-        view.addSubview(scrollView)
+        // Prevent scrolling at this point so that view is always scrolled up when it is displayed. The other case occurred, for example, if view was exited via a link beforehand.
+        textView.isScrollEnabled = false
         
-        let guide = view.safeAreaLayoutGuide
-        NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 0),
-            scrollView.bottomAnchor.constraint(equalToSystemSpacingBelow: guide.bottomAnchor, multiplier: 0),
-            scrollView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: guide.trailingAnchor)
-        ])
-
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
-        let margins = view.layoutMarginsGuide
-        NSLayoutConstraint.activate([
-            textLabel.topAnchor.constraint(equalToSystemSpacingBelow: scrollView.topAnchor, multiplier: 2.0),
-            textLabel.bottomAnchor.constraint(equalToSystemSpacingBelow: scrollView.bottomAnchor, multiplier: 2.0),
-            textLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-            textLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
-        ])
+        // Add label to view
+        view.addSubview(textView)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Enable scrolling
+        textView.isScrollEnabled = true
     }
     
 }

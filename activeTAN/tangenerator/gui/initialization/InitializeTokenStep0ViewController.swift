@@ -39,8 +39,9 @@ class InitializeTokenStep0ViewController : BankingQrCodeScannerViewController{
             fatalError()
         }
         
-        self.titleLabel.text = NSLocalizedString("initialization", comment: "")
-        self.hintLabel.text = NSLocalizedString("scan_letter_qr_code", comment: "")
+        self.titleLabel.text = Utils.localizedString("initialization")
+        self.hintLabel.text = Utils.localizedString("scan_letter_qr_code")
+        self.hintLabel.adjustsFontSizeToFitWidth = true
         
         listener = self
     }
@@ -89,19 +90,19 @@ extension InitializeTokenStep0ViewController : BankingQrCodeListener {
         // Instead of cancelling the ongoing process or restarting the whole process,
         // the user may repeat the portal QR code scanning.
         let alert = UIAlertController(
-            title: NSLocalizedString("initialization_failed_wrong_qr_code", comment: ""),
-            message: NSLocalizedString("scan_letter_qr_code", comment: ""),
+            title: Utils.localizedString("initialization_failed_wrong_qr_code"),
+            message: Utils.localizedString("scan_letter_qr_code"),
             preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(
-            title: NSLocalizedString("repeat", comment: ""),
+            title: Utils.localizedString("repeat"),
             style: .default,
             handler: { action in
                 self.startScan()
         }))
         
         alert.addAction(UIAlertAction(
-            title: NSLocalizedString("alert_cancel", comment: ""),
+            title: Utils.localizedString("alert_cancel"),
             style: .destructive,
             handler: {action in
                 self.initializeTokenContainer.leaveInitializationViews()

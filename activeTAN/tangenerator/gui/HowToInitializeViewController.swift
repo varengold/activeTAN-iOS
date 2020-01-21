@@ -27,7 +27,7 @@ class HowToInitializeViewController : HowToSlidesViewController{
         self.setupSlides()
         super.viewDidLoad()
         
-        self.actionButton.setTitle(NSLocalizedString("next_step", comment: ""), for: .normal)
+        self.actionButton.setTitle(Utils.localizedString("next_step"), for: .normal)
         
         self.rightBarButton.title = Utils.localizedString("nav_button_back")
     }

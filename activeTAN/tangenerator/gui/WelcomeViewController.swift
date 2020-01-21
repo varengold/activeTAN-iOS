@@ -21,7 +21,7 @@ import UIKit
 import SPStorkController
 
 
-class WelcomeViewController : UIViewController{
+class WelcomeViewController : ScrollStickyFooterViewController{
     
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var subtitleLabel : UILabel!
@@ -37,15 +37,15 @@ class WelcomeViewController : UIViewController{
         self.navigationItem.largeTitleDisplayMode = .never
         self.navigationController?.navigationBar.prefersLargeTitles = false
         
-        titleLabel.text = NSLocalizedString("welcome_title", comment: "")
-        subtitleLabel.text = NSLocalizedString("welcome_subtitle", comment:"")
+        titleLabel.text = Utils.localizedString("welcome_title")
+        subtitleLabel.text = Utils.localizedString("welcome_subtitle")
         subtitleLabel.adjustsFontSizeToFitWidth = true
-        instructionLabel.text = NSLocalizedString("welcome_start_activation_instruction", comment: "")
-        
+        instructionLabel.text = Utils.localizedString("welcome_start_activation_instruction")
+        instructionLabel.adjustsFontSizeToFitWidth = true
         menuButton.setTitle(Utils.localizedString("welcome_menu"), for: .normal)
-        
-        actionButton.setTitle(NSLocalizedString("welcome_start_activation_start", comment: ""), for: .normal)
-        
+        menuButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        actionButton.setTitle(Utils.localizedString("welcome_start_activation_start"), for: .normal)
+        actionButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     @IBAction func goMenu(sender : UIButton){

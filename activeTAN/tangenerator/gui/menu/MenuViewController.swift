@@ -178,32 +178,32 @@ class MenuViewController : UITableViewController{
         
         let slide0 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide0.imageView.image = UIImage(named: "activation_0")
-        slide0.headlineLabel.text = NSLocalizedString("instructionStep0", comment: "")
-        slide0.descriptionLabel.text = NSLocalizedString("instructionGoToTanAdmin", comment: "")
+        slide0.headlineLabel.text = Utils.localizedString("instructionStep0")
+        slide0.descriptionLabel.text = Utils.localizedString("instructionGoToTanAdmin")
         slides.append(slide0)
         
         let slide1 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide1.imageView.image = UIImage(named: "activation_1")
-        slide1.headlineLabel.text = NSLocalizedString("instructionStep1", comment: "")
-        slide1.descriptionLabel.text = NSLocalizedString("instructionScanLetter", comment: "")
+        slide1.headlineLabel.text = Utils.localizedString("instructionStep1")
+        slide1.descriptionLabel.text = Utils.localizedString("instructionScanLetter")
         slides.append(slide1)
         
         let slide2 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide2.imageView.image = UIImage(named: "activation_2")
-        slide2.headlineLabel.text = NSLocalizedString("instructionStep2", comment: "")
-        slide2.descriptionLabel.text = NSLocalizedString("instructionEnterSerial", comment: "")
+        slide2.headlineLabel.text = Utils.localizedString("instructionStep2")
+        slide2.descriptionLabel.text = Utils.localizedString("instructionEnterSerial")
         slides.append(slide2)
         
         let slide3 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide3.imageView.image = UIImage(named: "activation_3")
-        slide3.headlineLabel.text = NSLocalizedString("instructionStep3", comment: "")
-        slide3.descriptionLabel.text = NSLocalizedString("instructionScanQrScreen", comment: "")
+        slide3.headlineLabel.text = Utils.localizedString("instructionStep3")
+        slide3.descriptionLabel.text = Utils.localizedString("instructionScanQrScreen")
         slides.append(slide3)
         
         let slide4 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide4.imageView.image = UIImage(named: "activation_4")
-        slide4.headlineLabel.text = NSLocalizedString("instructionStep4", comment: "")
-        slide4.descriptionLabel.text = NSLocalizedString("instructionEnterStartTan", comment: "")
+        slide4.headlineLabel.text = Utils.localizedString("instructionStep4")
+        slide4.descriptionLabel.text = Utils.localizedString("instructionEnterStartTan")
         slides.append(slide4)
         
         return slides
@@ -214,26 +214,26 @@ class MenuViewController : UITableViewController{
         
         let slide0 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide0.imageView.image = UIImage(named: "usage_0")
-        slide0.headlineLabel.text = NSLocalizedString("instructionStep0", comment: "")
-        slide0.descriptionLabel.text = NSLocalizedString("instructionEnterOrder", comment: "")
+        slide0.headlineLabel.text = Utils.localizedString("instructionStep0")
+        slide0.descriptionLabel.text = Utils.localizedString("instructionEnterOrder")
         slides.append(slide0)
         
         let slide1 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide1.imageView.image = UIImage(named: "usage_1")
-        slide1.headlineLabel.text = NSLocalizedString("instructionStep1", comment: "")
-        slide1.descriptionLabel.text = NSLocalizedString("instructionScanQrScreen", comment: "")
+        slide1.headlineLabel.text = Utils.localizedString("instructionStep1")
+        slide1.descriptionLabel.text = Utils.localizedString("instructionScanQrScreen")
         slides.append(slide1)
         
         let slide2 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide2.imageView.image = UIImage(named: "usage_2")
-        slide2.headlineLabel.text = NSLocalizedString("instructionStep2", comment: "")
-        slide2.descriptionLabel.text = NSLocalizedString("instructionCheckOrder", comment: "")
+        slide2.headlineLabel.text = Utils.localizedString("instructionStep2")
+        slide2.descriptionLabel.text = Utils.localizedString("instructionCheckOrder")
         slides.append(slide2)
         
         let slide3 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide3.imageView.image = UIImage(named: "usage_3")
-        slide3.headlineLabel.text = NSLocalizedString("instructionStep3", comment: "")
-        slide3.descriptionLabel.text = NSLocalizedString("instructionEnterTan", comment: "")
+        slide3.headlineLabel.text = Utils.localizedString("instructionStep3")
+        slide3.descriptionLabel.text = Utils.localizedString("instructionEnterTan")
         slides.append(slide3)
         
         return slides

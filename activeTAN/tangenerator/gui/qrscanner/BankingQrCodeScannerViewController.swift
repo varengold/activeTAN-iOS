@@ -40,8 +40,8 @@ class BankingQrCodeScannerViewController : UIViewController {
         setupQRCapture()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupScanView()
         applyRectOfInterest()
     }

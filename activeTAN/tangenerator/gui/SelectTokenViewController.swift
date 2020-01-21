@@ -37,11 +37,11 @@ class SelectTokenViewController : UIViewController, UIPickerViewDelegate, UIPick
         self.tokenPicker.dataSource = self
         
         self.navBar.addStatusBarHeight = false
-        self.navBar.titleLabel.text = NSLocalizedString("choose_token_title", comment: "")
+        self.navBar.titleLabel.text = Utils.localizedString("choose_token_title")
         
         self.navBar.leftButton.setTitle("Zurück", for: .normal)
         self.navBar.leftButton.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-        self.navBar.rightButton.setTitle(NSLocalizedString("choose_token_done", comment: ""), for: .normal)
+        self.navBar.rightButton.setTitle(Utils.localizedString("choose_token_done"), for: .normal)
         self.navBar.rightButton.addTarget(self, action: #selector(self.selectToken), for: .touchUpInside)
         
         self.view.addSubview(self.navBar)

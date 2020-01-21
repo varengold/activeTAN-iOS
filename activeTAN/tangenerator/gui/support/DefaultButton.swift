@@ -32,22 +32,11 @@ class DefaultButton : UIButton {
     
     // custom styles for default button
     private func style(){
-        //self.backgroundColor = UIColor.blue
         self.setBackgroundColor(color: Utils.color(key: "action"), forState: .normal)
         self.setTitleColor(UIColor.white, for: .normal)
         self.layer.cornerRadius = 8
         self.clipsToBounds = true
         self.contentEdgeInsets = UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: (self.titleLabel?.font.pointSize)!)
-    }
-    
-    func hide(){
-        self.alpha = 0
-    }
-    
-    func fadeIn() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.alpha = 1
-        })
     }
 }
