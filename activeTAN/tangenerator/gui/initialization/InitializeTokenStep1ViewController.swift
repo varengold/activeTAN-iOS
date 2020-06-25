@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -83,17 +83,6 @@ class InitializeTokenStep1ViewController : ScrollStickyFooterViewController{
         self.actionButton.setTitle(Utils.localizedString("next_step"), for: .normal)
         
         doStartProcess()
-    }
-    
-    func showActivityIndicatory(view: UIView) {
-        let indicator: UIActivityIndicatorView = UIActivityIndicatorView()
-        indicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0);
-        indicator.center = view.center
-        indicator.hidesWhenStopped = true
-        indicator.style =
-            UIActivityIndicatorView.Style.gray
-        view.addSubview(indicator)
-        indicator.startAnimating()
     }
     
     @IBAction func onStep1Continue(sender: UIButton){

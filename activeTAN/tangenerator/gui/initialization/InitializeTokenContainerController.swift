@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -21,7 +21,7 @@ import UIKit
 import LocalAuthentication
 import AVFoundation
 
-class InitializeTokenContainerController : UINavigationController {
+class InitializeTokenContainerController : StyledNavigationController {
     var keyComponents : BankingKeyComponents?
     var letterNumber : Int?
     var tokenId : String?

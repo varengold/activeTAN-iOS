@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -22,8 +22,17 @@ import UIKit
 
 class Utils {
     
-    public static func color(key: String) -> UIColor {
-        if let property = readPlist(plist: "Colors", key: key) {
+    public static func color(key: String, traitCollection: UITraitCollection) -> UIColor {
+        let _key : String
+        
+        // If version >= 13, respect dark mode settings
+        if #available(iOS 13.0, *), traitCollection.userInterfaceStyle == .dark {
+                _key = "dark_mode_" + key
+        } else {
+            _key = "light_mode_" + key
+        }
+        
+        if let property = readPlist(plist: "Colors", key: _key) {
             return UIColor.init(hex: property)!
         }
         return UIColor.clear

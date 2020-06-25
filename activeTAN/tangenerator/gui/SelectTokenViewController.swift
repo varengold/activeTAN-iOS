@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -31,8 +31,6 @@ class SelectTokenViewController : UIViewController, UIPickerViewDelegate, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.white
-        
         self.tokenPicker.delegate = self
         self.tokenPicker.dataSource = self
         
@@ -44,9 +42,26 @@ class SelectTokenViewController : UIViewController, UIPickerViewDelegate, UIPick
         self.navBar.rightButton.setTitle(Utils.localizedString("choose_token_done"), for: .normal)
         self.navBar.rightButton.addTarget(self, action: #selector(self.selectToken), for: .touchUpInside)
         
+        // If version >= 13, respect dark mode settings
+        if #available(iOS 13.0, *), traitCollection.userInterfaceStyle == .dark {
+            self.navBar.backgroundColor = .systemGray3
+            self.navBar.separatorView.backgroundColor = .systemBackground
+        }
+
+        userInterfaceStyleDependantStyling()
+        
         self.view.addSubview(self.navBar)
     }
 
+    private func userInterfaceStyleDependantStyling(){
+        self.navBar.elementsColor = Utils.color(key: "accent", traitCollection: self.traitCollection)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        userInterfaceStyleDependantStyling()
+    }
+    
     @objc func back(){
         self.dismiss(animated: true, completion: nil)
     }

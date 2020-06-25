@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -46,13 +46,23 @@ class WelcomeViewController : ScrollStickyFooterViewController{
         menuButton.titleLabel?.adjustsFontSizeToFitWidth = true
         actionButton.setTitle(Utils.localizedString("welcome_start_activation_start"), for: .normal)
         actionButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        userInterfaceStyleDependantStyling()
+    }
+    
+    private func userInterfaceStyleDependantStyling(){
+        menuButton.tintColor = Utils.color(key: "accent", traitCollection: self.traitCollection)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        userInterfaceStyleDependantStyling()
     }
     
     @IBAction func goMenu(sender : UIButton){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Menu") as! MenuViewController
 
-        let nc = UINavigationController(rootViewController: controller)
+        let nc = StyledNavigationController(rootViewController: controller)
         
         let transitionDelegate = SPStorkTransitioningDelegate()
         nc.transitioningDelegate = transitionDelegate

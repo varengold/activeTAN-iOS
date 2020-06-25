@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -32,11 +32,20 @@ class DefaultButton : UIButton {
     
     // custom styles for default button
     private func style(){
-        self.setBackgroundColor(color: Utils.color(key: "action"), forState: .normal)
+        userInterfaceStyleDependantStyling()
         self.setTitleColor(UIColor.white, for: .normal)
         self.layer.cornerRadius = 8
         self.clipsToBounds = true
         self.contentEdgeInsets = UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: (self.titleLabel?.font.pointSize)!)
+    }
+    
+    private func userInterfaceStyleDependantStyling(){
+        self.setBackgroundColor(color: Utils.color(key: "action", traitCollection: self.traitCollection), forState: .normal)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        userInterfaceStyleDependantStyling()
     }
 }

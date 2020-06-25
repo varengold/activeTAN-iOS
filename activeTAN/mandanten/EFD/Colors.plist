@@ -2,9 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>action</key>
+	<key>light_mode_action</key>
 	<string>3295D2</string>
-	<key>accent</key>
+	<key>dark_mode_action</key>
+	<string>3295D2</string>
+	<key>light_mode_accent</key>
+	<string>3295D2</string>
+	<key>dark_mode_accent</key>
 	<string>3295D2</string>
 </dict>
 </plist>

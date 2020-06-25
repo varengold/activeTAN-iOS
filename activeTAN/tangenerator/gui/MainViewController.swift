@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -86,8 +86,10 @@ class MainViewController : BankingQrCodeScannerViewController, BankingQrCodeList
         
         if AVCaptureDevice.authorizationStatus(for: .video) !=  .authorized {
             cameraAccessInformation.isHidden = false
+            scanImage.isHidden = true
         } else{
             self.startScan()
+            scanImage.isHidden = false
         }
     }
     

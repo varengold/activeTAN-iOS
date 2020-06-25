@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -30,10 +30,11 @@ class MenuDetailViewController : UIViewController {
         self.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
-        createTextLabel()
+        createTextView()
+        userInterfaceStyleDependantStyling()
     }
     
-    private func createTextLabel() {
+    private func createTextView() {
         textView = UITextView(frame: view.bounds)
         textView.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         
@@ -63,6 +64,11 @@ class MenuDetailViewController : UIViewController {
             mattrStr.endEditing()
             
             textView.attributedText = mattrStr
+            if #available(iOS 13.0, *) {
+                textView.textColor = .label
+            } else {
+                textView.textColor = .darkText
+            }
         } catch let error {
             print("Error presenting settings detail view text: \(error)")
             return
@@ -75,6 +81,15 @@ class MenuDetailViewController : UIViewController {
         
         // Add label to view
         view.addSubview(textView)
+    }
+    
+    private func userInterfaceStyleDependantStyling(){
+        textView.linkTextAttributes = [NSAttributedString.Key.foregroundColor: Utils.color(key: "accent", traitCollection: self.traitCollection)]
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        userInterfaceStyleDependantStyling()
     }
     
     override func viewDidAppear(_ animated: Bool) {

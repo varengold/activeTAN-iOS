@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
+// Copyright (c) 2019-2020 EFDIS AG Bankensoftware, Freising <info@efdis.de>.
 //
 // This file is part of the activeTAN app for iOS.
 //
@@ -57,12 +57,16 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.white
-        
         self.visualisationClass.adjustsFontSizeToFitWidth = true
         
         self.dataElementsTable.layer.borderWidth = 1
-        self.dataElementsTable.layer.borderColor = UIColor.init(hex: "DDDDDD")?.cgColor
+        if #available(iOS 13.0, *) {
+            self.dataElementsTable.layer.borderColor = UIColor.systemGray4.cgColor
+            self.dataElementsTable.separatorColor = UIColor.systemGray4
+        } else {
+            self.dataElementsTable.layer.borderColor = UIColor.init(hex: "DDDDDD")?.cgColor
+            self.dataElementsTable.separatorColor = UIColor.init(hex: "DDDDDD")
+        }
         self.dataElementsTable.layer.cornerRadius = 8
         
         self.topConstraint.constant = self.navBar.height + self.topConstraint.constant
@@ -73,6 +77,14 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
         self.navBar.rightButton.setTitle(Utils.localizedString("verify_transaction_nav_button_done"), for: .normal)
         self.navBar.rightButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
         self.navBar.rightButton.isHidden = true
+        
+        // If version >= 13, respect dark mode settings
+        if #available(iOS 13.0, *), traitCollection.userInterfaceStyle == .dark {
+            self.navBar.backgroundColor = .systemGray3
+            self.navBar.separatorView.backgroundColor = .systemBackground
+        }
+        
+        userInterfaceStyleDependantStyling()
         
         view.addSubview(self.navBar)
         
@@ -144,6 +156,15 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
         super.viewWillAppear(animated)
         NotificationCenter.default.removeObserver(self, name: .tokenSelected, object: nil)
         NotificationCenter.default.post(name: .resumeScan, object: nil)
+    }
+    
+    private func userInterfaceStyleDependantStyling(){
+        self.navBar.elementsColor = Utils.color(key: "accent", traitCollection: self.traitCollection)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        userInterfaceStyleDependantStyling()
     }
     
     @objc func setToken(_ notification: Notification){
