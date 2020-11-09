@@ -18,7 +18,6 @@
 //
 
 import UIKit
-import SPStorkController
 import AVFoundation
 
 /*
@@ -75,9 +74,6 @@ class MainViewController : BankingQrCodeScannerViewController, BankingQrCodeList
             let controller = storyboard.instantiateViewController(withIdentifier: "Welcome")
             controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: false, completion: nil)
-        } else{
-            NotificationCenter.default.addObserver(self, selector: #selector(resumeScan), name: .resumeScan, object: nil)
-            startScan()
         }
     }
     
@@ -88,15 +84,16 @@ class MainViewController : BankingQrCodeScannerViewController, BankingQrCodeList
             cameraAccessInformation.isHidden = false
             scanImage.isHidden = true
         } else{
+            NotificationCenter.default.addObserver(self, selector: #selector(resumeScan), name: .resumeScan, object: nil)
             self.startScan()
             scanImage.isHidden = false
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: .resumeScan, object: nil)
-        isScanning = false
+        self.stopScan()
     }
 
     @objc func resumeScan(){
@@ -112,17 +109,9 @@ extension MainViewController {
             removeBackgroundForegroundNotifications()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            let controller = storyboard.instantiateViewController(withIdentifier: "VerifyTransactionDetails") as! VerifyTransactionDetailsController
+            let controller = storyboard.instantiateViewController(withIdentifier: "VerifyTransactionDetailsNavigationController") as! UINavigationController
             
-            controller.rawHHDuc = hhduc
-            
-            let transitionDelegate = SPStorkTransitioningDelegate()
-            transitionDelegate.hideIndicatorWhenScroll = true
-            transitionDelegate.tapAroundToDismissEnabled = false
-            transitionDelegate.hapticMoments = [.willPresent, .willDismissIfRelease]
-            controller.transitioningDelegate = transitionDelegate
-            controller.modalPresentationStyle = .custom
-            controller.modalPresentationCapturesStatusBarAppearance = true
+            (controller.viewControllers[0] as! VerifyTransactionDetailsController).rawHHDuc = hhduc
             
             self.present(controller, animated: true, completion: nil)
         

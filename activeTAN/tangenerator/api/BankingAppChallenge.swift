@@ -17,20 +17,18 @@
 // along with the activeTAN app.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-extension BankingToken {
-    func displayName() -> String{
-        if let _name = name, !_name.isEmpty {
-            return _name
-        }
-        return formattedSerialNumber()
-    }
-    
-    func formattedSerialNumber() -> String {
-        return Utils.formatSerialNumber(serialNumber: id!)
-    }
-    
-    static func parseFormattedSerialNumber(formattedSerialNumber : String) -> String {
-        return formattedSerialNumber.replacingOccurrences(of: "-", with: "")
-    }
+import Foundation
 
+struct BankingAppChallenge : Codable {
+    let qrCode : String
+    var tanMediaDescriptions : [String]
+    var status : BankingAppChallengeStatus
+    var tan : String?
+    var atc : Int32?
+}
+
+enum BankingAppChallengeStatus : String, Codable{
+    case pending
+    case released
+    case declined
 }

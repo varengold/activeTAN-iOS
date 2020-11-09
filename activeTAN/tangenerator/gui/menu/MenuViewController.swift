@@ -24,6 +24,8 @@ class MenuViewController : UITableViewController{
     var sections : [MenuSection]?
     var tokens : [BankingToken]?
     
+    var presentedModally : Bool = false
+    
     var manualMenuElements = [
         // Initialization
         MenuElement(
@@ -70,6 +72,7 @@ class MenuViewController : UITableViewController{
         self.title = Utils.localizedString("menu_title")
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadTokens), name: .reloadTokens, object: nil)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,6 +82,13 @@ class MenuViewController : UITableViewController{
         
         // Refresh view after returning from subsequent controllers which modify the data
         tableView.reloadData()
+        
+        if presentingViewController is WelcomeViewController {
+            self.presentedModally = true
+            self.showModalDismissButton()
+        } else{
+            self.presentedModally = false
+        }
     }
     
     @objc func loadTokens(){
@@ -161,12 +171,18 @@ class MenuViewController : UITableViewController{
                 let controller = storyboard.instantiateViewController(withIdentifier: "MenuHowToSlides") as! MenuHowToSlidesController
                 controller.title = menuElement.title
                 controller.slides = menuElement.slides!
+                if presentedModally {
+                    controller.showModalDismissButton()
+                }
                 self.navigationController!.pushViewController(controller, animated: true)
             } else{
                 // Default text view
                 let controller = storyboard.instantiateViewController(withIdentifier: "MenuDetailView") as! MenuDetailViewController
                 controller.title = menuElement.title
                 controller.text = menuElement.text
+                if presentedModally {
+                    controller.showModalDismissButton()
+                }
                 self.navigationController!.pushViewController(controller, animated: true)
             }
         }
@@ -238,7 +254,7 @@ class MenuViewController : UITableViewController{
         
         return slides
     }
-    
+        
     enum MenuSectionType {
         case coupledAccounts
         case staticViews

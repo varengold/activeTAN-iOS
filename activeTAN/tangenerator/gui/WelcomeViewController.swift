@@ -18,8 +18,6 @@
 //
 
 import UIKit
-import SPStorkController
-
 
 class WelcomeViewController : ScrollStickyFooterViewController{
     
@@ -61,14 +59,8 @@ class WelcomeViewController : ScrollStickyFooterViewController{
     @IBAction func goMenu(sender : UIButton){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Menu") as! MenuViewController
-
-        let nc = StyledNavigationController(rootViewController: controller)
         
-        let transitionDelegate = SPStorkTransitioningDelegate()
-        nc.transitioningDelegate = transitionDelegate
-        nc.modalPresentationStyle = .custom
-        nc.modalPresentationCapturesStatusBarAppearance = true
-        transitionDelegate.showCloseButton = true
+        let nc = StyledNavigationController(rootViewController: controller)
         
         self.present(nc, animated: true, completion: nil)
 

@@ -6,5 +6,7 @@
 	<string>https://efdis-online.de/OnlineBankingWebfrontend/api/activeTAN/</string>
 	<key>backend_api_url_qs</key>
 	<string>https://dailybuild.efdis-online.de/OnlineBankingWebfrontend/api/activeTAN/</string>
+	<key>BANKING_APP_URL_SCHEME</key>
+	<string>activeTAN-response-EFD</string>
 </dict>
 </plist>

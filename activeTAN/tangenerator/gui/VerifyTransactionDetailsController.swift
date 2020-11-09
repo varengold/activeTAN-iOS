@@ -18,8 +18,6 @@
 //
 
 import UIKit
-import SPStorkController
-import SPFakeBar
 import LocalAuthentication
 
 class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UITableViewDataSource, UITableViewDelegate {
@@ -30,7 +28,13 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
     // The selected TAN generator for TAN computation
     private var bankingToken : BankingToken?
     
-    @IBOutlet weak var topConstraint : NSLayoutConstraint!
+    // Flag, indicating whether this view controller has been started from the BankingAppApi.
+    // If yes, the generated TAN will be returned to the caller instead of being displayed.
+    private var startedFromApi : Bool?
+    var bankingAppApi : BankingAppApi?
+    
+    var usableTokens : [BankingToken]?
+    
     @IBOutlet weak var instructionTAN : UILabel!
     @IBOutlet weak var visualisationClass : UILabel!
     @IBOutlet weak var labelTAN : UILabel!
@@ -46,8 +50,6 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
     @IBOutlet weak var outputContainerHeight : NSLayoutConstraint!
     private let outputElementDistance = CGFloat(30)
     
-    let navBar = SPFakeBarView(style: .stork)
-    
     private final let ibanTypes : [DataElementType] = [.ibanOwn, .ibanSender, .ibanRecipient, .ibanPayer]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -56,7 +58,7 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         self.visualisationClass.adjustsFontSizeToFitWidth = true
         
         self.dataElementsTable.layer.borderWidth = 1
@@ -69,24 +71,20 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
         }
         self.dataElementsTable.layer.cornerRadius = 8
         
-        self.topConstraint.constant = self.navBar.height + self.topConstraint.constant
+        startedFromApi = (self.presentingViewController is BankingAppApi)
         
-        self.navBar.titleLabel.text = Utils.localizedString("verify_transaction_details_title")
-        self.navBar.leftButton.setTitle(Utils.localizedString("nav_button_back"), for: .normal)
-        self.navBar.leftButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
-        self.navBar.rightButton.setTitle(Utils.localizedString("verify_transaction_nav_button_done"), for: .normal)
-        self.navBar.rightButton.addTarget(self, action: #selector(self.dismissAction), for: .touchUpInside)
-        self.navBar.rightButton.isHidden = true
-        
-        // If version >= 13, respect dark mode settings
-        if #available(iOS 13.0, *), traitCollection.userInterfaceStyle == .dark {
-            self.navBar.backgroundColor = .systemGray3
-            self.navBar.separatorView.backgroundColor = .systemBackground
+        if startedFromApi! {
+            bankingAppApi = (self.presentingViewController as! BankingAppApi)
+            self.title = (Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String)
+            let leftButton = UIBarButtonItem(image: UIImage(systemName: "qrcode.viewfinder"), style: .plain, target: self, action: #selector(self.cancelApiCall))
+            self.navigationItem.leftBarButtonItem  = leftButton
+            NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackgroundAfterApiCall), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        } else {
+            self.title = Utils.localizedString("verify_transaction_details_title")
+            let leftButton = UIBarButtonItem(title: Utils.localizedString("nav_button_back"), style: .plain, target: self, action: #selector(self.dismissAction))
+            self.navigationItem.leftBarButtonItem  = leftButton
+            usableTokens = BankingTokenRepository.getAllUsable()
         }
-        
-        userInterfaceStyleDependantStyling()
-        
-        view.addSubview(self.navBar)
         
         textTANContainer.layer.cornerRadius = 8
         textTANContainer.clipsToBounds = true
@@ -156,15 +154,14 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
         super.viewWillAppear(animated)
         NotificationCenter.default.removeObserver(self, name: .tokenSelected, object: nil)
         NotificationCenter.default.post(name: .resumeScan, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
     
-    private func userInterfaceStyleDependantStyling(){
-        self.navBar.elementsColor = Utils.color(key: "accent", traitCollection: self.traitCollection)
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        userInterfaceStyleDependantStyling()
+    @objc func didEnterBackgroundAfterApiCall(){
+        print("App did enter background after API call.")
+        self.dismiss(animated: false, completion: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(bankingAppApi!, selector: #selector(bankingAppApi!.onRestart), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
     @objc func setToken(_ notification: Notification){
@@ -174,9 +171,13 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
         onTokenSelected()
     }
     
-    
     @objc func dismissAction(){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func cancelApiCall(){
+        print("API call canceled by user")
+        bankingAppApi!.onDeclined()
     }
     
     private func showDismissalAlert(){
@@ -215,14 +216,12 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
     }
     
     @IBAction func confirmButtonAction(_ sender: UIButton){
-        let usableTokens = BankingTokenRepository.getAllUsable()
-        
-        if usableTokens.count > 1 {
+        if usableTokens!.count > 1 {
             // Select token to use
-            goSelectToken(tokens: usableTokens)
-        } else if usableTokens.count == 1{
+            goSelectToken(tokens: usableTokens!)
+        } else if usableTokens!.count == 1{
             // Use only existing token
-            bankingToken = usableTokens.first
+            bankingToken = usableTokens!.first
             onTokenSelected()
         } else{
             // No token available
@@ -236,21 +235,15 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
     private func goSelectToken(tokens : [BankingToken]){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
-        let controller = storyboard.instantiateViewController(withIdentifier: "SelectToken") as! SelectTokenViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "SelectTokenNavigationController") as! UINavigationController
 
-        controller.tokens = tokens
-        
-        let transitionDelegate = SPStorkTransitioningDelegate()
-        transitionDelegate.hideIndicatorWhenScroll = true
-        transitionDelegate.tapAroundToDismissEnabled = false
-        transitionDelegate.hapticMoments = [.willPresent, .willDismissIfRelease]
-        transitionDelegate.customHeight = 250
-        transitionDelegate.showIndicator = false
-        transitionDelegate.swipeToDismissEnabled = false
-        controller.transitioningDelegate = transitionDelegate
+        (controller.viewControllers[0] as! SelectTokenViewController).tokens = tokens
+
+        let transitionDelegate = PartialModalTransitioningDelegate()
         controller.modalPresentationStyle = .custom
-        controller.modalPresentationCapturesStatusBarAppearance = true
-
+        controller.modalTransitionStyle = .coverVertical
+        controller.transitioningDelegate = transitionDelegate
+        
         self.present(controller, animated: true, completion: nil)
     }
     
@@ -307,6 +300,49 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
             return
         }
         
+        if startedFromApi! {
+            // When called from the banking app, we do not show the TAN, but return it to the caller
+            returnTan(tan: tan)
+        } else{
+            showTan(tan: tan)
+        }
+    }
+    
+    private func returnTan(tan : String){
+        bankingAppApi!.tanGeneratorId = bankingToken!.id
+        bankingAppApi!.tan = tan
+        if textATCContainer != nil {
+            bankingAppApi!.atc = bankingToken!.transactionCounter
+        }
+        
+        if BankingTokenRepository.isExhausted(bankingToken: bankingToken!) || BankingTokenRepository.isSoonExhausted(bankingToken: bankingToken!){
+            // We need to show a warning before returning to the banking app.
+            // This warning would usually be displayed below the TAN,
+            // but since we return to the banking app immediately it would be not visible.
+            // This, we use a dialog instead.
+            
+            let title = BankingTokenRepository.isExhausted(bankingToken: bankingToken!) ? Utils.localizedString("exhausted_generator_label") : Utils.localizedString("soon_exhausted_generator_label")
+            let message = BankingTokenRepository.isExhausted(bankingToken: bankingToken!) ? Utils.localizedString("exhausted_generator_description") : Utils.localizedString("soon_exhausted_generator_description")
+            
+            let alert = UIAlertController(
+                title: title,
+                message: message,
+                preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(
+                title: Utils.localizedString("ok"),
+                style: .default,
+                handler: { action in
+                    self.bankingAppApi!.onChallengeResult()
+            }))
+            
+            self.present(alert, animated: true)
+        } else{
+            bankingAppApi!.onChallengeResult()
+        }
+    }
+    
+    private func showTan(tan : String){
         self.textTAN.text = tan
         self.textTANContainer.popIn()
         self.outputContainerHeight.constant = self.textTANContainer.frame.height + outputElementDistance
@@ -331,8 +367,10 @@ class VerifyTransactionDetailsController : ScrollStickyFooterViewController, UIT
         self.view.layoutIfNeeded()
         resetBottomPadding()
         
-        self.navBar.leftButton.isHidden = true
-        self.navBar.rightButton.isHidden = false
+        // Show/hide buttons in navigation bar
+        self.navigationItem.setLeftBarButtonItems(nil, animated: true)
+        let rightButton = UIBarButtonItem(title: Utils.localizedString("verify_transaction_nav_button_done"), style: .plain, target: self, action: #selector(self.dismissAction))
+        self.navigationItem.rightBarButtonItem  = rightButton
     }
 
 }

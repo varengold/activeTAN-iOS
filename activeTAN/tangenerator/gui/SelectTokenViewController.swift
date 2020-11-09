@@ -18,13 +18,10 @@
 //
 
 import UIKit
-import SPFakeBar
 
 class SelectTokenViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     
     @IBOutlet weak var tokenPicker : UIPickerView!
-    
-    let navBar = SPFakeBarView(style: .small)
     
     var tokens : [BankingToken]?
     
@@ -34,32 +31,14 @@ class SelectTokenViewController : UIViewController, UIPickerViewDelegate, UIPick
         self.tokenPicker.delegate = self
         self.tokenPicker.dataSource = self
         
-        self.navBar.addStatusBarHeight = false
-        self.navBar.titleLabel.text = Utils.localizedString("choose_token_title")
+        self.title = Utils.localizedString("choose_token_title")
         
-        self.navBar.leftButton.setTitle("Zurück", for: .normal)
-        self.navBar.leftButton.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-        self.navBar.rightButton.setTitle(Utils.localizedString("choose_token_done"), for: .normal)
-        self.navBar.rightButton.addTarget(self, action: #selector(self.selectToken), for: .touchUpInside)
+        let leftButton = UIBarButtonItem(title: Utils.localizedString("nav_button_back"), style: .plain, target: self, action: #selector(self.back))
+        self.navigationItem.leftBarButtonItem  = leftButton
         
-        // If version >= 13, respect dark mode settings
-        if #available(iOS 13.0, *), traitCollection.userInterfaceStyle == .dark {
-            self.navBar.backgroundColor = .systemGray3
-            self.navBar.separatorView.backgroundColor = .systemBackground
-        }
-
-        userInterfaceStyleDependantStyling()
+        let rightButton = UIBarButtonItem(title: Utils.localizedString("choose_token_done"), style: .plain, target: self, action: #selector(self.selectToken))
+        self.navigationItem.rightBarButtonItem  = rightButton
         
-        self.view.addSubview(self.navBar)
-    }
-
-    private func userInterfaceStyleDependantStyling(){
-        self.navBar.elementsColor = Utils.color(key: "accent", traitCollection: self.traitCollection)
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        userInterfaceStyleDependantStyling()
     }
     
     @objc func back(){

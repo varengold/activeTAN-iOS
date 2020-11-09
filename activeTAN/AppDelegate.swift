@@ -24,6 +24,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    weak var scannerNavigation : UIViewController?
     
     lazy var persistentContainer: NSPersistentContainer = {
         
@@ -39,17 +40,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        if BankingTokenRepository.getAllUsable().count == 0 {
-            let controller = storyboard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController
-            self.window?.rootViewController = controller
-        }else{
-            let controller = storyboard.instantiateViewController(withIdentifier: "ScannerNavigation")
-            self.window?.rootViewController = controller
-        }
+        self.window?.rootViewController = initialViewController()
         
         return true
+    }
+    
+    func initialViewController() -> UIViewController{
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if BankingTokenRepository.getAllUsable().count == 0 {
+            return storyboard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController
+        }else{
+            // ScannerNavigation should only be instantiated once to avoid multiple registration of observers.
+            if scannerNavigation == nil{
+                scannerNavigation = storyboard.instantiateViewController(withIdentifier: "ScannerNavigation")
+            }
+            return scannerNavigation!
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -74,6 +80,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // Entry point for app when accessed via URL scheme by banking app for TAN generation.
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BankingAppApi") as! BankingAppApi
+        controller.fileName = url.host?.removingPercentEncoding
+        self.window?.rootViewController = controller
+            
+        return true
+    }
 
 }
 

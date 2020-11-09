@@ -38,4 +38,12 @@ extension UIViewController {
         backItem.title = Utils.localizedString("nav_button_back")
         self.navigationItem.backBarButtonItem = backItem
     }
+    
+    func showModalDismissButton(){
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(dismissModal))
+    }
+    
+    @objc func dismissModal(){
+        self.dismiss(animated: true, completion: nil)
+    }
 }

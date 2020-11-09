@@ -57,32 +57,39 @@ class BankingQrCodeScannerViewController : UIViewController {
         removeBackgroundForegroundNotifications()
     }
     
-    @objc func startScan(){
+    func startScan(){
         print("Start scan")
-        DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
-            guard let weakSelf = self else { return }
-            weakSelf.isScanning = true
-            weakSelf.capture?.start()
-        }
+        capture?.start()
+        isScanning = true
     }
     
-    @objc func stopScan(){
+    func stopScan(){
         print("Stop scan")
         capture?.stop()
         isScanning = false
     }
     
+    @objc func didEnterBackground(){
+        print("App did enter background")
+        stopScan()
+    }
+    
+    @objc func willEnterForeground(){
+        print("App about to enter foreground")
+        startScan()
+    }
+    
     func addBackgroundForegroundNotifications(){
         if !observerNotificationsAdded {
-            NotificationCenter.default.addObserver(self, selector: #selector(stopScan), name: UIApplication.didEnterBackgroundNotification, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(startScan), name: UIApplication.didBecomeActiveNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
             observerNotificationsAdded = true
         }
     }
     
     func removeBackgroundForegroundNotifications(){
         NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
         observerNotificationsAdded = false
     }
 }

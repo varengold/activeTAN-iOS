@@ -65,15 +65,6 @@ http://barcode4j.sourceforge.net/contributors.html
 <p><a href=\"https://github.com/krzyzanowskim/CryptoSwift\">github.com/krzyzanowskim/CryptoSwift</a></p>
 <p>This product includes software developed by the \"Marcin Krzyzanowski\" (http://krzyzanowskim.com/).</p>
 
-<h3>SPStorkController</h3>
-<p>Library for special graphic representation of modal app windows.</p>
-<p><a href=\"https://github.com/ivanvorobei/SPStorkController\">github.com/ivanvorobei/SPStorkController</a></p>
-
-<h3>SPFakeBar</h3>
-<p>Library for graphic representation of a navigation bar in windows provided by SPStorkController.</p>
-<p><a href=\"https://github.com/ivanvorobei/SPFakeBar\">github.com/ivanvorobei/SPFakeBar</a></p>
-
-
 <!--
 Taken from https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -840,7 +831,9 @@ Confirm your input in online banking. The order is released.";
 "button_confirm_delete_token" = "Delete TAN generator";
 "button_cancel_delete_token" = "Cancel";
 "invalidated_key_description"="For your security, this TAN generator cannot be used anymore, because the lock screen has been disabled. Please lock the TAN generator in online banking and start a new initializaion process.";
+"exhausted_generator_label"="Exhausted";
 "exhausted_generator_description"="This TAN generator has produced the maximum number of TANs and cannot be used anymore. Please start a new initialization process.";
+"soon_exhausted_generator_label"="Soon exhausted";
 "soon_exhausted_generator_description"="This TAN generator has almost produced the maximum number of TANs. Then it will no longer be possible to use it. Please start a new initializaion process soon.";
 "do_protect_usage_description"="Request Face ID, Touch ID or code for usage";
 
