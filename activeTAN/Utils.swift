@@ -32,24 +32,40 @@ class Utils {
             _key = "light_mode_" + key
         }
         
-        if let property = readPlist(plist: "Colors", key: _key) {
+        if let property = readPlistString(plist: "Colors", key: _key) {
             return UIColor.init(hex: property)!
         }
         return UIColor.clear
     }
     
     public static func config(key: String) -> String{
-        if let property = readPlist(plist : "Config", key: key) {
+        if let property = readPlistString(plist : "Config", key: key) {
             return property
         }
         return ""
     }
     
-    private static func readPlist(plist: String, key: String) -> String? {
+    private static func readPlistString(plist: String, key: String) -> String? {
         var nsDictionary: NSDictionary?
         if let path = Bundle.main.path(forResource: plist, ofType: "plist") {
             nsDictionary = NSDictionary(contentsOfFile: path)
             return nsDictionary![key] as? String
+        }
+        return nil
+    }
+    
+    public static func configBool(key: String) -> Bool{
+        if let property = readPlistBool(plist : "Config", key: key) {
+            return property
+        }
+        return false
+    }
+    
+    private static func readPlistBool(plist: String, key: String) -> Bool? {
+        var nsDictionary: NSDictionary?
+        if let path = Bundle.main.path(forResource: plist, ofType: "plist") {
+            nsDictionary = NSDictionary(contentsOfFile: path)
+            return nsDictionary![key] as? Bool
         }
         return nil
     }
@@ -92,5 +108,12 @@ class Utils {
         }
         
         return result
+    }
+    
+    static func base64UrlToBase64(base64Url: String) -> String {
+        let base64 = base64Url
+            .replacingOccurrences(of: "-", with: "+")
+            .replacingOccurrences(of: "_", with: "/")
+        return base64
     }
 }

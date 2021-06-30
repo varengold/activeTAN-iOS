@@ -6,5 +6,7 @@
 	<string>https://banking.varengold.de/OnlineBankingWebfrontend/api/activeTAN/</string>
 	<key>backend_api_url_qs</key>
 	<string>https://banking.varengold.de/OnlineBankingQS/api/activeTAN/</string>
+	<key>email_initialization_enabled</key>
+	<true/>
 </dict>
 </plist>

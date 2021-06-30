@@ -35,6 +35,12 @@ class QrCodeHandler {
         
         bqr = try extractBinaryQrCodeContent(result: result)
         
+        try handleResult(binary: bqr)
+    }
+    
+    func handleResult(binary : [UInt8]) throws{
+        var bqr : [UInt8]! = binary
+        
         if bqr.count < 4 {
             throw NoBankingQrCodeError.error("no BQR container, data too short")
         }

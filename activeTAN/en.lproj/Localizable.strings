@@ -777,6 +777,9 @@ Further rights regarding GDPR remain unaffected by this.
 "instructionScanLetter"="Scan the QR code on your activation letter with this activeTAN app.
 
 You did not receive an activation letter yet? You may also request a new activation letter in online banking.";
+"instructionScanEmail"="After starting the initialization, you will automatically receive an activation e-mail. Scan the QR code on your activation e-mail with this activeTAN app.
+
+Did you receive the e-mail on your smartphone? Instead, use the link inside the activation e-mail.";
 "instructionEnterSerial"="The activeTAN app generates a serial number. Enter the serial number in online banking.
 
 Press “continue” in the app and in online banking to proceed to the next step.";
@@ -785,7 +788,8 @@ Press “continue” in the app and in online banking to proceed to the next ste
 
 Confirm your input in online banking. The initialization is completed.
 
-Archive the activation letter to repeat the initialization at a later date if needed.";
+";
+"instructionArchiveLetter"="Archive the activation letter to repeat the initialization at a later date if needed.";
 
 "instructionPrimaryUseTitle"="TAN generation";
 "instructionEnterOrder"="Enter your order in online banking.
@@ -837,7 +841,8 @@ Enter your order in the banking app.";
 "delete_token"="Delete TAN generator";
 
 "title_delete_token_confirmation" = "Delete TAN generator";
-"message_delete_token_confirmation" = "This TAN generator will be deleted permanently. To repeat the initialization, the activation letter is required. Please also lock the TAN generator in online banking.";
+"message_delete_token_confirmation"="This TAN generator will be deleted permanently. Please also lock the TAN generator in online banking.";
+"message_delete_token_letter_warning"="To repeat the initialization, the activation letter is required.";
 "button_confirm_delete_token" = "Delete TAN generator";
 "button_cancel_delete_token" = "Cancel";
 "invalidated_key_description"="For your security, this TAN generator cannot be used anymore, because the lock screen has been disabled. Please lock the TAN generator in online banking and start a new initializaion process.";
@@ -850,8 +855,10 @@ Enter your order in the banking app.";
 "invalid_banking_qr"="Invalid banking QR code";
 
 "scan_letter_qr_code"="Please scan activation letter.";
+"scan_email_qr_code"="Please scan activation e-mail.";
 
 "additional_letter_qr_code"="Activation letter scanned";
+"additional_email_qr_code"="Activation e-mail scanned";
 "add_additional_token"="Do you want to activate another TAN generator for this device?";
 "button_cancel_add_additional_token" = "Cancel";
 "button_continue_add_additional_token" = "Continue";
@@ -870,6 +877,7 @@ Enter your order in the banking app.";
 
 "alert_ok"="OK";
 "alert_cancel"="Cancel";
+"gen_cancel"="Cancel";
 
 "verify_transaction_details_title"="Check Order";
 
@@ -894,10 +902,12 @@ Enter your order in the banking app.";
 "next_step"="Continue";
 
 "initialization_letter_scanned"="You have scanned your activation letter.";
+"initialization_email_scanned"="You have used your activation e-mail.";
 "enter_serial_number"="Please enter this serial number in online banking.";
 "go_to_scan_qr_code"="Press “Continue” to scan the QR code in online banking.";
 
-"scan_screen_qr_code"="Please scan QR code in online banking (not on activation letter).";
+"scan_screen_qr_code_not_letter"="Please scan QR code in online banking (not on activation letter).";
+"scan_screen_qr_code_not_email"="Please scan QR code in online banking (not on activation e-mail).";
 
 "label_serial_number"="Serial number";
 "initialization_portal_scanned"="You have scanned the QR code in online banking.";
@@ -913,6 +923,7 @@ Enter your order in the banking app.";
 "initialization_failed_no_camera_permission"="Camera access not permitted.";
 
 "initialization_failed_wrong_letter"="Please check, that you use the latest activation letter and repeat the process.";
+"initialization_failed_wrong_email"="Please check, that you use the latest activation e-mail and repeat the process.";
 "initialization_failed_wrong_serial"="A different serial number has been entered in online banking. Do you want to repeat the process?";
 "initialization_failed_wrong_qr_code"="Wrong QR Code";
 

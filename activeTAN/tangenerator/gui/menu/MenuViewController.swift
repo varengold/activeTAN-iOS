@@ -230,9 +230,14 @@ class MenuViewController : UITableViewController{
         slides.append(slide0)
         
         let slide1 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
-        slide1.imageView.image = UIImage(named: "activation_1")
         slide1.headlineLabel.text = Utils.localizedString("instructionStep1")
-        slide1.descriptionLabel.text = Utils.localizedString("instructionScanLetter")
+        if Utils.configBool(key: "email_initialization_enabled") {
+            slide1.imageView.image = UIImage(named: "activation_1_mail")
+            slide1.descriptionLabel.text = Utils.localizedString("instructionScanEmail")
+        } else{
+            slide1.imageView.image = UIImage(named: "activation_1")
+            slide1.descriptionLabel.text = Utils.localizedString("instructionScanLetter")
+        }
         slides.append(slide1)
         
         let slide2 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
@@ -250,7 +255,8 @@ class MenuViewController : UITableViewController{
         let slide4 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
         slide4.imageView.image = UIImage(named: "activation_4")
         slide4.headlineLabel.text = Utils.localizedString("instructionStep4")
-        slide4.descriptionLabel.text = Utils.localizedString("instructionEnterStartTan")
+        let instruction = Utils.localizedString("instructionEnterStartTan") + (!Utils.configBool(key: "email_initialization_enabled") ? Utils.localizedString("instructionArchiveLetter"):"")
+        slide4.descriptionLabel.text = instruction
         slides.append(slide4)
         
         return slides

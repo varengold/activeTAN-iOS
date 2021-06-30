@@ -44,7 +44,7 @@ class InitializeTokenStep2ViewController : BankingQrCodeScannerViewController, B
         listener = self
         
         titleLabel.text = Utils.localizedString("initialization")
-        hintLabel.text = Utils.localizedString("scan_screen_qr_code")
+        hintLabel.text = Utils.localizedString(Utils.configBool(key: "email_initialization_enabled") ? "scan_screen_qr_code_not_email" : "scan_screen_qr_code_not_letter")
         hintLabel.adjustsFontSizeToFitWidth = true
     }
     
@@ -108,7 +108,7 @@ extension InitializeTokenStep2ViewController {
         
         if portalKeyMaterial.letterNumber != initializeTokenContainer.letterNumber {
             // A wrong letter has been scanned in the first step
-            initializeTokenContainer.onInitializationFailed(reasonKey: "initialization_failed_wrong_letter", processShouldBeRepeated: false, onRepetition: {self.startScan()})
+            initializeTokenContainer.onInitializationFailed(reasonKey: Utils.configBool(key: "email_initialization_enabled") ? "initialization_failed_wrong_email":"initialization_failed_wrong_letter", processShouldBeRepeated: false, onRepetition: {self.startScan()})
             return
         }
         

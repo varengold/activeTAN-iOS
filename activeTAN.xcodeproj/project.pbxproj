@@ -54,6 +54,7 @@
 		BD6817F522CE41100086D71C /* BankingToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817F422CE41100086D71C /* BankingToken.swift */; };
 		BD6817FB22CF4F6B0086D71C /* BankingTokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817FA22CF4F6B0086D71C /* BankingTokenRepository.swift */; };
 		BD6817FD22CF59DC0086D71C /* DKCharset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6817FC22CF59DC0086D71C /* DKCharset.swift */; };
+		BD6E2706265293D80060A843 /* InitializeTokenFromAppLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E2705265293D80060A843 /* InitializeTokenFromAppLinkViewController.swift */; };
 		BD6EF6E5234CBD5F009E2A7F /* StickyFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6EF6E4234CBD5F009E2A7F /* StickyFooter.swift */; };
 		BD6EF6E7234CC62D009E2A7F /* ScrollStickyFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6EF6E6234CC62D009E2A7F /* ScrollStickyFooterViewController.swift */; };
 		BD7DB3EA2316D6FB00E5CF25 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD7DB3E92316D6FB00E5CF25 /* Config.plist */; };
@@ -180,6 +181,8 @@
 		BD6817F422CE41100086D71C /* BankingToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingToken.swift; sourceTree = "<group>"; };
 		BD6817FA22CF4F6B0086D71C /* BankingTokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingTokenRepository.swift; sourceTree = "<group>"; };
 		BD6817FC22CF59DC0086D71C /* DKCharset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKCharset.swift; sourceTree = "<group>"; };
+		BD6E2705265293D80060A843 /* InitializeTokenFromAppLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTokenFromAppLinkViewController.swift; sourceTree = "<group>"; };
+		BD6E270B2652A46B0060A843 /* activeTAN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = activeTAN.entitlements; sourceTree = "<group>"; };
 		BD6EF6E4234CBD5F009E2A7F /* StickyFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyFooter.swift; sourceTree = "<group>"; };
 		BD6EF6E6234CC62D009E2A7F /* ScrollStickyFooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStickyFooterViewController.swift; sourceTree = "<group>"; };
 		BD7DB3E92316D6FB00E5CF25 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -298,6 +301,7 @@
 		BD0FA11122FD618500780C6A /* EFD */ = {
 			isa = PBXGroup;
 			children = (
+				BDDFF31B2527215B001C099E /* activeTAN.entitlements */,
 				BD6817CD22C4F31C0086D71C /* api_key.pem */,
 				BD6817E222CCABC90086D71C /* Config.plist */,
 				BD0FA11C22FD7B8300780C6A /* Custom.xcassets */,
@@ -315,6 +319,7 @@
 				BDA1CCA92303FE5F00A09040 /* Colors.plist */,
 				BD7DB3E92316D6FB00E5CF25 /* Config.plist */,
 				BD7DB3EB2316D73F00E5CF25 /* Custom.strings */,
+				BD6E270B2652A46B0060A843 /* activeTAN.entitlements */,
 			);
 			path = VAR;
 			sourceTree = "<group>";
@@ -409,7 +414,6 @@
 				BD6651CE2289AA4200BC1773 /* Main.storyboard */,
 				BD6651D12289AA4300BC1773 /* Assets.xcassets */,
 				BD6651D62289AA4300BC1773 /* Info.plist */,
-				BDDFF31B2527215B001C099E /* activeTAN.entitlements */,
 				BD51E9D1228DA29300AEEE68 /* Utils.swift */,
 				BD6651D32289AA4300BC1773 /* LaunchScreen.storyboard */,
 				BD51E9D3228DA43400AEEE68 /* RuntimeError.swift */,
@@ -514,6 +518,7 @@
 				BD6817E022CB97B60086D71C /* InitializeTokenStep1ViewController.swift */,
 				BD6817E822CCD8220086D71C /* InitializeTokenStep2ViewController.swift */,
 				BD6817EA22CE25BB0086D71C /* InitializeTokenStep3ViewController.swift */,
+				BD6E2705265293D80060A843 /* InitializeTokenFromAppLinkViewController.swift */,
 			);
 			path = initialization;
 			sourceTree = "<group>";
@@ -793,6 +798,7 @@
 				BD680C6824AF2EC50047DD45 /* PartialModalTransitioningDelegate.swift in Sources */,
 				BDE80DA0230DA34700A26D33 /* MenuHowToSlidesController.swift in Sources */,
 				BDF14C7C22DF128C00010A8C /* MenuDetailViewController.swift in Sources */,
+				BD6E2706265293D80060A843 /* InitializeTokenFromAppLinkViewController.swift in Sources */,
 				BD9E56E722E5A16100AE8DC4 /* MainViewController.swift in Sources */,
 				BD6EF6E7234CC62D009E2A7F /* ScrollStickyFooterViewController.swift in Sources */,
 				BD6651CB2289AA4200BC1773 /* AppDelegate.swift in Sources */,
@@ -970,9 +976,9 @@
 			buildSettings = {
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = activeTAN/activeTAN.entitlements;
+				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -990,7 +996,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS.debug";
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1107,9 +1113,9 @@
 			buildSettings = {
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = activeTAN/activeTAN.entitlements;
+				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1127,7 +1133,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS";
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1250,9 +1256,9 @@
 			buildSettings = {
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1270,7 +1276,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1393,9 +1399,9 @@
 			buildSettings = {
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1413,7 +1419,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS.debug;
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "VAR activeTAN Test";
@@ -1530,10 +1536,10 @@
 			buildSettings = {
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1551,7 +1557,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = activeTAN;
@@ -1668,10 +1674,10 @@
 			buildSettings = {
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1689,7 +1695,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS;
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Test";
@@ -1871,10 +1877,10 @@
 			buildSettings = {
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = activeTAN/activeTAN.entitlements;
+				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1892,7 +1898,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Prod Debug";
@@ -1907,10 +1913,10 @@
 			buildSettings = {
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = activeTAN/activeTAN.entitlements;
+				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1928,7 +1934,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS Provisioning Profile";

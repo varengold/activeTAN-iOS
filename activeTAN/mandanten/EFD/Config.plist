@@ -8,5 +8,7 @@
 	<string>https://dailybuild.efdis-online.de/OnlineBankingWebfrontend/api/activeTAN/</string>
 	<key>BANKING_APP_URL_SCHEME</key>
 	<string>activeTAN-response-EFD</string>
+	<key>email_initialization_enabled</key>
+	<true/>
 </dict>
 </plist>

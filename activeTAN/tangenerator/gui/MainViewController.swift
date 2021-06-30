@@ -119,7 +119,7 @@ extension MainViewController {
     
     func onKeyMaterial(hhdkm: [UInt8]) {
         if hhdkm.count >= 1 && KeyMaterialType(rawValue: hhdkm[0])! == KeyMaterialType.LETTER {
-            let alert = UIAlertController(title: Utils.localizedString("additional_letter_qr_code"), message: Utils.localizedString("add_additional_token"), preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: Utils.localizedString(Utils.configBool(key: "email_initialization_enabled") ? "additional_email_qr_code":"additional_letter_qr_code"), message: Utils.localizedString("add_additional_token"), preferredStyle: .actionSheet)
             
             alert.addAction(UIAlertAction(
                 title: Utils.localizedString("button_cancel_add_additional_token"),

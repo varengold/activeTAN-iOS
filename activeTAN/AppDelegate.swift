@@ -88,6 +88,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         return true
     }
+    
+    // Entry point for app when accessed via Universal Link
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
+    {
+        let emailInitializationEnabled = Utils.configBool(key: "email_initialization_enabled")
+        
+        guard emailInitializationEnabled else {
+            print("Email initialization not enabled")
+            return false
+        }
+        
+        // Get URL components from the incoming user activity.
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+              let incomingURL = userActivity.webpageURL,
+              let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) else {
+            print("Failure during url component parsing")
+            return false
+        }
 
+        // Check for specific URL components that you need.
+        guard let params = components.queryItems else {
+            print("No url param found")
+            return false
+        }
+        
+        if let qrCodeParam = params.first{
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InitializeTokenFromAppLink") as! InitializeTokenFromAppLinkViewController
+            
+            controller.base64QrCode = Utils.base64UrlToBase64(base64Url: qrCodeParam.name)
+
+            let navController = InitializeTokenContainerController(rootViewController: controller)
+
+            self.window?.rootViewController = navController
+            return true
+            
+        }
+        print("Invalid url param")
+        return false
+    }
 }
 

@@ -40,7 +40,7 @@ class InitializeTokenStep0ViewController : BankingQrCodeScannerViewController{
         }
         
         self.titleLabel.text = Utils.localizedString("initialization")
-        self.hintLabel.text = Utils.localizedString("scan_letter_qr_code")
+        self.hintLabel.text = Utils.configBool(key: "email_initialization_enabled") ? Utils.localizedString("scan_email_qr_code") : Utils.localizedString("scan_letter_qr_code")
         self.hintLabel.adjustsFontSizeToFitWidth = true
         
         listener = self

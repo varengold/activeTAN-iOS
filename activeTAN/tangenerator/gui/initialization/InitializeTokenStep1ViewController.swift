@@ -67,7 +67,7 @@ class InitializeTokenStep1ViewController : ScrollStickyFooterViewController{
         
         self.titleLabel.text = Utils.localizedString("initialization")
         
-        self.descriptionLabel.text = Utils.localizedString("initialization_letter_scanned")
+        self.descriptionLabel.text = Utils.configBool(key: "email_initialization_enabled") ? Utils.localizedString("initialization_email_scanned") : Utils.localizedString("initialization_letter_scanned")
         self.descriptionLabel.adjustsFontSizeToFitWidth = true
         
         self.serialNumberContainer.layer.cornerRadius = 8

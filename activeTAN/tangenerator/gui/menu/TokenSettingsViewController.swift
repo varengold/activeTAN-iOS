@@ -188,8 +188,12 @@ class TokenSettingsViewController : UITableViewController {
     }
     
     private func deleteTokenAlert(){
+        var title = Utils.localizedString("message_delete_token_confirmation")
+        if !Utils.configBool(key: "email_initialization_enabled") {
+            title += " " + Utils.localizedString("message_delete_token_letter_warning")
+        }
         let alert = UIAlertController(
-            title: String.localizedStringWithFormat(Utils.localizedString("message_delete_token_confirmation")),
+            title: String.localizedStringWithFormat(title),
             message: nil,
             preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(
