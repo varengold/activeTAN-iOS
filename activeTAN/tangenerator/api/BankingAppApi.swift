@@ -71,9 +71,15 @@ class BankingAppApi : UIViewController{
                 return
             }
             
-            eligibleTokens = findMatchingBankingTokens(tanMediaDescriptions: challenge.tanMediaDescriptions)
+            do{
+                eligibleTokens = try findMatchingBankingTokens(tanMediaDescriptions: challenge.tanMediaDescriptions)
+            } catch{
+                print("Challenge has no matching TAN generators")
+                finishWithWarning()
+                return
+            }
             if eligibleTokens!.count == 0 {
-                print("This app is not initialized or initialization does not match expected TAN generators")
+                print("This app is not initialized")
                 finish(status: .canceled)
                 return
             }
@@ -140,7 +146,7 @@ class BankingAppApi : UIViewController{
         return try reader.decode(bitmap, hints:hints)
     }
     
-    private func findMatchingBankingTokens(tanMediaDescriptions : [String]) -> [String : BankingToken]{
+    private func findMatchingBankingTokens(tanMediaDescriptions : [String]) throws -> [String : BankingToken]{
         var usableTokensById = [String : BankingToken]()
         for token in BankingTokenRepository.getAllUsable() {
             usableTokensById[token.id!] = token
@@ -159,8 +165,54 @@ class BankingAppApi : UIViewController{
                 }
             }
         }
+        
+        // If the TAN generator has been initialized within the last 60 minutes, it is unknown
+        // to the banking app.  Thus, we allow to use any recently created TAN generator, if no
+        // common TAN generator has been identified above.
+        //
+        // This fixes app interoperability for users who set up the banking app before the TAN
+        // generator and want to use it within 60 minutes without performing a resynchronization
+        // process in the banking app.
+        //
+        // It might produce false positives on a shared device, which is used by user A for banking
+        // and user B for the TAN app.  This scenario should be rare and the false positives are
+        // gone after 60 minutes.  So, we accept this possible drawback.
+        if usableTokensByMediaDescription.count == 0 {
+            if let newTokenMaxAge = Calendar.current.date(
+                byAdding: .hour,
+                value: -1,
+                    to: Date()) {
+
+                for token in usableTokensById.values {
+                    if newTokenMaxAge < token.createdOn! {
+                        usableTokensByMediaDescription[token.formattedSerialNumber()] = token
+                    }
+                }
+            
+            }
+        }
+
+        if usableTokensById.count != 0 && usableTokensByMediaDescription.count == 0 {
+            throw TanGeneratorMismatchError.error
+        }
             
         return usableTokensByMediaDescription
+    }
+    
+    private func finishWithWarning(){
+        let alert = UIAlertController(
+            title: Utils.localizedString("no_matching_tan_generator_title"),
+            message: Utils.localizedString("no_matching_tan_generator_description"),
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(
+            title: Utils.localizedString("confirm_return"),
+            style: .destructive,
+            handler: {action in
+                self.finish(status: .canceled)
+        }))
+        
+        self.present(alert, animated: true)
     }
     
     private func finish(status : BankingApiResponseStatus){
@@ -215,10 +267,14 @@ class BankingAppApi : UIViewController{
             
             if let _tanGeneratorId = tanGeneratorId {
                 // Return to the caller only the used TAN generator's TAN media description
-                for token in findMatchingBankingTokens(tanMediaDescriptions: challenge.tanMediaDescriptions) {
-                    if _tanGeneratorId == token.value.id {
-                        challenge.tanMediaDescriptions = [token.key]
+                do {
+                    for token in try findMatchingBankingTokens(tanMediaDescriptions: challenge.tanMediaDescriptions) {
+                        if _tanGeneratorId == token.value.id {
+                            challenge.tanMediaDescriptions = [token.key]
+                        }
                     }
+                } catch{
+                    print("Challenge has no matching TAN generators")
                 }
             }
             
@@ -267,4 +323,8 @@ extension BankingAppApi : BankingQrCodeListener {
         print("Invalid QR code data: " + detailReason)
         finish(status: .canceled)
     }
+}
+
+enum TanGeneratorMismatchError: Error {
+    case error
 }

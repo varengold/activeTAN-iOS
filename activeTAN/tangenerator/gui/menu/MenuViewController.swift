@@ -26,38 +26,69 @@ class MenuViewController : UITableViewController{
     
     var presentedModally : Bool = false
     
-    var manualMenuElements = [
-        // Initialization
-        MenuElement(
-            Utils.localizedString("initialization"),
-            slides: getInitializationSlides()
-        ),
-        // Primary use
-        MenuElement(
-            Utils.localizedString("instructionPrimaryUseTitle"),
-            slides: getPrimaryUseSlides()
-        ),
-        // Security
-        MenuElement(
-            Utils.localizedString("instructionSecurityTitle"),
-            text: Utils.localizedString("instructionSecurityText")
-        )
-    ]
+    var manualMenuElements : [MenuElement] = [MenuElement]()
     
-    var staticMenuElements = [
-        // Privacy statement
-        MenuElement(
-            Utils.localizedString("menu_item_privacy"),
-            text: Utils.localizedString("privacy_statement") + String(format: Utils.localizedString("privacy_statement_closing"), Utils.localizedString("bank_name"))
-        ),
-        // License
-        MenuElement(Utils.localizedString("menu_item_copyright"), text: Utils.localizedString("license")),
-        // Imprint
-        MenuElement(
-            Utils.localizedString("menu_item_imprint"),
-            text: Utils.localizedString("imprint")
+    var staticMenuElements : [MenuElement] = [MenuElement]()
+    
+    required init?(coder: NSCoder) {
+        manualMenuElements.append(
+            // Initialization
+            MenuElement(
+                Utils.localizedString("initialization"),
+                slides: MenuViewController.getInitializationSlides()
+            )
         )
-    ]
+        manualMenuElements.append(
+            // Primary use
+            MenuElement(
+                Utils.localizedString("instructionPrimaryUseTitle"),
+                slides: MenuViewController.getPrimaryUseSlides()
+            )
+        )
+        
+        let bankingAppAvailable = Bundle.main.object(forInfoDictionaryKey: "APP_GROUP") as? String != ""
+        
+        // If an APP GROUP is configured, there is a corresponding banking app available.
+        // Add specific manual page in this case.
+        if bankingAppAvailable{
+            manualMenuElements.append(
+                MenuElement(
+                    Utils.localizedString("instructionBankingAppTitle"),
+                    slides: MenuViewController.getBankingAppUseSlides()
+                )
+            )
+        }
+        
+        var instructionSecurityText = Utils.localizedString("instructionSecurityText_main")
+        if bankingAppAvailable {
+            instructionSecurityText += Utils.localizedString("instructionSecurityText_bankingApp")
+        }
+        instructionSecurityText += Utils.localizedString("instructionSecurityText_updates")
+        
+        manualMenuElements.append(
+            // Security
+            MenuElement(
+                Utils.localizedString("instructionSecurityTitle"),
+                text: instructionSecurityText
+            )
+        )
+        
+        staticMenuElements = [
+            // Privacy statement
+            MenuElement(
+                Utils.localizedString("menu_item_privacy"),
+                text: Utils.localizedString("privacy_statement") + String(format: Utils.localizedString("privacy_statement_closing"), Utils.localizedString("bank_name"))
+            ),
+            // License
+            MenuElement(Utils.localizedString("menu_item_copyright"), text: Utils.localizedString("license")),
+            // Imprint
+            MenuElement(
+                Utils.localizedString("menu_item_imprint"),
+                text: Utils.localizedString("imprint")
+            )
+        ]
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         tableView.rowHeight = UITableView.automaticDimension
@@ -250,6 +281,36 @@ class MenuViewController : UITableViewController{
         slide3.imageView.image = UIImage(named: "usage_3")
         slide3.headlineLabel.text = Utils.localizedString("instructionStep3")
         slide3.descriptionLabel.text = Utils.localizedString("instructionEnterTan")
+        slides.append(slide3)
+        
+        return slides
+    }
+    
+    static func getBankingAppUseSlides() -> [HowToSlide]{
+        var slides = [HowToSlide]()
+        
+        let slide0 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
+        slide0.imageView.image = UIImage(named: "banking_app_usage_tan")
+        slide0.headlineLabel.text = Utils.localizedString("instructionStep0")
+        slide0.descriptionLabel.text = Utils.localizedString("instructionSelectTanMethodBankingApp")
+        slides.append(slide0)
+        
+        let slide1 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
+        slide1.imageView.image = UIImage(named: "banking_app_usage_order")
+        slide1.headlineLabel.text = Utils.localizedString("instructionStep1")
+        slide1.descriptionLabel.text = Utils.localizedString("instructionSwitchFromBankingApp")
+        slides.append(slide1)
+        
+        let slide2 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
+        slide2.imageView.image = UIImage(named: "usage_2")
+        slide2.headlineLabel.text = Utils.localizedString("instructionStep2")
+        slide2.descriptionLabel.text = Utils.localizedString("instructionCheckOrderBankingApp")
+        slides.append(slide2)
+        
+        let slide3 = Bundle.main.loadNibNamed("HowToSlide", owner: self, options: nil)?.first as! HowToSlide
+        slide3.imageView.image = UIImage(named: "banking_app_usage_tan")
+        slide3.headlineLabel.text = Utils.localizedString("instructionStep3")
+        slide3.descriptionLabel.text = Utils.localizedString("instructionSwitchToBankingApp")
         slides.append(slide3)
         
         return slides

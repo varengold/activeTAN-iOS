@@ -787,7 +787,7 @@ Confirm your input in online banking. The initialization is completed.
 
 Archive the activation letter to repeat the initialization at a later date if needed.";
 
-"instructionPrimaryUseTitle"="Primary usage";
+"instructionPrimaryUseTitle"="TAN generation";
 "instructionEnterOrder"="Enter your order in online banking.
 
 If you use different TAN procedures, select activeTAN to approve the order.";
@@ -796,8 +796,16 @@ If you use different TAN procedures, select activeTAN to approve the order.";
 
 Confirm your input in online banking. The order is released.";
 
+"instructionBankingAppTitle"="Usage with banking app";
+"instructionSelectTanMethodBankingApp"="If you use different TAN procedures, select activeTAN in the online banking settings of the banking app.
+
+Enter your order in the banking app.";
+"instructionSwitchFromBankingApp"="Sending the order automatically starts the activeTAN app.";
+"instructionCheckOrderBankingApp"="The device shows order details. Please check the data and release the order in the activeTAN app.";
+"instructionSwitchToBankingApp"="The banking app automatically executes the order with a TAN. It is not required to enter the TAN manually.";
+
 "instructionSecurityTitle"="Security & Usage notes";
-"instructionSecurityText"="<h3>Lock screen</h3>
+"instructionSecurityText_main"="<h3>Lock screen</h3>
 <p>
     Protect your device with a lock screen (code or password). Depending on the hardware, you may additionally use biometric identification (Touch ID or Face ID) to unlock.
 </p>
@@ -810,12 +818,14 @@ Confirm your input in online banking. The order is released.";
 </p>
 <p>
     More features: The QR code can be scanned quick and comfortably. After initial initialization, activeTAN may even be used without internet connection.
-</p>
-<h3>Updates</h3>
+</p>";
+"instructionSecurityText_bankingApp"="<p>
+    When using our banking app on the same device, it is not required to scan a QR code or to enter a TAN. Thus, orders can be released even faster and easier. Both apps are securely separated by the operating system.
+</p>";
+"instructionSecurityText_updates"="<h3>Updates</h3>
 <p>
     Protect all your devices by automatic installation of security updates. Thereby, potential vulnerabilities may be fixed by vendors quickly.
-</p>
-";
+</p>";
 
 "menu_token_title"="TAN Generator";
 "menu_token_name"="Name";
@@ -909,6 +919,10 @@ Confirm your input in online banking. The order is released.";
 "initialization_failed_unknown_reason"="A technical error has occurred. Please try again later.";
 
 "main_no_camera_permission"="To use this app, you must allow access to the camera (Settings > Privacy > Camera).";
+
+"no_matching_tan_generator_title"="Note";
+"no_matching_tan_generator_description"="Local use of activeTAN is unfortunately not possible. Use a separate device. Please initialize the activeTAN app for the same user credentials which have been used in the banking app, or delete TAN generators in the settings dialog of the activeTAN app, if they have been disabled in online banking.";
+"confirm_return"="Back";
 
 // Data elements for unidirectional mode
 "DE10"="Address";

@@ -788,7 +788,7 @@ Bestätigen Sie die Eingabe im Online-Banking. Die Aktivierung ist damit abgesch
 
 Nehmen Sie den Aktivierungsbrief zu Ihren Bankunterlagen, um die Aktivierung später bei Bedarf erneut durchführen zu können.";
 
-"instructionPrimaryUseTitle"="Verwendung";
+"instructionPrimaryUseTitle"="TAN generieren";
 "instructionEnterOrder"="Geben Sie Ihren Auftrag im Online-Banking ein.
 
 Falls Sie mehrere TAN-Verfahren benutzen, wählen Sie activeTAN zur Freigabe der Transaktion aus.";
@@ -797,8 +797,16 @@ Falls Sie mehrere TAN-Verfahren benutzen, wählen Sie activeTAN zur Freigabe der
 
 Bestätigen Sie die Eingabe im Online-Banking. Der Auftrag wird freigegeben.";
 
+"instructionBankingAppTitle"="Verwendung mit Banking-App";
+"instructionSelectTanMethodBankingApp"="Falls Sie mehrere TAN-Verfahren benutzen, wählen Sie in den Online-Banking-Einstellungen der Banking-App das activeTAN-Verfahren aus.
+
+Geben Sie Ihren Auftrag in der Banking-App ein.";
+"instructionSwitchFromBankingApp"="Beim Senden des Auftrags wird die activeTAN-App automatisch gestartet.";
+"instructionCheckOrderBankingApp"="In der activeTAN-App werden Auftragsdaten angezeigt. Prüfen Sie die Daten und geben Sie den Auftrag frei.";
+"instructionSwitchToBankingApp"="Die Banking-App führt den Auftrag mit einer TAN automatisch aus. Die manuelle Eingabe der TAN entfällt.";
+
 "instructionSecurityTitle"="Sicherheit & Nutzungshinweise";
-"instructionSecurityText"="<h3>Sperrbildschirm</h3>
+"instructionSecurityText_main"="<h3>Sperrbildschirm</h3>
 <p>
     Sichern Sie Ihr Smartphone mit einem Sperrbildschirm (Code oder Kennwort). Je nach Gerät können Sie auch biometische Merkmale (Touch ID oder Face ID) zum Entsperren benutzen.
 </p>
@@ -812,12 +820,14 @@ Bestätigen Sie die Eingabe im Online-Banking. Der Auftrag wird freigegeben.";
 <p>
     Weitere Vorteile: Der QR-Code kann schnell und komfortabel gescannt werden. Nach der einmaligen Aktivierung funktioniert activeTAN sogar ohne Internetverbindung.
 </p>
-<h3>Aktualisierungen</h3>
+";
+"instructionSecurityText_bankingApp"="<p>
+    Bei Verwendung unserer Banking-App auf demselben Gerät entfällt das Scannen des QR-Codes und die Eingabe der TAN, sodass Aufträge noch schneller und einfacher freigegeben werden können. Die beiden Apps bleiben dabei durch das Betriebssystem sicher getrennt.
+</p>";
+"instructionSecurityText_updates"="<h3>Aktualisierungen</h3>
 <p>
     Sichern Sie alle Ihre Geräte ab, indem Sie Sicherheitsupdates automatisch installieren. So können potentielle Schwachstellen durch die Hersteller schnell behoben werden.
-</p>
-";
-
+</p>";
 
 "menu_token_title"="TAN-Generator";
 "menu_token_name"="Name";
@@ -911,6 +921,10 @@ Bestätigen Sie die Eingabe im Online-Banking. Der Auftrag wird freigegeben.";
 "initialization_failed_unknown_reason"="Es ist ein technischer Fehler aufgetreten. Bitte probieren Sie es später erneut.";
 
 "main_no_camera_permission"="Um diese App nutzen zu können, müssen Sie den Zugriff auf die Kamera gestatten (Einstellungen > Datenschutz > Kamera).";
+
+"no_matching_tan_generator_title"="Hinweis";
+"no_matching_tan_generator_description"="Die lokale Verwendung von activeTAN ist leider nicht möglich und muss über ein separates Gerät erfolgen. Bitte aktivieren Sie die activeTAN-App für die gleichen Zugangsdaten, die Sie in der Banking-App verwenden, oder löschen Sie TAN-Generatoren in den Einstellungen der activeTAN-App, falls Sie diese im Online-Banking deaktiviert haben.";
+"confirm_return"="Zurück";
 
 // Data elements for unidirectional mode
 "DE10"="Adresse";
