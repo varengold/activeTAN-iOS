@@ -110,24 +110,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         // Check for specific URL components that you need.
-        guard let params = components.queryItems else {
-            print("No url param found")
+        var bqrEncoded : String
+        if (components.fragment != nil) {
+            // New version:
+            // key material is encoded as an url fragment
+            bqrEncoded = components.fragment!
+        } else if (components.query != nil) {
+            // Old version (for backwards compatibility):
+            // key material has been encoded as an url query
+            bqrEncoded = components.query!
+        } else {
+            print("Url without parameter")
             return false
         }
         
-        if let qrCodeParam = params.first{
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InitializeTokenFromAppLink") as! InitializeTokenFromAppLinkViewController
-            
-            controller.base64QrCode = Utils.base64UrlToBase64(base64Url: qrCodeParam.name)
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InitializeTokenFromAppLink") as! InitializeTokenFromAppLinkViewController
+        
+        controller.base64QrCode = Utils.base64UrlToBase64(base64Url: bqrEncoded)
 
-            let navController = InitializeTokenContainerController(rootViewController: controller)
+        let navController = InitializeTokenContainerController(rootViewController: controller)
 
-            self.window?.rootViewController = navController
-            return true
-            
-        }
-        print("Invalid url param")
-        return false
+        self.window?.rootViewController = navController
+        return true
     }
 }
 

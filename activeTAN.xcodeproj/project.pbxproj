@@ -215,6 +215,8 @@
 		BDE80D9F230DA34700A26D33 /* MenuHowToSlidesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHowToSlidesController.swift; sourceTree = "<group>"; };
 		BDF14C7B22DF128C00010A8C /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
 		BDF14C7D22DF173100010A8C /* MenuElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuElement.swift; sourceTree = "<group>"; };
+		BDF3B5E827B3C58300F7DB24 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Custom.strings; sourceTree = "<group>"; };
+		BDF3B5ED27B3C58700F7DB24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Custom.strings; sourceTree = "<group>"; };
 		C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod debug.xcconfig"; sourceTree = "<group>"; };
 		CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod debug.xcconfig"; sourceTree = "<group>"; };
 		CFEB2E5EDBE5AB9F6AF563A3 /* Pods_activeTANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -902,6 +904,15 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		BDF3B5E927B3C58300F7DB24 /* Custom.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDF3B5E827B3C58300F7DB24 /* de */,
+				BDF3B5ED27B3C58700F7DB24 /* en */,
+			);
+			name = Custom.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -974,12 +985,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6794A45127D952CCD005C168 /* Pods-activeTAN.efd qs debug.xcconfig */;
 			buildSettings = {
+				APPLINK_DOMAIN = "applinks:dailybuild.efdis-online.de?mode=developer";
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
 					"mandanten/*/*/*",
@@ -996,10 +1008,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS.debug";
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "EFDIS activeTAN Test Debug";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1111,12 +1123,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 931EFEE6B1F2F586ED958AA8 /* Pods-activeTAN.efd qs release.xcconfig */;
 			buildSettings = {
+				APPLINK_DOMAIN = "applinks:dailybuild.efdis-online.de?mode=developer";
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
 					"mandanten/*/*/*",
@@ -1133,10 +1147,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS";
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "EFDIS activeTAN Test";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1254,11 +1268,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */;
 			buildSettings = {
+				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1276,7 +1291,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1397,11 +1412,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */;
 			buildSettings = {
+				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1419,7 +1435,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS.debug;
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "VAR activeTAN Test";
@@ -1534,12 +1550,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */;
 			buildSettings = {
+				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1557,7 +1574,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = activeTAN;
@@ -1672,12 +1689,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */;
 			buildSettings = {
+				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1695,7 +1713,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS;
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Test";
@@ -1875,12 +1893,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDC271C2ACAC26EFB1D56DDB /* Pods-activeTAN.efd prod debug.xcconfig */;
 			buildSettings = {
+				APPLINK_DOMAIN = "applinks:efdis-online.de";
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1898,7 +1917,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Prod Debug";
@@ -1911,12 +1930,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1AE150AE947CB1F663E362C6 /* Pods-activeTAN.efd prod release.xcconfig */;
 			buildSettings = {
+				APPLINK_DOMAIN = "applinks:efdis-online.de";
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1934,7 +1954,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS Provisioning Profile";
