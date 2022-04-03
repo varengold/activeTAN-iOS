@@ -6,7 +6,7 @@ target 'activeTAN' do
 
   # Pods for activeTAN
   pod 'ZXingObjC', '3.6.5' #ZXing QR code scanner, objective c port
-  pod 'CryptoSwift', '1.3.1' #Crypto Algorithms
+  pod 'CryptoSwift', '1.4.3' #Crypto Algorithms
   
   target 'activeTANTests' do
     inherit! :search_paths

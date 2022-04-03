@@ -104,6 +104,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		024FA1D20BC7C5650FCBA26D /* Pods-activeTANUITests.sal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.sal prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.sal prod release.xcconfig"; sourceTree = "<group>"; };
 		0801BAE833509E31FE08B021 /* Pods-activeTANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.release.xcconfig"; sourceTree = "<group>"; };
 		090C44B7FCC4FE54ECB33CFD /* Pods-activeTAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.debug.xcconfig"; sourceTree = "<group>"; };
 		10E50DE4DA6D7A63920EEA3F /* Pods-activeTANUITests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,24 +112,31 @@
 		1CC3CEBCAA044C7C3F662B77 /* Pods-activeTANUITests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
 		2B5EF3B566355245454D4138 /* Pods-activeTANTests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs debug.xcconfig"; sourceTree = "<group>"; };
 		2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod debug.xcconfig"; sourceTree = "<group>"; };
+		356D413DFE74625551A47F78 /* Pods-activeTAN.sal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.sal prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.sal prod release.xcconfig"; sourceTree = "<group>"; };
 		39374CFD360B9359B5B872AB /* Pods-activeTANUITests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs debug.xcconfig"; sourceTree = "<group>"; };
 		4393CB05B9C9CD8DAB2D7A5B /* Pods_activeTANUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		441B788E71319D9C040D7E66 /* Pods-activeTANTests.sal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.sal qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.sal qs release.xcconfig"; sourceTree = "<group>"; };
+		466B7AF8D9EF317F70F1ED06 /* Pods-activeTAN.sal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.sal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.sal prod debug.xcconfig"; sourceTree = "<group>"; };
 		5D39CE7549E2AC2EF77E1B96 /* Pods-activeTANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.release.xcconfig"; sourceTree = "<group>"; };
 		5EC1937911CD1978ABE49E43 /* Pods-activeTANTests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod release.xcconfig"; sourceTree = "<group>"; };
 		64995C4B5BF5F3716465C414 /* Pods-activeTAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.release.xcconfig"; sourceTree = "<group>"; };
 		6794A45127D952CCD005C168 /* Pods-activeTAN.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs debug.xcconfig"; sourceTree = "<group>"; };
 		679A6661EDBF0F64EA1B1255 /* Pods-activeTANUITests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs release.xcconfig"; sourceTree = "<group>"; };
+		688559A1BE168297FCA8B84C /* Pods-activeTANUITests.sal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.sal qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.sal qs release.xcconfig"; sourceTree = "<group>"; };
 		6CFAA21934AE7784F3F5840E /* Pods-activeTANTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70ACCCB272B6FEFC2EB00635 /* Pods-activeTANTests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs release.xcconfig"; sourceTree = "<group>"; };
 		7A57276EF5E6D216CEBA9B69 /* Pods-activeTANUITests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod release.xcconfig"; sourceTree = "<group>"; };
 		7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod release.xcconfig"; sourceTree = "<group>"; };
 		7E3321A1C173CBCE2E023F14 /* Pods-activeTANTests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
+		835FF50C2C37A513959FD3C8 /* Pods-activeTANUITests.sal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.sal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.sal prod debug.xcconfig"; sourceTree = "<group>"; };
 		931EFEE6B1F2F586ED958AA8 /* Pods-activeTAN.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs release.xcconfig"; sourceTree = "<group>"; };
 		948F5987EFB769B0660AA6E5 /* Pods-activeTANUITests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs release.xcconfig"; sourceTree = "<group>"; };
 		9FA71AC7DBC1EE4C719D5049 /* Pods-activeTANUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A496842A2090C0D79328F78C /* Pods-activeTANTests.sal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.sal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.sal qs debug.xcconfig"; sourceTree = "<group>"; };
 		AD0D859DE2D9A9A87A7D8871 /* Pods-activeTANTests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
 		B20A19FEB97B55805438029F /* Pods_activeTAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B323E253800DD89481459CDD /* Pods-activeTANTests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs release.xcconfig"; sourceTree = "<group>"; };
+		B38166F338E7D90F31520EFC /* Pods-activeTANUITests.sal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.sal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.sal qs debug.xcconfig"; sourceTree = "<group>"; };
 		BAB7574C3CB77F316D14CFD5 /* Pods-activeTANUITests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod release.xcconfig"; sourceTree = "<group>"; };
 		BD045C7022957503001058C5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTokenViewController.swift; sourceTree = "<group>"; };
@@ -218,10 +226,14 @@
 		BDF3B5E827B3C58300F7DB24 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Custom.strings; sourceTree = "<group>"; };
 		BDF3B5ED27B3C58700F7DB24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Custom.strings; sourceTree = "<group>"; };
 		C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod debug.xcconfig"; sourceTree = "<group>"; };
+		CA5971A44FDE25C44C633B12 /* Pods-activeTAN.sal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.sal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.sal qs debug.xcconfig"; sourceTree = "<group>"; };
 		CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod debug.xcconfig"; sourceTree = "<group>"; };
 		CFEB2E5EDBE5AB9F6AF563A3 /* Pods_activeTANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E531463BC1F2D85D5A0840CB /* Pods-activeTANTests.sal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.sal prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.sal prod release.xcconfig"; sourceTree = "<group>"; };
+		E80C40CBEB1B7E003CB9C031 /* Pods-activeTANTests.sal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.sal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.sal prod debug.xcconfig"; sourceTree = "<group>"; };
 		EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs debug.xcconfig"; sourceTree = "<group>"; };
 		EDC271C2ACAC26EFB1D56DDB /* Pods-activeTAN.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod debug.xcconfig"; sourceTree = "<group>"; };
+		F31AE33D321D5EE92B49A46F /* Pods-activeTAN.sal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.sal qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.sal qs release.xcconfig"; sourceTree = "<group>"; };
 		F51EFF2775DAB0F6E59BE90E /* Pods-activeTANTests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod release.xcconfig"; sourceTree = "<group>"; };
 		FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,17 +288,29 @@
 				BAB7574C3CB77F316D14CFD5 /* Pods-activeTANUITests.efd prod release.xcconfig */,
 				679A6661EDBF0F64EA1B1255 /* Pods-activeTANUITests.efd qs release.xcconfig */,
 				2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */,
+				466B7AF8D9EF317F70F1ED06 /* Pods-activeTAN.sal prod debug.xcconfig */,
 				EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */,
+				CA5971A44FDE25C44C633B12 /* Pods-activeTAN.sal qs debug.xcconfig */,
 				7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */,
+				356D413DFE74625551A47F78 /* Pods-activeTAN.sal prod release.xcconfig */,
 				FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */,
+				F31AE33D321D5EE92B49A46F /* Pods-activeTAN.sal qs release.xcconfig */,
 				CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */,
+				E80C40CBEB1B7E003CB9C031 /* Pods-activeTANTests.sal prod debug.xcconfig */,
 				2B5EF3B566355245454D4138 /* Pods-activeTANTests.var qs debug.xcconfig */,
+				A496842A2090C0D79328F78C /* Pods-activeTANTests.sal qs debug.xcconfig */,
 				5EC1937911CD1978ABE49E43 /* Pods-activeTANTests.var prod release.xcconfig */,
+				E531463BC1F2D85D5A0840CB /* Pods-activeTANTests.sal prod release.xcconfig */,
 				B323E253800DD89481459CDD /* Pods-activeTANTests.var qs release.xcconfig */,
+				441B788E71319D9C040D7E66 /* Pods-activeTANTests.sal qs release.xcconfig */,
 				C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */,
+				835FF50C2C37A513959FD3C8 /* Pods-activeTANUITests.sal prod debug.xcconfig */,
 				39374CFD360B9359B5B872AB /* Pods-activeTANUITests.var qs debug.xcconfig */,
+				B38166F338E7D90F31520EFC /* Pods-activeTANUITests.sal qs debug.xcconfig */,
 				7A57276EF5E6D216CEBA9B69 /* Pods-activeTANUITests.var prod release.xcconfig */,
+				024FA1D20BC7C5650FCBA26D /* Pods-activeTANUITests.sal prod release.xcconfig */,
 				948F5987EFB769B0660AA6E5 /* Pods-activeTANUITests.var qs release.xcconfig */,
+				688559A1BE168297FCA8B84C /* Pods-activeTANUITests.sal qs release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -990,7 +1014,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1008,7 +1032,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS.debug";
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS activeTAN Test Debug";
@@ -1129,7 +1153,7 @@
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1147,7 +1171,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS";
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS activeTAN Test";
@@ -1273,7 +1297,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1291,7 +1315,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1417,7 +1441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1435,7 +1459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS.debug;
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "VAR activeTAN Test";
@@ -1556,7 +1580,7 @@
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1574,7 +1598,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = activeTAN;
@@ -1695,7 +1719,7 @@
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/VAR/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1713,7 +1737,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS;
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Test";
@@ -1899,7 +1923,7 @@
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1917,7 +1941,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Prod Debug";
@@ -1936,7 +1960,7 @@
 				CODE_SIGN_ENTITLEMENTS = activeTAN/mandanten/EFD/activeTAN.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1954,7 +1978,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.2;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS Provisioning Profile";
