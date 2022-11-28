@@ -122,9 +122,8 @@ class BankingAppApi : UIViewController{
     }
     
     private func readChallengeFile() -> String {
-        let fileUrl = fileDir!.appendingPathComponent(fileName!)
-            
         do{
+            let fileUrl = fileDir!.appendingPathComponent(fileName!)
             let json = try String(contentsOf: fileUrl, encoding: .utf8)
             return json
         } catch{
