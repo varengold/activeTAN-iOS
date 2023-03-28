@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+
+This dictionary enables the entitlements for:
+
+ * using the TAN app together with the banking app on the same device
+
+ * using email initialization together with a mail app on the same device
+
+-->
+<dict>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>$(APPLINK_DOMAIN)</string>
+	</array>
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>$(APP_GROUP)</string>
+	</array>
+</dict>
+</plist>

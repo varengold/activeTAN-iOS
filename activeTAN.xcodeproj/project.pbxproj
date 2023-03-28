@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C1E9D4E0E7471B66EC8404 /* Pods_activeTANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4393CB05B9C9CD8DAB2D7A5B /* Pods_activeTANUITests.framework */; };
-		5A005D31056B7ABC259CB402 /* Pods_activeTANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEB2E5EDBE5AB9F6AF563A3 /* Pods_activeTANTests.framework */; };
 		BD045C7122957503001058C5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD045C7022957503001058C5 /* UIViewControllerExtension.swift */; };
 		BD0B83A922F0336700DA66F6 /* SelectTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */; };
 		BD0B83B322FB266100DA66F6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */; };
@@ -83,7 +81,9 @@
 		BDE80DA0230DA34700A26D33 /* MenuHowToSlidesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE80D9F230DA34700A26D33 /* MenuHowToSlidesController.swift */; };
 		BDF14C7C22DF128C00010A8C /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF14C7B22DF128C00010A8C /* MenuDetailViewController.swift */; };
 		BDF14C7E22DF173100010A8C /* MenuElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF14C7D22DF173100010A8C /* MenuElement.swift */; };
-		D4278450FE9C9211C371FBE3 /* Pods_activeTAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20A19FEB97B55805438029F /* Pods_activeTAN.framework */; };
+		E7DE05D3E1CC83762999D724 /* Pods_activeTANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668B290863D91FC90F095909 /* Pods_activeTANTests.framework */; };
+		EB31EBFD296DC67526E3C058 /* Pods_activeTANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1759A26C48F04C90B43C29CE /* Pods_activeTANUITests.framework */; };
+		FC1A2A300E4C1D751B9270A2 /* Pods_activeTAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C0A229D152E6DD9CA8A6B /* Pods_activeTAN.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,49 +104,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		024FA1D20BC7C5650FCBA26D /* Pods-activeTANUITests.sal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.sal prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.sal prod release.xcconfig"; sourceTree = "<group>"; };
-		0801BAE833509E31FE08B021 /* Pods-activeTANUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.release.xcconfig"; sourceTree = "<group>"; };
-		090C44B7FCC4FE54ECB33CFD /* Pods-activeTAN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.debug.xcconfig"; sourceTree = "<group>"; };
-		0EC8C4CFBB760C6A16719497 /* Pods-activeTAN.bal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.bal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.bal prod debug.xcconfig"; sourceTree = "<group>"; };
-		10E50DE4DA6D7A63920EEA3F /* Pods-activeTANUITests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
-		1AE150AE947CB1F663E362C6 /* Pods-activeTAN.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod release.xcconfig"; sourceTree = "<group>"; };
-		1CC3CEBCAA044C7C3F662B77 /* Pods-activeTANUITests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
-		29B24EBA0E17E13EFD48442B /* Pods-activeTANTests.bal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.bal qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.bal qs release.xcconfig"; sourceTree = "<group>"; };
-		2B5EF3B566355245454D4138 /* Pods-activeTANTests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs debug.xcconfig"; sourceTree = "<group>"; };
-		2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod debug.xcconfig"; sourceTree = "<group>"; };
-		356D413DFE74625551A47F78 /* Pods-activeTAN.sal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.sal prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.sal prod release.xcconfig"; sourceTree = "<group>"; };
-		3877DCDFE072A486D46FCD6A /* Pods-activeTANTests.bal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.bal prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.bal prod release.xcconfig"; sourceTree = "<group>"; };
-		39374CFD360B9359B5B872AB /* Pods-activeTANUITests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs debug.xcconfig"; sourceTree = "<group>"; };
-		4393CB05B9C9CD8DAB2D7A5B /* Pods_activeTANUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		441B788E71319D9C040D7E66 /* Pods-activeTANTests.sal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.sal qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.sal qs release.xcconfig"; sourceTree = "<group>"; };
-		466B7AF8D9EF317F70F1ED06 /* Pods-activeTAN.sal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.sal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.sal prod debug.xcconfig"; sourceTree = "<group>"; };
-		4CE8A29E150479D6B0D39285 /* Pods-activeTANUITests.bal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.bal prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.bal prod release.xcconfig"; sourceTree = "<group>"; };
-		583CABE2C5F527CF57F4BA4C /* Pods-activeTAN.bal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.bal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.bal qs debug.xcconfig"; sourceTree = "<group>"; };
-		5BD6A788A05DFAB689B5EADE /* Pods-activeTAN.bal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.bal prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.bal prod release.xcconfig"; sourceTree = "<group>"; };
-		5D39CE7549E2AC2EF77E1B96 /* Pods-activeTANTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.release.xcconfig"; sourceTree = "<group>"; };
-		5EC1937911CD1978ABE49E43 /* Pods-activeTANTests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod release.xcconfig"; sourceTree = "<group>"; };
-		64995C4B5BF5F3716465C414 /* Pods-activeTAN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.release.xcconfig"; sourceTree = "<group>"; };
-		6794A45127D952CCD005C168 /* Pods-activeTAN.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs debug.xcconfig"; sourceTree = "<group>"; };
-		679A6661EDBF0F64EA1B1255 /* Pods-activeTANUITests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs release.xcconfig"; sourceTree = "<group>"; };
-		688559A1BE168297FCA8B84C /* Pods-activeTANUITests.sal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.sal qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.sal qs release.xcconfig"; sourceTree = "<group>"; };
-		6CFAA21934AE7784F3F5840E /* Pods-activeTANTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.debug.xcconfig"; sourceTree = "<group>"; };
-		70ACCCB272B6FEFC2EB00635 /* Pods-activeTANTests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs release.xcconfig"; sourceTree = "<group>"; };
-		76763CF66303DCD498949706 /* Pods-activeTANUITests.bal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.bal qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.bal qs release.xcconfig"; sourceTree = "<group>"; };
-		7A57276EF5E6D216CEBA9B69 /* Pods-activeTANUITests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod release.xcconfig"; sourceTree = "<group>"; };
-		7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod release.xcconfig"; sourceTree = "<group>"; };
-		7E3321A1C173CBCE2E023F14 /* Pods-activeTANTests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
-		835FF50C2C37A513959FD3C8 /* Pods-activeTANUITests.sal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.sal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.sal prod debug.xcconfig"; sourceTree = "<group>"; };
-		931EFEE6B1F2F586ED958AA8 /* Pods-activeTAN.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs release.xcconfig"; sourceTree = "<group>"; };
-		948F5987EFB769B0660AA6E5 /* Pods-activeTANUITests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs release.xcconfig"; sourceTree = "<group>"; };
-		9FA71AC7DBC1EE4C719D5049 /* Pods-activeTANUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9FC2B89CB23DBCC52F3850CB /* Pods-activeTANUITests.bal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.bal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.bal qs debug.xcconfig"; sourceTree = "<group>"; };
-		A496842A2090C0D79328F78C /* Pods-activeTANTests.sal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.sal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.sal qs debug.xcconfig"; sourceTree = "<group>"; };
-		AD0D859DE2D9A9A87A7D8871 /* Pods-activeTANTests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
-		B20A19FEB97B55805438029F /* Pods_activeTAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B323E253800DD89481459CDD /* Pods-activeTANTests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs release.xcconfig"; sourceTree = "<group>"; };
-		B38166F338E7D90F31520EFC /* Pods-activeTANUITests.sal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.sal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.sal qs debug.xcconfig"; sourceTree = "<group>"; };
-		B9FFA1F02433AF6A1A98EAA5 /* Pods-activeTANTests.bal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.bal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.bal prod debug.xcconfig"; sourceTree = "<group>"; };
-		BAB7574C3CB77F316D14CFD5 /* Pods-activeTANUITests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod release.xcconfig"; sourceTree = "<group>"; };
+		14A90669B53850284E6B271D /* Pods-activeTAN.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod debug.xcconfig"; sourceTree = "<group>"; };
+		1759A26C48F04C90B43C29CE /* Pods_activeTANUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17EA050F5AC4B20FC667FE9B /* Pods-activeTANTests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
+		3C38FD206D59CC7316897E31 /* Pods-activeTAN.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod debug.xcconfig"; sourceTree = "<group>"; };
+		41E5531F9C55CD9F05EC8076 /* Pods-activeTANTests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs release.xcconfig"; sourceTree = "<group>"; };
+		4EFA79089DAB7CB02BBAB71A /* Pods-activeTAN.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs release.xcconfig"; sourceTree = "<group>"; };
+		61332019484CFC7DA7F7BB7A /* Pods-activeTAN.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs release.xcconfig"; sourceTree = "<group>"; };
+		668B290863D91FC90F095909 /* Pods_activeTANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C6D9E77C60801A8BDDAE1E7 /* Pods-activeTANTests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod debug.xcconfig"; sourceTree = "<group>"; };
+		73E557A3EFE245DA00478CAA /* Pods-activeTANUITests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod debug.xcconfig"; sourceTree = "<group>"; };
+		785CD23898FF22E37B4B11CF /* Pods-activeTAN.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod release.xcconfig"; sourceTree = "<group>"; };
+		84651DC7C96B8CF106A32B82 /* Pods-activeTANTests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs debug.xcconfig"; sourceTree = "<group>"; };
+		8A95684F99EB36A6B0B30404 /* Pods-activeTANUITests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs debug.xcconfig"; sourceTree = "<group>"; };
+		8B6771EE6BB8232459676A8E /* Pods-activeTANUITests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs release.xcconfig"; sourceTree = "<group>"; };
+		8B906125116DFE28CE3FFDCE /* Pods-activeTAN.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs debug.xcconfig"; sourceTree = "<group>"; };
+		94C5D59133CBE1EE61AB6E9E /* Pods-activeTAN.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod release.xcconfig"; sourceTree = "<group>"; };
+		9AF0395437A3D11A022D3567 /* Pods-activeTANUITests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod release.xcconfig"; sourceTree = "<group>"; };
+		9B50933DF609C91895BF8F36 /* Pods-activeTANTests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod release.xcconfig"; sourceTree = "<group>"; };
+		9D54306C99A7D0B61C79528E /* Pods-activeTANUITests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
+		AFDA20FCAA8059E6E895C3BC /* Pods-activeTANUITests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod release.xcconfig"; sourceTree = "<group>"; };
 		BD045C7022957503001058C5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTokenViewController.swift; sourceTree = "<group>"; };
 		BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -234,20 +211,13 @@
 		BDF14C7D22DF173100010A8C /* MenuElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuElement.swift; sourceTree = "<group>"; };
 		BDF3B5E827B3C58300F7DB24 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Custom.strings; sourceTree = "<group>"; };
 		BDF3B5ED27B3C58700F7DB24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Custom.strings; sourceTree = "<group>"; };
-		C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod debug.xcconfig"; sourceTree = "<group>"; };
-		CA5971A44FDE25C44C633B12 /* Pods-activeTAN.sal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.sal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.sal qs debug.xcconfig"; sourceTree = "<group>"; };
-		CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod debug.xcconfig"; sourceTree = "<group>"; };
-		CFEB2E5EDBE5AB9F6AF563A3 /* Pods_activeTANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB62F405FE9AD43E56CD21F0 /* Pods-activeTANTests.bal qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.bal qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.bal qs debug.xcconfig"; sourceTree = "<group>"; };
-		E531463BC1F2D85D5A0840CB /* Pods-activeTANTests.sal prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.sal prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.sal prod release.xcconfig"; sourceTree = "<group>"; };
-		E80C40CBEB1B7E003CB9C031 /* Pods-activeTANTests.sal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.sal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.sal prod debug.xcconfig"; sourceTree = "<group>"; };
-		EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs debug.xcconfig"; sourceTree = "<group>"; };
-		EDC271C2ACAC26EFB1D56DDB /* Pods-activeTAN.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod debug.xcconfig"; sourceTree = "<group>"; };
-		F15EA489464878831F646512 /* Pods-activeTAN.bal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.bal qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.bal qs release.xcconfig"; sourceTree = "<group>"; };
-		F31AE33D321D5EE92B49A46F /* Pods-activeTAN.sal qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.sal qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.sal qs release.xcconfig"; sourceTree = "<group>"; };
-		F51EFF2775DAB0F6E59BE90E /* Pods-activeTANTests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod release.xcconfig"; sourceTree = "<group>"; };
-		F5B35C3F1EA100A12D027719 /* Pods-activeTANUITests.bal prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.bal prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.bal prod debug.xcconfig"; sourceTree = "<group>"; };
-		FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs release.xcconfig"; sourceTree = "<group>"; };
+		CC7E36DE2AC80A589FF7D8EF /* Pods-activeTANTests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod release.xcconfig"; sourceTree = "<group>"; };
+		D8F305B9719691153E7D4968 /* Pods-activeTANTests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs release.xcconfig"; sourceTree = "<group>"; };
+		E14AB63984AEAF6D1E4F28BB /* Pods-activeTANUITests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
+		E4B1A77A409D864BAFADC174 /* Pods-activeTAN.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs debug.xcconfig"; sourceTree = "<group>"; };
+		E84942624A00C48C58B991E8 /* Pods-activeTANUITests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs release.xcconfig"; sourceTree = "<group>"; };
+		ED625B456B35874B9AE8F627 /* Pods-activeTANTests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
+		FE4C0A229D152E6DD9CA8A6B /* Pods_activeTAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,7 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4278450FE9C9211C371FBE3 /* Pods_activeTAN.framework in Frameworks */,
+				FC1A2A300E4C1D751B9270A2 /* Pods_activeTAN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A005D31056B7ABC259CB402 /* Pods_activeTANTests.framework in Frameworks */,
+				E7DE05D3E1CC83762999D724 /* Pods_activeTANTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C1E9D4E0E7471B66EC8404 /* Pods_activeTANUITests.framework in Frameworks */,
+				EB31EBFD296DC67526E3C058 /* Pods_activeTANUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,62 +251,42 @@
 		007D1F67FED447A5B14B6851 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				090C44B7FCC4FE54ECB33CFD /* Pods-activeTAN.debug.xcconfig */,
-				64995C4B5BF5F3716465C414 /* Pods-activeTAN.release.xcconfig */,
-				6CFAA21934AE7784F3F5840E /* Pods-activeTANTests.debug.xcconfig */,
-				5D39CE7549E2AC2EF77E1B96 /* Pods-activeTANTests.release.xcconfig */,
-				9FA71AC7DBC1EE4C719D5049 /* Pods-activeTANUITests.debug.xcconfig */,
-				0801BAE833509E31FE08B021 /* Pods-activeTANUITests.release.xcconfig */,
-				EDC271C2ACAC26EFB1D56DDB /* Pods-activeTAN.efd prod debug.xcconfig */,
-				6794A45127D952CCD005C168 /* Pods-activeTAN.efd qs debug.xcconfig */,
-				1AE150AE947CB1F663E362C6 /* Pods-activeTAN.efd prod release.xcconfig */,
-				931EFEE6B1F2F586ED958AA8 /* Pods-activeTAN.efd qs release.xcconfig */,
-				AD0D859DE2D9A9A87A7D8871 /* Pods-activeTANTests.efd prod debug.xcconfig */,
-				7E3321A1C173CBCE2E023F14 /* Pods-activeTANTests.efd qs debug.xcconfig */,
-				F51EFF2775DAB0F6E59BE90E /* Pods-activeTANTests.efd prod release.xcconfig */,
-				70ACCCB272B6FEFC2EB00635 /* Pods-activeTANTests.efd qs release.xcconfig */,
-				10E50DE4DA6D7A63920EEA3F /* Pods-activeTANUITests.efd prod debug.xcconfig */,
-				1CC3CEBCAA044C7C3F662B77 /* Pods-activeTANUITests.efd qs debug.xcconfig */,
-				BAB7574C3CB77F316D14CFD5 /* Pods-activeTANUITests.efd prod release.xcconfig */,
-				679A6661EDBF0F64EA1B1255 /* Pods-activeTANUITests.efd qs release.xcconfig */,
-				2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */,
-				466B7AF8D9EF317F70F1ED06 /* Pods-activeTAN.sal prod debug.xcconfig */,
-				0EC8C4CFBB760C6A16719497 /* Pods-activeTAN.bal prod debug.xcconfig */,
-				EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */,
-				CA5971A44FDE25C44C633B12 /* Pods-activeTAN.sal qs debug.xcconfig */,
-				583CABE2C5F527CF57F4BA4C /* Pods-activeTAN.bal qs debug.xcconfig */,
-				7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */,
-				356D413DFE74625551A47F78 /* Pods-activeTAN.sal prod release.xcconfig */,
-				5BD6A788A05DFAB689B5EADE /* Pods-activeTAN.bal prod release.xcconfig */,
-				FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */,
-				F31AE33D321D5EE92B49A46F /* Pods-activeTAN.sal qs release.xcconfig */,
-				F15EA489464878831F646512 /* Pods-activeTAN.bal qs release.xcconfig */,
-				CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */,
-				E80C40CBEB1B7E003CB9C031 /* Pods-activeTANTests.sal prod debug.xcconfig */,
-				B9FFA1F02433AF6A1A98EAA5 /* Pods-activeTANTests.bal prod debug.xcconfig */,
-				2B5EF3B566355245454D4138 /* Pods-activeTANTests.var qs debug.xcconfig */,
-				A496842A2090C0D79328F78C /* Pods-activeTANTests.sal qs debug.xcconfig */,
-				DB62F405FE9AD43E56CD21F0 /* Pods-activeTANTests.bal qs debug.xcconfig */,
-				5EC1937911CD1978ABE49E43 /* Pods-activeTANTests.var prod release.xcconfig */,
-				E531463BC1F2D85D5A0840CB /* Pods-activeTANTests.sal prod release.xcconfig */,
-				3877DCDFE072A486D46FCD6A /* Pods-activeTANTests.bal prod release.xcconfig */,
-				B323E253800DD89481459CDD /* Pods-activeTANTests.var qs release.xcconfig */,
-				441B788E71319D9C040D7E66 /* Pods-activeTANTests.sal qs release.xcconfig */,
-				29B24EBA0E17E13EFD48442B /* Pods-activeTANTests.bal qs release.xcconfig */,
-				C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */,
-				835FF50C2C37A513959FD3C8 /* Pods-activeTANUITests.sal prod debug.xcconfig */,
-				F5B35C3F1EA100A12D027719 /* Pods-activeTANUITests.bal prod debug.xcconfig */,
-				39374CFD360B9359B5B872AB /* Pods-activeTANUITests.var qs debug.xcconfig */,
-				B38166F338E7D90F31520EFC /* Pods-activeTANUITests.sal qs debug.xcconfig */,
-				9FC2B89CB23DBCC52F3850CB /* Pods-activeTANUITests.bal qs debug.xcconfig */,
-				7A57276EF5E6D216CEBA9B69 /* Pods-activeTANUITests.var prod release.xcconfig */,
-				024FA1D20BC7C5650FCBA26D /* Pods-activeTANUITests.sal prod release.xcconfig */,
-				4CE8A29E150479D6B0D39285 /* Pods-activeTANUITests.bal prod release.xcconfig */,
-				948F5987EFB769B0660AA6E5 /* Pods-activeTANUITests.var qs release.xcconfig */,
-				688559A1BE168297FCA8B84C /* Pods-activeTANUITests.sal qs release.xcconfig */,
-				76763CF66303DCD498949706 /* Pods-activeTANUITests.bal qs release.xcconfig */,
+				14A90669B53850284E6B271D /* Pods-activeTAN.efd prod debug.xcconfig */,
+				3C38FD206D59CC7316897E31 /* Pods-activeTAN.var prod debug.xcconfig */,
+				E4B1A77A409D864BAFADC174 /* Pods-activeTAN.efd qs debug.xcconfig */,
+				8B906125116DFE28CE3FFDCE /* Pods-activeTAN.var qs debug.xcconfig */,
+				785CD23898FF22E37B4B11CF /* Pods-activeTAN.efd prod release.xcconfig */,
+				94C5D59133CBE1EE61AB6E9E /* Pods-activeTAN.var prod release.xcconfig */,
+				61332019484CFC7DA7F7BB7A /* Pods-activeTAN.efd qs release.xcconfig */,
+				4EFA79089DAB7CB02BBAB71A /* Pods-activeTAN.var qs release.xcconfig */,
+				ED625B456B35874B9AE8F627 /* Pods-activeTANTests.efd prod debug.xcconfig */,
+				6C6D9E77C60801A8BDDAE1E7 /* Pods-activeTANTests.var prod debug.xcconfig */,
+				17EA050F5AC4B20FC667FE9B /* Pods-activeTANTests.efd qs debug.xcconfig */,
+				84651DC7C96B8CF106A32B82 /* Pods-activeTANTests.var qs debug.xcconfig */,
+				CC7E36DE2AC80A589FF7D8EF /* Pods-activeTANTests.efd prod release.xcconfig */,
+				9B50933DF609C91895BF8F36 /* Pods-activeTANTests.var prod release.xcconfig */,
+				D8F305B9719691153E7D4968 /* Pods-activeTANTests.efd qs release.xcconfig */,
+				41E5531F9C55CD9F05EC8076 /* Pods-activeTANTests.var qs release.xcconfig */,
+				E14AB63984AEAF6D1E4F28BB /* Pods-activeTANUITests.efd prod debug.xcconfig */,
+				73E557A3EFE245DA00478CAA /* Pods-activeTANUITests.var prod debug.xcconfig */,
+				9D54306C99A7D0B61C79528E /* Pods-activeTANUITests.efd qs debug.xcconfig */,
+				8A95684F99EB36A6B0B30404 /* Pods-activeTANUITests.var qs debug.xcconfig */,
+				9AF0395437A3D11A022D3567 /* Pods-activeTANUITests.efd prod release.xcconfig */,
+				AFDA20FCAA8059E6E895C3BC /* Pods-activeTANUITests.var prod release.xcconfig */,
+				E84942624A00C48C58B991E8 /* Pods-activeTANUITests.efd qs release.xcconfig */,
+				8B6771EE6BB8232459676A8E /* Pods-activeTANUITests.var qs release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		1CFA2E416DD005C63A4874F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE4C0A229D152E6DD9CA8A6B /* Pods_activeTAN.framework */,
+				668B290863D91FC90F095909 /* Pods_activeTANTests.framework */,
+				1759A26C48F04C90B43C29CE /* Pods_activeTANUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BD0FA11022FD617D00780C6A /* mandanten */ = {
@@ -441,7 +391,7 @@
 				BD6651E92289AA4300BC1773 /* activeTANUITests */,
 				BD6651C82289AA4200BC1773 /* Products */,
 				007D1F67FED447A5B14B6851 /* Pods */,
-				D2EF53B65D7D3A3AEFB4B63D /* Frameworks */,
+				1CFA2E416DD005C63A4874F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -573,16 +523,6 @@
 			path = initialization;
 			sourceTree = "<group>";
 		};
-		D2EF53B65D7D3A3AEFB4B63D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B20A19FEB97B55805438029F /* Pods_activeTAN.framework */,
-				CFEB2E5EDBE5AB9F6AF563A3 /* Pods_activeTANTests.framework */,
-				4393CB05B9C9CD8DAB2D7A5B /* Pods_activeTANUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -590,11 +530,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD6651EF2289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTAN" */;
 			buildPhases = (
-				ADB2ABA13920884AC2E1DB9C /* [CP] Check Pods Manifest.lock */,
+				00B058CAEE4CA4BD8B3E9D99 /* [CP] Check Pods Manifest.lock */,
 				BD6651C32289AA4200BC1773 /* Sources */,
 				BD6651C42289AA4200BC1773 /* Frameworks */,
 				BD6651C52289AA4200BC1773 /* Resources */,
-				4919FF69A1A8EE6586B98AE0 /* [CP] Embed Pods Frameworks */,
+				E82739E2DC433AA316F9C2BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -609,7 +549,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD6651F22289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANTests" */;
 			buildPhases = (
-				604462241C6D3864C8AB9294 /* [CP] Check Pods Manifest.lock */,
+				93D765631644CCF53C3AAA7A /* [CP] Check Pods Manifest.lock */,
 				BD6651D72289AA4300BC1773 /* Sources */,
 				BD6651D82289AA4300BC1773 /* Frameworks */,
 				BD6651D92289AA4300BC1773 /* Resources */,
@@ -628,7 +568,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD6651F52289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANUITests" */;
 			buildPhases = (
-				9FC654C06AB56648DC548B5C /* [CP] Check Pods Manifest.lock */,
+				DFA5F5F00DF9B55C05A05F03 /* [CP] Check Pods Manifest.lock */,
 				BD6651E22289AA4300BC1773 /* Sources */,
 				BD6651E32289AA4300BC1773 /* Frameworks */,
 				BD6651E42289AA4300BC1773 /* Resources */,
@@ -728,24 +668,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4919FF69A1A8EE6586B98AE0 /* [CP] Embed Pods Frameworks */ = {
+		00B058CAEE4CA4BD8B3E9D99 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-activeTAN-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		604462241C6D3864C8AB9294 /* [CP] Check Pods Manifest.lock */ = {
+		93D765631644CCF53C3AAA7A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -767,7 +712,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FC654C06AB56648DC548B5C /* [CP] Check Pods Manifest.lock */ = {
+		DFA5F5F00DF9B55C05A05F03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -789,26 +734,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ADB2ABA13920884AC2E1DB9C /* [CP] Check Pods Manifest.lock */ = {
+		E82739E2DC433AA316F9C2BF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-activeTAN-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1019,7 +959,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1031,14 +971,14 @@
 		};
 		BD0FA0F922FD601500780C6A /* EFD QS Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6794A45127D952CCD005C168 /* Pods-activeTAN.efd qs debug.xcconfig */;
+			baseConfigurationReference = E4B1A77A409D864BAFADC174 /* Pods-activeTAN.efd qs debug.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:dailybuild.efdis-online.de?mode=developer";
-				APP_GROUP = "group.de.efdis-online.banking4shared";
+				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/mandanten/$(CONFIGURATION_MANDANT)/activeTAN.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1051,12 +991,11 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS.debug";
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS activeTAN Test Debug";
@@ -1067,7 +1006,7 @@
 		};
 		BD0FA0FA22FD601500780C6A /* EFD QS Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E3321A1C173CBCE2E023F14 /* Pods-activeTANTests.efd qs debug.xcconfig */;
+			baseConfigurationReference = 17EA050F5AC4B20FC667FE9B /* Pods-activeTANTests.efd qs debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1089,7 +1028,7 @@
 		};
 		BD0FA0FB22FD601500780C6A /* EFD QS Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CC3CEBCAA044C7C3F662B77 /* Pods-activeTANUITests.efd qs debug.xcconfig */;
+			baseConfigurationReference = 9D54306C99A7D0B61C79528E /* Pods-activeTANUITests.efd qs debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1157,7 +1096,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1169,15 +1108,15 @@
 		};
 		BD0FA0FD22FD602200780C6A /* EFD QS Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 931EFEE6B1F2F586ED958AA8 /* Pods-activeTAN.efd qs release.xcconfig */;
+			baseConfigurationReference = 61332019484CFC7DA7F7BB7A /* Pods-activeTAN.efd qs release.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:dailybuild.efdis-online.de?mode=developer";
-				APP_GROUP = "group.de.efdis-online.banking4shared";
+				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/mandanten/$(CONFIGURATION_MANDANT)/activeTAN.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1190,12 +1129,11 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS";
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS activeTAN Test";
@@ -1206,7 +1144,7 @@
 		};
 		BD0FA0FE22FD602200780C6A /* EFD QS Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70ACCCB272B6FEFC2EB00635 /* Pods-activeTANTests.efd qs release.xcconfig */;
+			baseConfigurationReference = D8F305B9719691153E7D4968 /* Pods-activeTANTests.efd qs release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1228,7 +1166,7 @@
 		};
 		BD0FA0FF22FD602200780C6A /* EFD QS Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 679A6661EDBF0F64EA1B1255 /* Pods-activeTANUITests.efd qs release.xcconfig */;
+			baseConfigurationReference = E84942624A00C48C58B991E8 /* Pods-activeTANUITests.efd qs release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1302,7 +1240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1314,14 +1252,14 @@
 		};
 		BD0FA15F22FD9B0B00780C6A /* VAR Prod Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CA0E503DD5825E06EDCCB1B /* Pods-activeTAN.var prod debug.xcconfig */;
+			baseConfigurationReference = 3C38FD206D59CC7316897E31 /* Pods-activeTAN.var prod debug.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/mandanten/$(CONFIGURATION_MANDANT)/activeTAN.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1334,12 +1272,11 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1350,7 +1287,7 @@
 		};
 		BD0FA16022FD9B0B00780C6A /* VAR Prod Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA6E5ADA4AF94864A720B024 /* Pods-activeTANTests.var prod debug.xcconfig */;
+			baseConfigurationReference = 6C6D9E77C60801A8BDDAE1E7 /* Pods-activeTANTests.var prod debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1372,7 +1309,7 @@
 		};
 		BD0FA16122FD9B0B00780C6A /* VAR Prod Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C046CC158BBA58920519BFF0 /* Pods-activeTANUITests.var prod debug.xcconfig */;
+			baseConfigurationReference = 73E557A3EFE245DA00478CAA /* Pods-activeTANUITests.var prod debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1446,7 +1383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1458,14 +1395,14 @@
 		};
 		BD0FA16322FD9B1600780C6A /* VAR QS Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB029D955D54B384934FD0CB /* Pods-activeTAN.var qs debug.xcconfig */;
+			baseConfigurationReference = 8B906125116DFE28CE3FFDCE /* Pods-activeTAN.var qs debug.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/mandanten/$(CONFIGURATION_MANDANT)/activeTAN.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1478,12 +1415,11 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS.debug;
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "VAR activeTAN Test";
@@ -1494,7 +1430,7 @@
 		};
 		BD0FA16422FD9B1600780C6A /* VAR QS Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B5EF3B566355245454D4138 /* Pods-activeTANTests.var qs debug.xcconfig */;
+			baseConfigurationReference = 84651DC7C96B8CF106A32B82 /* Pods-activeTANTests.var qs debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1516,7 +1452,7 @@
 		};
 		BD0FA16522FD9B1600780C6A /* VAR QS Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39374CFD360B9359B5B872AB /* Pods-activeTANUITests.var qs debug.xcconfig */;
+			baseConfigurationReference = 8A95684F99EB36A6B0B30404 /* Pods-activeTANUITests.var qs debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1584,7 +1520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1596,15 +1532,15 @@
 		};
 		BD0FA16722FD9B1E00780C6A /* VAR Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AB0B3A0D98B1E4E89E6DFC6 /* Pods-activeTAN.var prod release.xcconfig */;
+			baseConfigurationReference = 94C5D59133CBE1EE61AB6E9E /* Pods-activeTAN.var prod release.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/mandanten/$(CONFIGURATION_MANDANT)/activeTAN.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1617,12 +1553,11 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = activeTAN;
@@ -1633,7 +1568,7 @@
 		};
 		BD0FA16822FD9B1E00780C6A /* VAR Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EC1937911CD1978ABE49E43 /* Pods-activeTANTests.var prod release.xcconfig */;
+			baseConfigurationReference = 9B50933DF609C91895BF8F36 /* Pods-activeTANTests.var prod release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1655,7 +1590,7 @@
 		};
 		BD0FA16922FD9B1E00780C6A /* VAR Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A57276EF5E6D216CEBA9B69 /* Pods-activeTANUITests.var prod release.xcconfig */;
+			baseConfigurationReference = AFDA20FCAA8059E6E895C3BC /* Pods-activeTANUITests.var prod release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1723,7 +1658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1735,15 +1670,15 @@
 		};
 		BD0FA16B22FD9B2800780C6A /* VAR QS Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBA11485E4FA01CBA99A1FA8 /* Pods-activeTAN.var qs release.xcconfig */;
+			baseConfigurationReference = 4EFA79089DAB7CB02BBAB71A /* Pods-activeTAN.var qs release.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/mandanten/$(CONFIGURATION_MANDANT)/activeTAN.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1756,12 +1691,11 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS;
 				PRODUCT_NAME = "$(TARGET_NAME) Test";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Test";
@@ -1772,7 +1706,7 @@
 		};
 		BD0FA16C22FD9B2800780C6A /* VAR QS Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B323E253800DD89481459CDD /* Pods-activeTANTests.var qs release.xcconfig */;
+			baseConfigurationReference = 41E5531F9C55CD9F05EC8076 /* Pods-activeTANTests.var qs release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1794,7 +1728,7 @@
 		};
 		BD0FA16D22FD9B2800780C6A /* VAR QS Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 948F5987EFB769B0660AA6E5 /* Pods-activeTANUITests.var qs release.xcconfig */;
+			baseConfigurationReference = 8B6771EE6BB8232459676A8E /* Pods-activeTANUITests.var qs release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1868,7 +1802,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1927,7 +1861,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1939,15 +1873,15 @@
 		};
 		BD6651F02289AA4300BC1773 /* EFD Prod Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDC271C2ACAC26EFB1D56DDB /* Pods-activeTAN.efd prod debug.xcconfig */;
+			baseConfigurationReference = 14A90669B53850284E6B271D /* Pods-activeTAN.efd prod debug.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:efdis-online.de";
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/mandanten/$(CONFIGURATION_MANDANT)/activeTAN.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-banking-and-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1960,12 +1894,11 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Prod Debug";
@@ -1976,15 +1909,15 @@
 		};
 		BD6651F12289AA4300BC1773 /* EFD Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AE150AE947CB1F663E362C6 /* Pods-activeTAN.efd prod release.xcconfig */;
+			baseConfigurationReference = 785CD23898FF22E37B4B11CF /* Pods-activeTAN.efd prod release.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:efdis-online.de";
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/mandanten/$(CONFIGURATION_MANDANT)/activeTAN.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-banking-and-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1997,12 +1930,11 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS Provisioning Profile";
@@ -2013,7 +1945,7 @@
 		};
 		BD6651F32289AA4300BC1773 /* EFD Prod Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD0D859DE2D9A9A87A7D8871 /* Pods-activeTANTests.efd prod debug.xcconfig */;
+			baseConfigurationReference = ED625B456B35874B9AE8F627 /* Pods-activeTANTests.efd prod debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2035,7 +1967,7 @@
 		};
 		BD6651F42289AA4300BC1773 /* EFD Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F51EFF2775DAB0F6E59BE90E /* Pods-activeTANTests.efd prod release.xcconfig */;
+			baseConfigurationReference = CC7E36DE2AC80A589FF7D8EF /* Pods-activeTANTests.efd prod release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2057,7 +1989,7 @@
 		};
 		BD6651F62289AA4300BC1773 /* EFD Prod Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10E50DE4DA6D7A63920EEA3F /* Pods-activeTANUITests.efd prod debug.xcconfig */;
+			baseConfigurationReference = E14AB63984AEAF6D1E4F28BB /* Pods-activeTANUITests.efd prod debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2078,7 +2010,7 @@
 		};
 		BD6651F72289AA4300BC1773 /* EFD Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAB7574C3CB77F316D14CFD5 /* Pods-activeTANUITests.efd prod release.xcconfig */;
+			baseConfigurationReference = 9AF0395437A3D11A022D3567 /* Pods-activeTANUITests.efd prod release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

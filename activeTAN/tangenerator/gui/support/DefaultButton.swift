@@ -36,7 +36,10 @@ class DefaultButton : UIButton {
         self.setTitleColor(UIColor.white, for: .normal)
         self.layer.cornerRadius = 8
         self.clipsToBounds = true
-        self.contentEdgeInsets = UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18)
+        
+        self.configuration = UIButton.Configuration.filled()
+        self.configuration!.contentInsets = NSDirectionalEdgeInsets(top: 18, leading: 18, bottom: 18, trailing: 18)
+        
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: (self.titleLabel?.font.pointSize)!)
     }
     

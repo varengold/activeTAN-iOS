@@ -119,7 +119,7 @@ extension SecurityHandler {
         
         // Assemble attributes
         
-        let attributes: [String : Any] = [
+        let attributes: NSDictionary = [
             kSecAttrKeyType as String:            attrKeyType,
             kSecAttrKeySizeInBits as String:      256,
             kSecAttrTokenID as String:            kSecAttrTokenIDSecureEnclave,
@@ -131,12 +131,12 @@ extension SecurityHandler {
         ]
         
         // Generate key pair
-        var publicKey, privateKey: SecKey?
-        let status = SecKeyGeneratePair(attributes as CFDictionary, &publicKey, &privateKey)
-        
-        guard status == errSecSuccess else {
-            throw SecurityHandlerError.error("Could not generate key pair.")
+        var error: Unmanaged<CFError>?
+        guard let privateKey = SecKeyCreateRandomKey(attributes, &error) else {
+            throw SecurityHandlerError.error("Could not generate key pair: " + error!.takeRetainedValue().localizedDescription)
         }
+        
+        let publicKey = SecKeyCopyPublicKey(privateKey)
         
         return publicKey!
     }

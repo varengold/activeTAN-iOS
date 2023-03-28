@@ -169,7 +169,8 @@ extension BankingQrCodeScannerViewController {
         
         let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
         
-        let orientation = UIApplication.shared.statusBarOrientation
+        
+        let orientation = scanView!.window!.windowScene!.interfaceOrientation
         let portraitOrientation = orientation == .portrait || orientation == .portraitUpsideDown
         
         if let formatDescription = device?.activeFormat.formatDescription {

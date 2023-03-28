@@ -275,8 +275,6 @@ class HHDuc {
                 throw UnsupportedDataFormatError.error("Illegal start code format: \(message)")
             }
             break
-        default:
-            throw UnsupportedDataFormatError.error("Unsupported start code encoding")
         }
         
         var hhduc : HHDuc
@@ -366,9 +364,6 @@ class HHDuc {
                         try hhduc.setDataElement(type: type, value: longValue)
                     }
                     break;
-                    
-                default:
-                    throw UnsupportedDataFormatError.error("Unsupported data element encoding")
                 }
             }
         }

@@ -117,7 +117,7 @@ class BankingTokenRepository {
         let results = getTokens()
         
         for object in results {
-            guard let objectData = object as? NSManagedObject else {continue}
+            let objectData = object as NSManagedObject
             managedContext.delete(objectData)
         }
         save()

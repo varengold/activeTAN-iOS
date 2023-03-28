@@ -421,13 +421,22 @@ extension VerifyTransactionDetailsController {
         
         
         if type.attr.format == DataElementTypeAttributes.Format.numeric {
-            // Make numbers respect the device's locale
+            // Make numbers respect the current app language
+            value = value.replacingOccurrences(of: ",", with: ".")
+            let number = NSDecimalNumber.init(
+                string: value,
+                locale: Locale(identifier: "en-US"))
+            
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
-            let number =  value.replacingOccurrences(of: ",", with: ".")
-            if let formattedNumber = formatter.number(from: number), let formattedString = formatter.string(from: formattedNumber) {
-                value = formattedString
+            formatter.usesGroupingSeparator = true
+            formatter.locale = Locale(identifier: Locale.current.languageCode!)
+            
+            if let decimalPoint = value.lastIndex(of: ".") {
+                formatter.minimumFractionDigits = value.distance(from: decimalPoint, to: value.endIndex) - 1
             }
+            
+            value = formatter.string(from: number)!
         }
         
         cell.labelLabel?.text = getString(dataElementType: type)
