@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DB5239DBA5E0954B14D1BCC /* Pods_activeTAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D299CAAE559CB3A3F20402D /* Pods_activeTAN.framework */; };
+		93C7B3C372416F2EA62BBA1F /* Pods_activeTANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE446BAF0E3E8B1149D7E12 /* Pods_activeTANUITests.framework */; };
+		AB9915E20CF0D605FEF7FD98 /* Pods_activeTANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDFC2B828F121BA26A8D1E1 /* Pods_activeTANTests.framework */; };
 		BD045C7122957503001058C5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD045C7022957503001058C5 /* UIViewControllerExtension.swift */; };
 		BD0B83A922F0336700DA66F6 /* SelectTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */; };
 		BD0B83B322FB266100DA66F6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */; };
@@ -81,9 +84,6 @@
 		BDE80DA0230DA34700A26D33 /* MenuHowToSlidesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE80D9F230DA34700A26D33 /* MenuHowToSlidesController.swift */; };
 		BDF14C7C22DF128C00010A8C /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF14C7B22DF128C00010A8C /* MenuDetailViewController.swift */; };
 		BDF14C7E22DF173100010A8C /* MenuElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF14C7D22DF173100010A8C /* MenuElement.swift */; };
-		E7DE05D3E1CC83762999D724 /* Pods_activeTANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668B290863D91FC90F095909 /* Pods_activeTANTests.framework */; };
-		EB31EBFD296DC67526E3C058 /* Pods_activeTANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1759A26C48F04C90B43C29CE /* Pods_activeTANUITests.framework */; };
-		FC1A2A300E4C1D751B9270A2 /* Pods_activeTAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C0A229D152E6DD9CA8A6B /* Pods_activeTAN.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,26 +104,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14A90669B53850284E6B271D /* Pods-activeTAN.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod debug.xcconfig"; sourceTree = "<group>"; };
-		1759A26C48F04C90B43C29CE /* Pods_activeTANUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		17EA050F5AC4B20FC667FE9B /* Pods-activeTANTests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
-		3C38FD206D59CC7316897E31 /* Pods-activeTAN.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod debug.xcconfig"; sourceTree = "<group>"; };
-		41E5531F9C55CD9F05EC8076 /* Pods-activeTANTests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs release.xcconfig"; sourceTree = "<group>"; };
-		4EFA79089DAB7CB02BBAB71A /* Pods-activeTAN.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs release.xcconfig"; sourceTree = "<group>"; };
-		61332019484CFC7DA7F7BB7A /* Pods-activeTAN.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs release.xcconfig"; sourceTree = "<group>"; };
-		668B290863D91FC90F095909 /* Pods_activeTANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C6D9E77C60801A8BDDAE1E7 /* Pods-activeTANTests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod debug.xcconfig"; sourceTree = "<group>"; };
-		73E557A3EFE245DA00478CAA /* Pods-activeTANUITests.var prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod debug.xcconfig"; sourceTree = "<group>"; };
-		785CD23898FF22E37B4B11CF /* Pods-activeTAN.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd prod release.xcconfig"; sourceTree = "<group>"; };
-		84651DC7C96B8CF106A32B82 /* Pods-activeTANTests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var qs debug.xcconfig"; sourceTree = "<group>"; };
-		8A95684F99EB36A6B0B30404 /* Pods-activeTANUITests.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs debug.xcconfig"; sourceTree = "<group>"; };
-		8B6771EE6BB8232459676A8E /* Pods-activeTANUITests.var qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var qs release.xcconfig"; sourceTree = "<group>"; };
-		8B906125116DFE28CE3FFDCE /* Pods-activeTAN.var qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var qs debug.xcconfig"; sourceTree = "<group>"; };
-		94C5D59133CBE1EE61AB6E9E /* Pods-activeTAN.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var prod release.xcconfig"; sourceTree = "<group>"; };
-		9AF0395437A3D11A022D3567 /* Pods-activeTANUITests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod release.xcconfig"; sourceTree = "<group>"; };
-		9B50933DF609C91895BF8F36 /* Pods-activeTANTests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var prod release.xcconfig"; sourceTree = "<group>"; };
-		9D54306C99A7D0B61C79528E /* Pods-activeTANUITests.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs debug.xcconfig"; sourceTree = "<group>"; };
-		AFDA20FCAA8059E6E895C3BC /* Pods-activeTANUITests.var prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var prod release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var prod release.xcconfig"; sourceTree = "<group>"; };
+		05C1A94C08A5D9E85428CC05 /* Pods-activeTAN.efd release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd release.xcconfig"; sourceTree = "<group>"; };
+		0BDFC2B828F121BA26A8D1E1 /* Pods_activeTANTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D3B3AE535832346EF686AFC /* Pods-activeTANTests.efd debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd debug.xcconfig"; sourceTree = "<group>"; };
+		3EE446BAF0E3E8B1149D7E12 /* Pods_activeTANUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTANUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		421FC703893ADAA8EC884EF3 /* Pods-activeTANUITests.var debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var debug.xcconfig"; sourceTree = "<group>"; };
+		42E3843C697494103A1AD34B /* Pods-activeTAN.var debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var debug.xcconfig"; sourceTree = "<group>"; };
+		553D73DA54C8286AA5D5EE0B /* Pods-activeTAN.var release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.var release.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.var release.xcconfig"; sourceTree = "<group>"; };
+		627224FCA0D5ADF317113E5E /* Pods-activeTANTests.efd release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd release.xcconfig"; sourceTree = "<group>"; };
+		63B67F5C27819F2416E61D29 /* Pods-activeTANUITests.var release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.var release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.var release.xcconfig"; sourceTree = "<group>"; };
+		6D299CAAE559CB3A3F20402D /* Pods_activeTAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		763894F8DA7C7364EB653D50 /* Pods-activeTANUITests.efd release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd release.xcconfig"; sourceTree = "<group>"; };
+		877DC585740E34D3E01B5FD1 /* Pods-activeTANUITests.efd debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd debug.xcconfig"; sourceTree = "<group>"; };
+		89A86423BB0E56B0B228F6D2 /* Pods-activeTANTests.var debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var debug.xcconfig"; sourceTree = "<group>"; };
+		9F5A729EA3CC4472B5851A7D /* Pods-activeTAN.efd debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd debug.xcconfig"; sourceTree = "<group>"; };
 		BD045C7022957503001058C5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTokenViewController.swift; sourceTree = "<group>"; };
 		BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -211,13 +205,7 @@
 		BDF14C7D22DF173100010A8C /* MenuElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuElement.swift; sourceTree = "<group>"; };
 		BDF3B5E827B3C58300F7DB24 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Custom.strings; sourceTree = "<group>"; };
 		BDF3B5ED27B3C58700F7DB24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Custom.strings; sourceTree = "<group>"; };
-		CC7E36DE2AC80A589FF7D8EF /* Pods-activeTANTests.efd prod release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod release.xcconfig"; sourceTree = "<group>"; };
-		D8F305B9719691153E7D4968 /* Pods-activeTANTests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd qs release.xcconfig"; sourceTree = "<group>"; };
-		E14AB63984AEAF6D1E4F28BB /* Pods-activeTANUITests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
-		E4B1A77A409D864BAFADC174 /* Pods-activeTAN.efd qs debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd qs debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd qs debug.xcconfig"; sourceTree = "<group>"; };
-		E84942624A00C48C58B991E8 /* Pods-activeTANUITests.efd qs release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd qs release.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd qs release.xcconfig"; sourceTree = "<group>"; };
-		ED625B456B35874B9AE8F627 /* Pods-activeTANTests.efd prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.efd prod debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.efd prod debug.xcconfig"; sourceTree = "<group>"; };
-		FE4C0A229D152E6DD9CA8A6B /* Pods_activeTAN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_activeTAN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4EF7581732C77E238E2DFCA /* Pods-activeTANTests.var release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var release.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1A2A300E4C1D751B9270A2 /* Pods_activeTAN.framework in Frameworks */,
+				5DB5239DBA5E0954B14D1BCC /* Pods_activeTAN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DE05D3E1CC83762999D724 /* Pods_activeTANTests.framework in Frameworks */,
+				AB9915E20CF0D605FEF7FD98 /* Pods_activeTANTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB31EBFD296DC67526E3C058 /* Pods_activeTANUITests.framework in Frameworks */,
+				93C7B3C372416F2EA62BBA1F /* Pods_activeTANUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,40 +239,28 @@
 		007D1F67FED447A5B14B6851 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				14A90669B53850284E6B271D /* Pods-activeTAN.efd prod debug.xcconfig */,
-				3C38FD206D59CC7316897E31 /* Pods-activeTAN.var prod debug.xcconfig */,
-				E4B1A77A409D864BAFADC174 /* Pods-activeTAN.efd qs debug.xcconfig */,
-				8B906125116DFE28CE3FFDCE /* Pods-activeTAN.var qs debug.xcconfig */,
-				785CD23898FF22E37B4B11CF /* Pods-activeTAN.efd prod release.xcconfig */,
-				94C5D59133CBE1EE61AB6E9E /* Pods-activeTAN.var prod release.xcconfig */,
-				61332019484CFC7DA7F7BB7A /* Pods-activeTAN.efd qs release.xcconfig */,
-				4EFA79089DAB7CB02BBAB71A /* Pods-activeTAN.var qs release.xcconfig */,
-				ED625B456B35874B9AE8F627 /* Pods-activeTANTests.efd prod debug.xcconfig */,
-				6C6D9E77C60801A8BDDAE1E7 /* Pods-activeTANTests.var prod debug.xcconfig */,
-				17EA050F5AC4B20FC667FE9B /* Pods-activeTANTests.efd qs debug.xcconfig */,
-				84651DC7C96B8CF106A32B82 /* Pods-activeTANTests.var qs debug.xcconfig */,
-				CC7E36DE2AC80A589FF7D8EF /* Pods-activeTANTests.efd prod release.xcconfig */,
-				9B50933DF609C91895BF8F36 /* Pods-activeTANTests.var prod release.xcconfig */,
-				D8F305B9719691153E7D4968 /* Pods-activeTANTests.efd qs release.xcconfig */,
-				41E5531F9C55CD9F05EC8076 /* Pods-activeTANTests.var qs release.xcconfig */,
-				E14AB63984AEAF6D1E4F28BB /* Pods-activeTANUITests.efd prod debug.xcconfig */,
-				73E557A3EFE245DA00478CAA /* Pods-activeTANUITests.var prod debug.xcconfig */,
-				9D54306C99A7D0B61C79528E /* Pods-activeTANUITests.efd qs debug.xcconfig */,
-				8A95684F99EB36A6B0B30404 /* Pods-activeTANUITests.var qs debug.xcconfig */,
-				9AF0395437A3D11A022D3567 /* Pods-activeTANUITests.efd prod release.xcconfig */,
-				AFDA20FCAA8059E6E895C3BC /* Pods-activeTANUITests.var prod release.xcconfig */,
-				E84942624A00C48C58B991E8 /* Pods-activeTANUITests.efd qs release.xcconfig */,
-				8B6771EE6BB8232459676A8E /* Pods-activeTANUITests.var qs release.xcconfig */,
+				9F5A729EA3CC4472B5851A7D /* Pods-activeTAN.efd debug.xcconfig */,
+				42E3843C697494103A1AD34B /* Pods-activeTAN.var debug.xcconfig */,
+				05C1A94C08A5D9E85428CC05 /* Pods-activeTAN.efd release.xcconfig */,
+				553D73DA54C8286AA5D5EE0B /* Pods-activeTAN.var release.xcconfig */,
+				0D3B3AE535832346EF686AFC /* Pods-activeTANTests.efd debug.xcconfig */,
+				89A86423BB0E56B0B228F6D2 /* Pods-activeTANTests.var debug.xcconfig */,
+				627224FCA0D5ADF317113E5E /* Pods-activeTANTests.efd release.xcconfig */,
+				C4EF7581732C77E238E2DFCA /* Pods-activeTANTests.var release.xcconfig */,
+				877DC585740E34D3E01B5FD1 /* Pods-activeTANUITests.efd debug.xcconfig */,
+				421FC703893ADAA8EC884EF3 /* Pods-activeTANUITests.var debug.xcconfig */,
+				763894F8DA7C7364EB653D50 /* Pods-activeTANUITests.efd release.xcconfig */,
+				63B67F5C27819F2416E61D29 /* Pods-activeTANUITests.var release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		1CFA2E416DD005C63A4874F6 /* Frameworks */ = {
+		9C307DA5F419FF6F8CA0C07C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FE4C0A229D152E6DD9CA8A6B /* Pods_activeTAN.framework */,
-				668B290863D91FC90F095909 /* Pods_activeTANTests.framework */,
-				1759A26C48F04C90B43C29CE /* Pods_activeTANUITests.framework */,
+				6D299CAAE559CB3A3F20402D /* Pods_activeTAN.framework */,
+				0BDFC2B828F121BA26A8D1E1 /* Pods_activeTANTests.framework */,
+				3EE446BAF0E3E8B1149D7E12 /* Pods_activeTANUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -391,7 +367,7 @@
 				BD6651E92289AA4300BC1773 /* activeTANUITests */,
 				BD6651C82289AA4200BC1773 /* Products */,
 				007D1F67FED447A5B14B6851 /* Pods */,
-				1CFA2E416DD005C63A4874F6 /* Frameworks */,
+				9C307DA5F419FF6F8CA0C07C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -530,11 +506,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD6651EF2289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTAN" */;
 			buildPhases = (
-				00B058CAEE4CA4BD8B3E9D99 /* [CP] Check Pods Manifest.lock */,
+				B4CCAF7CA4DBB507C4B3E5CA /* [CP] Check Pods Manifest.lock */,
 				BD6651C32289AA4200BC1773 /* Sources */,
 				BD6651C42289AA4200BC1773 /* Frameworks */,
 				BD6651C52289AA4200BC1773 /* Resources */,
-				E82739E2DC433AA316F9C2BF /* [CP] Embed Pods Frameworks */,
+				8C8B84DDF47534F265CA0D46 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -549,7 +525,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD6651F22289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANTests" */;
 			buildPhases = (
-				93D765631644CCF53C3AAA7A /* [CP] Check Pods Manifest.lock */,
+				6E0BDC4995757829BD384C14 /* [CP] Check Pods Manifest.lock */,
 				BD6651D72289AA4300BC1773 /* Sources */,
 				BD6651D82289AA4300BC1773 /* Frameworks */,
 				BD6651D92289AA4300BC1773 /* Resources */,
@@ -568,7 +544,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD6651F52289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANUITests" */;
 			buildPhases = (
-				DFA5F5F00DF9B55C05A05F03 /* [CP] Check Pods Manifest.lock */,
+				238889C9A8303889DBD55502 /* [CP] Check Pods Manifest.lock */,
 				BD6651E22289AA4300BC1773 /* Sources */,
 				BD6651E32289AA4300BC1773 /* Frameworks */,
 				BD6651E42289AA4300BC1773 /* Resources */,
@@ -589,8 +565,9 @@
 		BD6651BF2289AA4200BC1773 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "EFDIS AG Bankensoftware";
 				TargetAttributes = {
 					BD6651C62289AA4200BC1773 = {
@@ -668,51 +645,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00B058CAEE4CA4BD8B3E9D99 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-activeTAN-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		93D765631644CCF53C3AAA7A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-activeTANTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFA5F5F00DF9B55C05A05F03 /* [CP] Check Pods Manifest.lock */ = {
+		238889C9A8303889DBD55502 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -734,7 +667,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E82739E2DC433AA316F9C2BF /* [CP] Embed Pods Frameworks */ = {
+		6E0BDC4995757829BD384C14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-activeTANTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C8B84DDF47534F265CA0D46 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -749,6 +704,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-activeTAN/Pods-activeTAN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4CCAF7CA4DBB507C4B3E5CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-activeTAN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -904,7 +881,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BD0FA0F822FD601500780C6A /* EFD QS Debug */ = {
+		BD0FA15E22FD9B0B00780C6A /* VAR Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -939,288 +916,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_ENVIRONMENT = qs;
-				CONFIGURATION_MANDANT = EFD;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = "EFD QS Debug";
-		};
-		BD0FA0F922FD601500780C6A /* EFD QS Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4B1A77A409D864BAFADC174 /* Pods-activeTAN.efd qs debug.xcconfig */;
-			buildSettings = {
-				APPLINK_DOMAIN = "applinks:dailybuild.efdis-online.de?mode=developer";
-				APP_GROUP = "";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
-				DEVELOPMENT_TEAM = FA842N8S4U;
-				EXCLUDED_SOURCE_FILE_NAMES = (
-					"mandanten/*/*",
-					"mandanten/*/*/*",
-					"mandanten/*/*/*/*",
-				);
-				INCLUDED_SOURCE_FILE_NAMES = (
-					"mandanten/$(CONFIGURATION_MANDANT)/*",
-					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
-					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
-				);
-				INFOPLIST_FILE = activeTAN/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS.debug";
-				PRODUCT_NAME = "$(TARGET_NAME) Test";
-				PROVISIONING_PROFILE_SPECIFIER = "EFDIS activeTAN Test Debug";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "EFD QS Debug";
-		};
-		BD0FA0FA22FD601500780C6A /* EFD QS Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17EA050F5AC4B20FC667FE9B /* Pods-activeTANTests.efd qs debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
-				INFOPLIST_FILE = activeTANTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
-			};
-			name = "EFD QS Debug";
-		};
-		BD0FA0FB22FD601500780C6A /* EFD QS Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D54306C99A7D0B61C79528E /* Pods-activeTANUITests.efd qs debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
-				INFOPLIST_FILE = activeTANUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = activeTAN;
-			};
-			name = "EFD QS Debug";
-		};
-		BD0FA0FC22FD602200780C6A /* EFD QS Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_ENVIRONMENT = qs;
-				CONFIGURATION_MANDANT = EFD;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = "EFD QS Release";
-		};
-		BD0FA0FD22FD602200780C6A /* EFD QS Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61332019484CFC7DA7F7BB7A /* Pods-activeTAN.efd qs release.xcconfig */;
-			buildSettings = {
-				APPLINK_DOMAIN = "applinks:dailybuild.efdis-online.de?mode=developer";
-				APP_GROUP = "";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
-				DEVELOPMENT_TEAM = FA842N8S4U;
-				EXCLUDED_SOURCE_FILE_NAMES = (
-					"mandanten/*/*",
-					"mandanten/*/*/*",
-					"mandanten/*/*/*/*",
-				);
-				INCLUDED_SOURCE_FILE_NAMES = (
-					"mandanten/$(CONFIGURATION_MANDANT)/*",
-					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
-					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
-				);
-				INFOPLIST_FILE = activeTAN/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.QS";
-				PRODUCT_NAME = "$(TARGET_NAME) Test";
-				PROVISIONING_PROFILE_SPECIFIER = "EFDIS activeTAN Test";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "EFD QS Release";
-		};
-		BD0FA0FE22FD602200780C6A /* EFD QS Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8F305B9719691153E7D4968 /* Pods-activeTANTests.efd qs release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
-				INFOPLIST_FILE = activeTANTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
-			};
-			name = "EFD QS Release";
-		};
-		BD0FA0FF22FD602200780C6A /* EFD QS Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E84942624A00C48C58B991E8 /* Pods-activeTANUITests.efd qs release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
-				INFOPLIST_FILE = activeTANUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = activeTAN;
-			};
-			name = "EFD QS Release";
-		};
-		BD0FA15E22FD9B0B00780C6A /* VAR Prod Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_ENVIRONMENT = prod;
 				CONFIGURATION_MANDANT = VAR;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1248,18 +943,18 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = "VAR Prod Debug";
+			name = "VAR Debug";
 		};
-		BD0FA15F22FD9B0B00780C6A /* VAR Prod Debug */ = {
+		BD0FA15F22FD9B0B00780C6A /* VAR Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C38FD206D59CC7316897E31 /* Pods-activeTAN.var prod debug.xcconfig */;
+			baseConfigurationReference = 42E3843C697494103A1AD34B /* Pods-activeTAN.var debug.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = "";
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1276,18 +971,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = "VAR Prod Debug";
+			name = "VAR Debug";
 		};
-		BD0FA16022FD9B0B00780C6A /* VAR Prod Debug */ = {
+		BD0FA16022FD9B0B00780C6A /* VAR Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C6D9E77C60801A8BDDAE1E7 /* Pods-activeTANTests.var prod debug.xcconfig */;
+			baseConfigurationReference = 89A86423BB0E56B0B228F6D2 /* Pods-activeTANTests.var debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1305,11 +1000,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
 			};
-			name = "VAR Prod Debug";
+			name = "VAR Debug";
 		};
-		BD0FA16122FD9B0B00780C6A /* VAR Prod Debug */ = {
+		BD0FA16122FD9B0B00780C6A /* VAR Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73E557A3EFE245DA00478CAA /* Pods-activeTANUITests.var prod debug.xcconfig */;
+			baseConfigurationReference = 421FC703893ADAA8EC884EF3 /* Pods-activeTANUITests.var debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1326,9 +1021,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = activeTAN;
 			};
-			name = "VAR Prod Debug";
+			name = "VAR Debug";
 		};
-		BD0FA16222FD9B1600780C6A /* VAR QS Debug */ = {
+		BD0FA16622FD9B1E00780C6A /* VAR Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1363,150 +1058,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_ENVIRONMENT = qs;
-				CONFIGURATION_MANDANT = VAR;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = "VAR QS Debug";
-		};
-		BD0FA16322FD9B1600780C6A /* VAR QS Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B906125116DFE28CE3FFDCE /* Pods-activeTAN.var qs debug.xcconfig */;
-			buildSettings = {
-				APPLINK_DOMAIN = "applinks:banking.varengold.de";
-				APP_GROUP = "";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
-				DEVELOPMENT_TEAM = FA842N8S4U;
-				EXCLUDED_SOURCE_FILE_NAMES = (
-					"mandanten/*/*",
-					"mandanten/*/*/*",
-					"mandanten/*/*/*/*",
-				);
-				INCLUDED_SOURCE_FILE_NAMES = (
-					"mandanten/$(CONFIGURATION_MANDANT)/*",
-					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
-					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
-				);
-				INFOPLIST_FILE = activeTAN/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.10;
-				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS.debug;
-				PRODUCT_NAME = "$(TARGET_NAME) Test";
-				PROVISIONING_PROFILE_SPECIFIER = "VAR activeTAN Test";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "VAR QS Debug";
-		};
-		BD0FA16422FD9B1600780C6A /* VAR QS Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84651DC7C96B8CF106A32B82 /* Pods-activeTANTests.var qs debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
-				INFOPLIST_FILE = activeTANTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
-			};
-			name = "VAR QS Debug";
-		};
-		BD0FA16522FD9B1600780C6A /* VAR QS Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A95684F99EB36A6B0B30404 /* Pods-activeTANUITests.var qs debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
-				INFOPLIST_FILE = activeTANUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = activeTAN;
-			};
-			name = "VAR QS Debug";
-		};
-		BD0FA16622FD9B1E00780C6A /* VAR Prod Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_ENVIRONMENT = prod;
 				CONFIGURATION_MANDANT = VAR;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1528,11 +1079,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = "VAR Prod Release";
+			name = "VAR Release";
 		};
-		BD0FA16722FD9B1E00780C6A /* VAR Prod Release */ = {
+		BD0FA16722FD9B1E00780C6A /* VAR Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94C5D59133CBE1EE61AB6E9E /* Pods-activeTAN.var prod release.xcconfig */;
+			baseConfigurationReference = 553D73DA54C8286AA5D5EE0B /* Pods-activeTAN.var release.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:banking.varengold.de";
 				APP_GROUP = "";
@@ -1540,7 +1091,7 @@
 				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1557,18 +1108,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = activeTAN;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = "VAR Prod Release";
+			name = "VAR Release";
 		};
-		BD0FA16822FD9B1E00780C6A /* VAR Prod Release */ = {
+		BD0FA16822FD9B1E00780C6A /* VAR Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B50933DF609C91895BF8F36 /* Pods-activeTANTests.var prod release.xcconfig */;
+			baseConfigurationReference = C4EF7581732C77E238E2DFCA /* Pods-activeTANTests.var release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1586,11 +1137,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
 			};
-			name = "VAR Prod Release";
+			name = "VAR Release";
 		};
-		BD0FA16922FD9B1E00780C6A /* VAR Prod Release */ = {
+		BD0FA16922FD9B1E00780C6A /* VAR Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFDA20FCAA8059E6E895C3BC /* Pods-activeTANUITests.var prod release.xcconfig */;
+			baseConfigurationReference = 63B67F5C27819F2416E61D29 /* Pods-activeTANUITests.var release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1607,9 +1158,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = activeTAN;
 			};
-			name = "VAR Prod Release";
+			name = "VAR Release";
 		};
-		BD0FA16A22FD9B2800780C6A /* VAR QS Release */ = {
+		BD6651ED2289AA4300BC1773 /* EFD Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1644,145 +1195,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_ENVIRONMENT = qs;
-				CONFIGURATION_MANDANT = VAR;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = "VAR QS Release";
-		};
-		BD0FA16B22FD9B2800780C6A /* VAR QS Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EFA79089DAB7CB02BBAB71A /* Pods-activeTAN.var qs release.xcconfig */;
-			buildSettings = {
-				APPLINK_DOMAIN = "applinks:banking.varengold.de";
-				APP_GROUP = "";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
-				DEVELOPMENT_TEAM = Q7N8HY55JG;
-				EXCLUDED_SOURCE_FILE_NAMES = (
-					"mandanten/*/*",
-					"mandanten/*/*/*",
-					"mandanten/*/*/*/*",
-				);
-				INCLUDED_SOURCE_FILE_NAMES = (
-					"mandanten/$(CONFIGURATION_MANDANT)/*",
-					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
-					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
-				);
-				INFOPLIST_FILE = activeTAN/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.10;
-				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.QS;
-				PRODUCT_NAME = "$(TARGET_NAME) Test";
-				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Test";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "VAR QS Release";
-		};
-		BD0FA16C22FD9B2800780C6A /* VAR QS Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41E5531F9C55CD9F05EC8076 /* Pods-activeTANTests.var qs release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
-				INFOPLIST_FILE = activeTANTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
-			};
-			name = "VAR QS Release";
-		};
-		BD0FA16D22FD9B2800780C6A /* VAR QS Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B6771EE6BB8232459676A8E /* Pods-activeTANUITests.var qs release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
-				INFOPLIST_FILE = activeTANUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.efdis.activeTANUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = activeTAN;
-			};
-			name = "VAR QS Release";
-		};
-		BD6651ED2289AA4300BC1773 /* EFD Prod Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_ENVIRONMENT = prod;
 				CONFIGURATION_MANDANT = EFD;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1810,9 +1222,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = "EFD Prod Debug";
+			name = "EFD Debug";
 		};
-		BD6651EE2289AA4300BC1773 /* EFD Prod Release */ = {
+		BD6651EE2289AA4300BC1773 /* EFD Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1847,7 +1259,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_ENVIRONMENT = prod;
 				CONFIGURATION_MANDANT = EFD;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1869,11 +1280,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = "EFD Prod Release";
+			name = "EFD Release";
 		};
-		BD6651F02289AA4300BC1773 /* EFD Prod Debug */ = {
+		BD6651F02289AA4300BC1773 /* EFD Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14A90669B53850284E6B271D /* Pods-activeTAN.efd prod debug.xcconfig */;
+			baseConfigurationReference = 9F5A729EA3CC4472B5851A7D /* Pods-activeTAN.efd debug.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:efdis-online.de";
 				APP_GROUP = "group.de.efdis-online.banking4shared";
@@ -1881,7 +1292,7 @@
 				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-banking-and-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1898,18 +1309,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Prod Debug";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = "EFD Prod Debug";
+			name = "EFD Debug";
 		};
-		BD6651F12289AA4300BC1773 /* EFD Prod Release */ = {
+		BD6651F12289AA4300BC1773 /* EFD Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 785CD23898FF22E37B4B11CF /* Pods-activeTAN.efd prod release.xcconfig */;
+			baseConfigurationReference = 05C1A94C08A5D9E85428CC05 /* Pods-activeTAN.efd release.xcconfig */;
 			buildSettings = {
 				APPLINK_DOMAIN = "applinks:efdis-online.de";
 				APP_GROUP = "group.de.efdis-online.banking4shared";
@@ -1917,7 +1328,7 @@
 				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-banking-and-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1934,18 +1345,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS Provisioning Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = "EFD Prod Release";
+			name = "EFD Release";
 		};
-		BD6651F32289AA4300BC1773 /* EFD Prod Debug */ = {
+		BD6651F32289AA4300BC1773 /* EFD Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED625B456B35874B9AE8F627 /* Pods-activeTANTests.efd prod debug.xcconfig */;
+			baseConfigurationReference = 0D3B3AE535832346EF686AFC /* Pods-activeTANTests.efd debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1963,11 +1374,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
 			};
-			name = "EFD Prod Debug";
+			name = "EFD Debug";
 		};
-		BD6651F42289AA4300BC1773 /* EFD Prod Release */ = {
+		BD6651F42289AA4300BC1773 /* EFD Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC7E36DE2AC80A589FF7D8EF /* Pods-activeTANTests.efd prod release.xcconfig */;
+			baseConfigurationReference = 627224FCA0D5ADF317113E5E /* Pods-activeTANTests.efd release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1985,11 +1396,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/activeTAN.app/activeTAN";
 			};
-			name = "EFD Prod Release";
+			name = "EFD Release";
 		};
-		BD6651F62289AA4300BC1773 /* EFD Prod Debug */ = {
+		BD6651F62289AA4300BC1773 /* EFD Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E14AB63984AEAF6D1E4F28BB /* Pods-activeTANUITests.efd prod debug.xcconfig */;
+			baseConfigurationReference = 877DC585740E34D3E01B5FD1 /* Pods-activeTANUITests.efd debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2006,11 +1417,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = activeTAN;
 			};
-			name = "EFD Prod Debug";
+			name = "EFD Debug";
 		};
-		BD6651F72289AA4300BC1773 /* EFD Prod Release */ = {
+		BD6651F72289AA4300BC1773 /* EFD Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AF0395437A3D11A022D3567 /* Pods-activeTANUITests.efd prod release.xcconfig */;
+			baseConfigurationReference = 763894F8DA7C7364EB653D50 /* Pods-activeTANUITests.efd release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2027,7 +1438,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = activeTAN;
 			};
-			name = "EFD Prod Release";
+			name = "EFD Release";
 		};
 /* End XCBuildConfiguration section */
 
@@ -2035,62 +1446,46 @@
 		BD6651C22289AA4200BC1773 /* Build configuration list for PBXProject "activeTAN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD6651ED2289AA4300BC1773 /* EFD Prod Debug */,
-				BD0FA15E22FD9B0B00780C6A /* VAR Prod Debug */,
-				BD0FA0F822FD601500780C6A /* EFD QS Debug */,
-				BD0FA16222FD9B1600780C6A /* VAR QS Debug */,
-				BD6651EE2289AA4300BC1773 /* EFD Prod Release */,
-				BD0FA16622FD9B1E00780C6A /* VAR Prod Release */,
-				BD0FA0FC22FD602200780C6A /* EFD QS Release */,
-				BD0FA16A22FD9B2800780C6A /* VAR QS Release */,
+				BD6651ED2289AA4300BC1773 /* EFD Debug */,
+				BD0FA15E22FD9B0B00780C6A /* VAR Debug */,
+				BD6651EE2289AA4300BC1773 /* EFD Release */,
+				BD0FA16622FD9B1E00780C6A /* VAR Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "EFD Prod Release";
+			defaultConfigurationName = "EFD Release";
 		};
 		BD6651EF2289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTAN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD6651F02289AA4300BC1773 /* EFD Prod Debug */,
-				BD0FA15F22FD9B0B00780C6A /* VAR Prod Debug */,
-				BD0FA0F922FD601500780C6A /* EFD QS Debug */,
-				BD0FA16322FD9B1600780C6A /* VAR QS Debug */,
-				BD6651F12289AA4300BC1773 /* EFD Prod Release */,
-				BD0FA16722FD9B1E00780C6A /* VAR Prod Release */,
-				BD0FA0FD22FD602200780C6A /* EFD QS Release */,
-				BD0FA16B22FD9B2800780C6A /* VAR QS Release */,
+				BD6651F02289AA4300BC1773 /* EFD Debug */,
+				BD0FA15F22FD9B0B00780C6A /* VAR Debug */,
+				BD6651F12289AA4300BC1773 /* EFD Release */,
+				BD0FA16722FD9B1E00780C6A /* VAR Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "EFD Prod Release";
+			defaultConfigurationName = "EFD Release";
 		};
 		BD6651F22289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD6651F32289AA4300BC1773 /* EFD Prod Debug */,
-				BD0FA16022FD9B0B00780C6A /* VAR Prod Debug */,
-				BD0FA0FA22FD601500780C6A /* EFD QS Debug */,
-				BD0FA16422FD9B1600780C6A /* VAR QS Debug */,
-				BD6651F42289AA4300BC1773 /* EFD Prod Release */,
-				BD0FA16822FD9B1E00780C6A /* VAR Prod Release */,
-				BD0FA0FE22FD602200780C6A /* EFD QS Release */,
-				BD0FA16C22FD9B2800780C6A /* VAR QS Release */,
+				BD6651F32289AA4300BC1773 /* EFD Debug */,
+				BD0FA16022FD9B0B00780C6A /* VAR Debug */,
+				BD6651F42289AA4300BC1773 /* EFD Release */,
+				BD0FA16822FD9B1E00780C6A /* VAR Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "EFD Prod Release";
+			defaultConfigurationName = "EFD Release";
 		};
 		BD6651F52289AA4300BC1773 /* Build configuration list for PBXNativeTarget "activeTANUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD6651F62289AA4300BC1773 /* EFD Prod Debug */,
-				BD0FA16122FD9B0B00780C6A /* VAR Prod Debug */,
-				BD0FA0FB22FD601500780C6A /* EFD QS Debug */,
-				BD0FA16522FD9B1600780C6A /* VAR QS Debug */,
-				BD6651F72289AA4300BC1773 /* EFD Prod Release */,
-				BD0FA16922FD9B1E00780C6A /* VAR Prod Release */,
-				BD0FA0FF22FD602200780C6A /* EFD QS Release */,
-				BD0FA16D22FD9B2800780C6A /* VAR QS Release */,
+				BD6651F62289AA4300BC1773 /* EFD Debug */,
+				BD0FA16122FD9B0B00780C6A /* VAR Debug */,
+				BD6651F72289AA4300BC1773 /* EFD Release */,
+				BD0FA16922FD9B1E00780C6A /* VAR Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "EFD Prod Release";
+			defaultConfigurationName = "EFD Release";
 		};
 /* End XCConfigurationList section */
 

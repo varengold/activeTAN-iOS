@@ -23,6 +23,8 @@ import ZXingObjC
 class InitializeTokenFromAppLinkViewController : UIViewController {
     var base64QrCode : String?
     
+    var backendId : Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let qrCodeData = Data(base64Encoded:base64QrCode!) {
@@ -42,6 +44,8 @@ class InitializeTokenFromAppLinkViewController : UIViewController {
         
         let controller = storyboard.instantiateViewController(withIdentifier: "InitializeTokenStep1") as! InitializeTokenStep1ViewController
         controller.rawLetterKeyMaterial = hhdkm
+        controller.initializeTokenContainer.backendId = backendId!
+        controller.showBackendName = (backendId != 0)
         controller.navigationItem.leftBarButtonItem = UIBarButtonItem(title: Utils.localizedString("gen_cancel"), style: .done, target: self, action: #selector(redirectToInitView))
         
         let navController = InitializeTokenContainerController(rootViewController: controller)
@@ -61,6 +65,8 @@ class InitializeTokenFromAppLinkViewController : UIViewController {
 }
 
 extension InitializeTokenFromAppLinkViewController : BankingQrCodeListener {
+    
+    
     func onTransactionData(hhduc: [UInt8]) {
         onInvalidBankingQrCode(detailReason: "Transaction data not supported via api")
     }

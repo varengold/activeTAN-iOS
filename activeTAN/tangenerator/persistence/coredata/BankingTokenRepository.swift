@@ -38,11 +38,12 @@ class BankingTokenRepository {
         return appDelegate.persistentContainer.viewContext
     }
     
-    static func insertNewToken(id: String, name: String, keyAlias : String) throws {
+    static func insertNewToken(id: String, backendId: Int, name: String, keyAlias : String) throws {
         let entity = NSEntityDescription.entity(forEntityName: "BankingToken", in: managedContext)!
         let bankingToken = NSManagedObject(entity: entity, insertInto: managedContext)
         
         bankingToken.setValue(id, forKey: "id")
+        bankingToken.setValue(backendId, forKey: "backendId")
         bankingToken.setValue(name, forKey: "name")
         bankingToken.setValue(keyAlias, forKey: "keyAlias")
         bankingToken.setValue(0, forKey: "transactionCounter")

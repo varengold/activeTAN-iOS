@@ -124,9 +124,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
+        var detectedBackendId : Int?
+        let backendApiUrls = Utils.configArray(key: "backend_api_url")
+        for (backendId, backendApiUrl) in backendApiUrls.enumerated() {
+            let backendApiUrlComponents = NSURLComponents(url: URL(string: backendApiUrl)!, resolvingAgainstBaseURL: false)!
+            
+            // The app link refers to a landing page in the online banking application,
+            // which also hosts the api for this app.
+            // The online banking application can be identified by the domain
+            // and the first path segment.
+            if backendApiUrlComponents.host == components.host && backendApiUrlComponents.path!.split(separator: "/")[1]
+                == components.path!.split(separator: "/")[1] {
+                detectedBackendId = backendId
+                break
+            }
+        }
+        if detectedBackendId == nil {
+            print("could not identify backend")
+            return false
+        }
+        
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InitializeTokenFromAppLink") as! InitializeTokenFromAppLinkViewController
         
         controller.base64QrCode = Utils.base64UrlToBase64(base64Url: bqrEncoded)
+        controller.backendId = detectedBackendId
 
         let navController = InitializeTokenContainerController(rootViewController: controller)
 

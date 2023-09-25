@@ -2,10 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>backend_api_url_prod</key>
-	<string>https://banking.varengold.de/OnlineBankingWebfrontend/api/activeTAN/</string>
-	<key>backend_api_url_qs</key>
-	<string>https://banking.varengold.de/OnlineBankingQS/api/activeTAN/</string>
+	<key>backend_api_url</key>
+	<array>
+		<string>https://banking.varengold.de/OnlineBankingWebfrontend/api/activeTAN/</string>
+		<string>https://banking.varengold.de/OnlineBankingQS/api/activeTAN/</string>
+	</array>
 	<key>email_initialization_enabled</key>
 	<true/>
 </dict>

@@ -64,7 +64,35 @@ extension SelectTokenViewController {
         return tokens!.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return tokens![row].displayName()
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+       return 50
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        var text : String = tokens![row].displayName()
+        
+        // If the user has initialized a token for a non-default backend,
+        // we must display the backend name for each token.
+        if !tokens!.filter({ token in
+            return !token.isDefaultBackend()}).isEmpty {
+            let backendNames = Utils.localizedString("backend_names").split(separator: "\n")
+            let backendName = String(backendNames[Int(tokens![row].backendId)])
+            text += "\n" + "(" + backendName + ")"
+        }
+        
+        let label: UILabel
+        if let view = view {
+            label = view as! UILabel
+        } else {
+            label = UILabel(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width - 80, height: pickerView.frame.height))
+        }
+
+        label.text = text
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.sizeToFit()
+
+        return label
     }
 }

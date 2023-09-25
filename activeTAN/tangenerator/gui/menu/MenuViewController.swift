@@ -23,6 +23,7 @@ class MenuViewController : UITableViewController{
 
     var sections : [MenuSection]?
     var tokens : [BankingToken]?
+    var showBackendNames : Bool = false
     
     var presentedModally : Bool = false
     
@@ -127,6 +128,11 @@ class MenuViewController : UITableViewController{
     }
     
     private func initTable(){
+        // If the user has initialized a token for a non-default backend,
+        // we must display the backend name for each token.
+        showBackendNames = !tokens!.filter({ token in
+            return !token.isDefaultBackend()}).isEmpty
+        
         sections = [MenuSection]()
         
         if tokens!.count > 0 {
@@ -171,6 +177,14 @@ class MenuViewController : UITableViewController{
             // Coupled accounts
             cell.textLabel!.text = tokens![indexPath.row].name
             cell.detailTextLabel!.text = tokens![indexPath.row].formattedSerialNumber()
+          
+            // Show backend, if there is at least one token for a non-default backend
+            if showBackendNames {
+                let backendNames = Utils.localizedString("backend_names").split(separator: "\n")
+                let backendName = String(backendNames[Int(tokens![indexPath.row].backendId)])
+              
+                cell.detailTextLabel!.text! += " " + backendName
+            }
         } else if sectionType == MenuSectionType.staticViews {
             // Menu text views
             let menuElement = sections![indexPath.section].elements![indexPath.row]
@@ -192,6 +206,7 @@ class MenuViewController : UITableViewController{
             // Coupled accounts
             let controller = storyboard.instantiateViewController(withIdentifier: "TokenSettings") as! TokenSettingsViewController
             controller.bankingToken = tokens![indexPath.row]
+            controller.showBackendName = showBackendNames
             self.navigationController!.pushViewController(controller, animated: true)
         } else if sectionType == MenuSectionType.staticViews {
             // Menu text views

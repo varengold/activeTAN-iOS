@@ -127,7 +127,7 @@ extension SecurityHandler {
                 kSecAttrIsPermanent as String:      true,
                 kSecAttrApplicationTag as String:   privateTag,
                 kSecAttrAccessControl as String:    accessControl
-            ]
+            ] as [String : Any]
         ]
         
         // Generate key pair

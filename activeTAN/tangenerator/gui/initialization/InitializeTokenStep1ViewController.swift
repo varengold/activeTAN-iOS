@@ -28,6 +28,8 @@ class InitializeTokenStep1ViewController : ScrollStickyFooterViewController{
     @IBOutlet weak var serialNumberContainer : UIView!
     @IBOutlet weak var labelSerialNumber : UILabel!
     @IBOutlet weak var serialNumber : UILabel!
+    @IBOutlet weak var labelBackendName : UILabel!
+    @IBOutlet weak var backendName : UILabel!
     @IBOutlet weak var activityIndicator : UIActivityIndicatorView!
     @IBOutlet weak var descriptionLabel : UILabel!
     @IBOutlet weak var hintLabel : UILabel!
@@ -49,6 +51,9 @@ class InitializeTokenStep1ViewController : ScrollStickyFooterViewController{
     
     var demoMode : Bool = false
     let demoTokenId = "XX0123456789"
+    
+    var showBackendName : Bool = false
+    var changeBackendTapCounter : Int = 0
     
     // MARK: Life Cycle
     
@@ -72,9 +77,24 @@ class InitializeTokenStep1ViewController : ScrollStickyFooterViewController{
         
         self.serialNumberContainer.layer.cornerRadius = 8
         self.serialNumberContainer.clipsToBounds = true
+        let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.tapOnSerialNumberContainer (_:)))
+        self.serialNumberContainer.addGestureRecognizer(tapGesture)
+        
         self.labelSerialNumber.text = Utils.localizedString("label_serial_number")
         self.labelSerialNumber.adjustsFontSizeToFitWidth = true
         self.serialNumber.adjustsFontSizeToFitWidth = true
+        
+        if showBackendName {
+            let backendNames = Utils.localizedString("backend_names").split(separator: "\n")
+            let backendName = String(backendNames[initializeTokenContainer.backendId])
+            self.labelBackendName.text = Utils.localizedString("backends_title")
+            self.labelBackendName.adjustsFontSizeToFitWidth = true
+            self.backendName.text = backendName
+            self.backendName.adjustsFontSizeToFitWidth = true
+        } else {
+            self.labelBackendName.removeFromSuperview()
+            self.backendName.removeFromSuperview()
+        }
         
         self.hintLabel.text = Utils.localizedString("enter_serial_number") + "\n\n" + Utils.localizedString("go_to_scan_qr_code")
         self.hintLabel.adjustsFontSizeToFitWidth = true
@@ -94,6 +114,54 @@ class InitializeTokenStep1ViewController : ScrollStickyFooterViewController{
 // MARK: Process steps
 
 extension InitializeTokenStep1ViewController {
+    
+    @objc private func tapOnSerialNumberContainer(_ sender:UITapGestureRecognizer) {
+        changeBackendTapCounter += 1
+        if changeBackendTapCounter >= 8 {
+            changeBackendTapCounter = 0
+            changeBackend()
+        }
+    }
+    
+    private func changeBackend() {
+        let backendNames = Utils.localizedString("backend_names").split(separator: "\n")
+        
+        let picker = UIAlertController(
+            title: Utils.localizedString("backends_title"),
+            message: nil,
+            preferredStyle: .actionSheet)
+        
+        for (newBackendId, backendName) in backendNames.enumerated() {
+            picker.addAction(UIAlertAction(
+                title: String(backendName),
+                style: .default,
+                handler: { action in
+                    self.onBackendSelected(newBackendId: newBackendId)
+            }))
+        }
+        
+        picker.addAction(UIAlertAction(
+            title: Utils.localizedString("alert_cancel"),
+            style: .cancel,
+            handler: nil))
+        
+        self.present(picker, animated: true)
+    }
+    
+    private func onBackendSelected(newBackendId : Int) {
+        initializeTokenContainer.backendId = newBackendId
+        showBackendName = true
+        
+        // Discard token ID
+        initializeTokenContainer.tokenId = nil
+        
+        // Discard decive key
+        initializeTokenContainer.keyComponents = nil
+        
+        // Reload view and restart process
+        self.loadView()
+        self.viewDidLoad()
+    }
     
     private func doStartProcess(){
         guard let rawBytes = rawLetterKeyMaterial else{
@@ -202,7 +270,10 @@ extension InitializeTokenStep1ViewController {
             
             let encryptedDeciveKey = try SecurityHandler.encrypt(plain: plainDeviceKeyComponent, publicKey: publicKey, algorithm: apiUploadEncryptionAlgorithm)
             
-            guard let url = URL(string: Utils.config(key: Bundle.main.object(forInfoDictionaryKey: "API_KEY_URL") as! String)) else {return}
+            let backendApiUrls = Utils.configArray(key: "backend_api_url")
+            let backendApiUrl = backendApiUrls[initializeTokenContainer.backendId]
+            
+            guard let url = URL(string: backendApiUrl) else {return}
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.httpBody = encryptedDeciveKey

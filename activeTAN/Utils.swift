@@ -70,6 +70,22 @@ class Utils {
         return nil
     }
     
+    public static func configArray(key: String) -> [String]{
+        if let property = readPlistArray(plist : "Config", key: key) {
+            return property
+        }
+        return []
+    }
+    
+    private static func readPlistArray(plist: String, key: String) -> [String]? {
+        var nsDictionary: NSDictionary?
+        if let path = Bundle.main.path(forResource: plist, ofType: "plist") {
+            nsDictionary = NSDictionary(contentsOfFile: path)
+            return nsDictionary![key] as? [String]
+        }
+        return nil
+    }
+    
     static func copyOfRange<T>(arr: [T], from: Int, to: Int) -> [T]? where T: ExpressibleByIntegerLiteral {
         guard from >= 0 && from <= arr.count && from <= to else { return nil }
         

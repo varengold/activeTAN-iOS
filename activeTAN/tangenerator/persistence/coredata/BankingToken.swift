@@ -32,5 +32,9 @@ extension BankingToken {
     static func parseFormattedSerialNumber(formattedSerialNumber : String) -> String {
         return formattedSerialNumber.replacingOccurrences(of: "-", with: "")
     }
+    
+    func isDefaultBackend() -> Bool {
+        return backendId == 0
+    }
 
 }

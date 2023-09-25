@@ -69,7 +69,7 @@ extension InitializeTokenStep0ViewController : BankingQrCodeListener {
         if initializeTokenContainer.checkRequirements() {
             if hhdkm.count >= 1 {
                 let type = KeyMaterialType(rawValue: hhdkm[0])!
-                if type == KeyMaterialType.LETTER || type == KeyMaterialType.DEMO {
+                if [KeyMaterialType.LETTER, KeyMaterialType.DEMO].contains(type) {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let controller = storyboard.instantiateViewController(withIdentifier: "InitializeTokenStep1") as! InitializeTokenStep1ViewController
                     controller.rawLetterKeyMaterial = hhdkm

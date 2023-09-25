@@ -118,7 +118,8 @@ extension MainViewController {
     }
     
     func onKeyMaterial(hhdkm: [UInt8]) {
-        if hhdkm.count >= 1 && KeyMaterialType(rawValue: hhdkm[0])! == KeyMaterialType.LETTER {
+        let type = KeyMaterialType(rawValue: hhdkm[0])!
+        if hhdkm.count >= 1 && [KeyMaterialType.LETTER, KeyMaterialType.DEMO].contains(type) {
             let alert = UIAlertController(title: Utils.localizedString(Utils.configBool(key: "email_initialization_enabled") ? "additional_email_qr_code":"additional_letter_qr_code"), message: Utils.localizedString("add_additional_token"), preferredStyle: .actionSheet)
             
             alert.addAction(UIAlertAction(
@@ -138,6 +139,9 @@ extension MainViewController {
                     
                     let controller = storyboard.instantiateViewController(withIdentifier: "InitializeTokenStep1") as! InitializeTokenStep1ViewController
                     controller.rawLetterKeyMaterial = hhdkm
+                    if type == KeyMaterialType.DEMO {
+                        controller.demoMode = true
+                    }
                     
                     let navController = InitializeTokenContainerController(rootViewController: controller)
                     

@@ -937,6 +937,10 @@ Geben Sie Ihren Auftrag in der Banking-App ein.";
 "no_matching_tan_generator_description"="Die lokale Verwendung von activeTAN ist leider nicht möglich und muss über ein separates Gerät erfolgen. Bitte aktivieren Sie die activeTAN-App für die gleichen Zugangsdaten, die Sie in der Banking-App verwenden, oder löschen Sie TAN-Generatoren in den Einstellungen der activeTAN-App, falls Sie diese im Online-Banking deaktiviert haben.";
 "confirm_return"="Zurück";
 
+"backends_title"="Umgebung";
+"backend_names"="Produktivsystem
+Testsystem (QS)";
+
 // Data elements for unidirectional mode
 "DE10"="Adresse";
 "DE11"="Angebots-Nr.";

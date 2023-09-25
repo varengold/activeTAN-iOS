@@ -935,6 +935,10 @@ Enter your order in the banking app.";
 "no_matching_tan_generator_description"="Local use of activeTAN is unfortunately not possible. Use a separate device. Please initialize the activeTAN app for the same user credentials which have been used in the banking app, or delete TAN generators in the settings dialog of the activeTAN app, if they have been disabled in online banking.";
 "confirm_return"="Back";
 
+"backends_title"="Environment";
+"backend_names"="Production system
+Test system (QA)";
+
 // Data elements for unidirectional mode
 "DE10"="Address";
 "DE11"="Quote No.";

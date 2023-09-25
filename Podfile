@@ -5,13 +5,14 @@ target 'activeTAN' do
   use_frameworks!
 
   # ZXing QR code scanner, Objective C port
-  # Podfile is currently outdated,
-  # see https://github.com/zxingify/zxingify-objc/issues/511
-  # Thus, we have to install it from the upstream repo to get the current version
-  pod 'ZXingObjC', :git => 'https://github.com/zxingify/zxingify-objc.git', :tag => '3.6.7'
+  # Podspec is currently outdated, see https://github.com/zxingify/zxingify-objc/issues/511
+  # Thus, we have to install it from a custom podspec
+  #    - Updated version number to 3.6.7
+  #    - Updated iOS deployment target to 11.0 (for XCode 14)
+  pod 'ZXingObjC/QRCode', :podspec => './ZXingObjC.podspec'
 
   # Crypto algorithms
-  pod 'CryptoSwift', '1.6.0'
+  pod 'CryptoSwift', '1.7.1'
   
   target 'activeTANTests' do
     inherit! :search_paths

@@ -77,7 +77,7 @@ class InitializeTokenStep2ViewController : BankingQrCodeScannerViewController, B
             let uuid = UUID().uuidString // internal uuid for token
             try SecurityHandler.saveToKeychain(key: uuid, data: encryptedSecretKey)
             
-            try BankingTokenRepository.insertNewToken(id: initializeTokenContainer.tokenId!, name: Utils.localizedString("default_token_name"), keyAlias: uuid)
+            try BankingTokenRepository.insertNewToken(id: initializeTokenContainer.tokenId!, backendId: initializeTokenContainer.backendId, name: Utils.localizedString("default_token_name"), keyAlias: uuid)
             
             let token = try BankingTokenRepository.readToken(keyAlias: uuid)
 

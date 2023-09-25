@@ -23,6 +23,7 @@ import LocalAuthentication
 class TokenSettingsViewController : UITableViewController {
     
     var bankingToken : BankingToken?
+    var showBackendName : Bool = false
     
     @IBOutlet weak var labelExhaustedToken : UILabel!
     @IBOutlet weak var labelInvalidKey : UILabel!
@@ -30,6 +31,8 @@ class TokenSettingsViewController : UITableViewController {
     @IBOutlet weak var valueTokenName : UILabel!
     @IBOutlet weak var labelTokenId : UILabel!
     @IBOutlet weak var valueTokenId : UILabel!
+    @IBOutlet weak var labelBackendName : UILabel!
+    @IBOutlet weak var valueBackendName : UILabel!
     @IBOutlet weak var labelCreatedOn : UILabel!
     @IBOutlet weak var valueCreatedOn : UILabel!
     @IBOutlet weak var labelLastUsed : UILabel!
@@ -51,6 +54,7 @@ class TokenSettingsViewController : UITableViewController {
         
         labelTokenName.text = Utils.localizedString("menu_token_name")
         labelTokenId.text = Utils.localizedString("menu_serial_number")
+        labelBackendName.text = Utils.localizedString("backends_title")
         labelCreatedOn.text = Utils.localizedString("active_since_label")
         labelLastUsed.text = Utils.localizedString("last_used_label")
         labelProtectUsage.text = Utils.localizedString("protect_usage")
@@ -78,6 +82,10 @@ class TokenSettingsViewController : UITableViewController {
         valueTokenName.text = _bankingToken.name
         valueTokenId.text = _bankingToken.formattedSerialNumber()
         
+        let backendNames = Utils.localizedString("backend_names").split(separator: "\n")
+        let backendName = String(backendNames[Int(_bankingToken.backendId)])
+        valueBackendName.text = backendName
+                                              
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         
@@ -161,6 +169,9 @@ class TokenSettingsViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if !showBackendName && indexPath.section == 0 && indexPath.row == 2 {
+            return 0;
+        }
         // Hide table view cell with invalidated key message, if token is usable
         if hasInvalidKey && indexPath.section == 3 && indexPath.row == 1 {
             // Workaround for table views with static content: set height of cell to 0 if cell shouldn't be displayed
@@ -170,6 +181,7 @@ class TokenSettingsViewController : UITableViewController {
             // Workaround for table views with static content: set height of cell to 0 if cell shouldn't be displayed
             return 0
         }
+        
         return super.tableView(tableView, heightForRowAt: indexPath)
     }
     

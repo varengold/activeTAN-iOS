@@ -25,6 +25,7 @@ class InitializeTokenContainerController : StyledNavigationController {
     var keyComponents : BankingKeyComponents?
     var letterNumber : Int?
     var tokenId : String?
+    var backendId : Int = 0
     
     func onInitializationFailed(reasonKey : String, processShouldBeRepeated : Bool, onRepetition: @escaping () -> ()){
         var _reasonKey = reasonKey

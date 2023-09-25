@@ -2,10 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>backend_api_url_prod</key>
-	<string>https://efdis-online.de/OnlineBankingWebfrontend/api/activeTAN/</string>
-	<key>backend_api_url_qs</key>
-	<string>https://dailybuild.efdis-online.de/OnlineBankingWebfrontend/api/activeTAN/</string>
+	<key>backend_api_url</key>
+	<array>
+		<string>https://efdis-online.de/OnlineBankingWebfrontend/api/activeTAN/</string>
+		<string>https://dailybuild.efdis-online.de/OnlineBankingWebfrontend/api/activeTAN/</string>
+	</array>
 	<key>BANKING_APP_URL_SCHEME</key>
 	<string>activeTAN-response-EFD</string>
 	<key>email_initialization_enabled</key>
