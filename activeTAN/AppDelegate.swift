@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Get URL components from the incoming user activity.
         guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
               let incomingURL = userActivity.webpageURL,
-              let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) else {
+              let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: false) else {
             print("Failure during url component parsing")
             return false
         }
@@ -133,8 +133,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // which also hosts the api for this app.
             // The online banking application can be identified by the domain
             // and the first path segment.
-            if backendApiUrlComponents.host == components.host && backendApiUrlComponents.path!.split(separator: "/")[1]
-                == components.path!.split(separator: "/")[1] {
+            let host1 = backendApiUrlComponents.host!
+            let host2 = components.host!
+            let firstPathUrl1 = backendApiUrlComponents.path!.components(separatedBy: "/")[1]
+            let firstPathUrl2 = components.path!.components(separatedBy: "/")[1]
+            if host1 == host2 && firstPathUrl1 == firstPathUrl2 {
                 detectedBackendId = backendId
                 break
             }

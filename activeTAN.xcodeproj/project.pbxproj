@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5DB5239DBA5E0954B14D1BCC /* Pods_activeTAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D299CAAE559CB3A3F20402D /* Pods_activeTAN.framework */; };
 		93C7B3C372416F2EA62BBA1F /* Pods_activeTANUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE446BAF0E3E8B1149D7E12 /* Pods_activeTANUITests.framework */; };
 		AB9915E20CF0D605FEF7FD98 /* Pods_activeTANTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDFC2B828F121BA26A8D1E1 /* Pods_activeTANTests.framework */; };
+		B2262E6A2BE51EBF00DD4920 /* Custom.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2262E652BE51EBE00DD4920 /* Custom.strings */; };
+		B2262E6B2BE51EBF00DD4920 /* Custom.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2262E682BE51EBE00DD4920 /* Custom.strings */; };
 		BD045C7122957503001058C5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD045C7022957503001058C5 /* UIViewControllerExtension.swift */; };
 		BD0B83A922F0336700DA66F6 /* SelectTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */; };
 		BD0B83B322FB266100DA66F6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */; };
@@ -118,6 +120,8 @@
 		877DC585740E34D3E01B5FD1 /* Pods-activeTANUITests.efd debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANUITests.efd debug.xcconfig"; path = "Target Support Files/Pods-activeTANUITests/Pods-activeTANUITests.efd debug.xcconfig"; sourceTree = "<group>"; };
 		89A86423BB0E56B0B228F6D2 /* Pods-activeTANTests.var debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTANTests.var debug.xcconfig"; path = "Target Support Files/Pods-activeTANTests/Pods-activeTANTests.var debug.xcconfig"; sourceTree = "<group>"; };
 		9F5A729EA3CC4472B5851A7D /* Pods-activeTAN.efd debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-activeTAN.efd debug.xcconfig"; path = "Target Support Files/Pods-activeTAN/Pods-activeTAN.efd debug.xcconfig"; sourceTree = "<group>"; };
+		B2262E642BE51EBE00DD4920 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Custom.strings; sourceTree = "<group>"; };
+		B2262E672BE51EBE00DD4920 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Custom.strings; sourceTree = "<group>"; };
 		BD045C7022957503001058C5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BD0B83A822F0336700DA66F6 /* SelectTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTokenViewController.swift; sourceTree = "<group>"; };
 		BD0B83B222FB266100DA66F6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -191,14 +195,13 @@
 		BDA1CCA12303F12C00A09040 /* Custom.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Custom.xcassets; sourceTree = "<group>"; };
 		BDA1CCA92303FE5F00A09040 /* Colors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
 		BDDFF31225261B7D001C099E /* BankingAppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppApi.swift; sourceTree = "<group>"; };
-		BDDFF31B2527215B001C099E /* activeTAN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = activeTAN.entitlements; sourceTree = "<group>"; };
 		BDDFF375252B6671001C099E /* BankingAppChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppChallenge.swift; sourceTree = "<group>"; };
 		BDE80D87230C1C6000A26D33 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BDE80D89230C1C7100A26D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BDE80D8B230C1D8800A26D33 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Custom.strings; sourceTree = "<group>"; };
 		BDE80D8D230C1D8D00A26D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Custom.strings; sourceTree = "<group>"; };
 		BDE80D98230D985700A26D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BDE80D9A230D985C00A26D33 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BDE80D9A230D985C00A26D33 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xcfilelist; };
 		BDE80D9B230D9D7100A26D33 /* HowToSlidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToSlidesViewController.swift; sourceTree = "<group>"; };
 		BDE80D9F230DA34700A26D33 /* MenuHowToSlidesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHowToSlidesController.swift; sourceTree = "<group>"; };
 		BDF14C7B22DF128C00010A8C /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +268,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B2262E662BE51EBE00DD4920 /* de.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				B2262E652BE51EBE00DD4920 /* Custom.strings */,
+			);
+			path = de.lproj;
+			sourceTree = "<group>";
+		};
+		B2262E692BE51EBE00DD4920 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				B2262E682BE51EBE00DD4920 /* Custom.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		BD0FA11022FD617D00780C6A /* mandanten */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +296,6 @@
 		BD0FA11122FD618500780C6A /* EFD */ = {
 			isa = PBXGroup;
 			children = (
-				BDDFF31B2527215B001C099E /* activeTAN.entitlements */,
 				BD6817CD22C4F31C0086D71C /* api_key.pem */,
 				BD6817E222CCABC90086D71C /* Config.plist */,
 				BD0FA11C22FD7B8300780C6A /* Custom.xcassets */,
@@ -567,7 +585,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "EFDIS AG Bankensoftware";
 				TargetAttributes = {
 					BD6651C62289AA4200BC1773 = {
@@ -610,21 +628,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD51E9D0228DA1E300AEEE68 /* Colors.plist in Resources */,
+				BDA1CCAA2303FE5F00A09040 /* Colors.plist in Resources */,
+				BDE80D8A230C1D8800A26D33 /* Custom.strings in Resources */,
+				B2262E6B2BE51EBF00DD4920 /* Custom.strings in Resources */,
+				BD7DB3EC2316D73F00E5CF25 /* Custom.strings in Resources */,
+				BD6817E322CCABC90086D71C /* Config.plist in Resources */,
+				BD7DB3EA2316D6FB00E5CF25 /* Config.plist in Resources */,
+				BD0FA11D22FD7B8300780C6A /* Custom.xcassets in Resources */,
+				BDA1CCA22303F12C00A09040 /* Custom.xcassets in Resources */,
+				BD6817CE22C4F31C0086D71C /* api_key.pem in Resources */,
+				BDA1CC9A2303EBDC00A09040 /* api_key.pem in Resources */,
+				BDE80D86230C1C6000A26D33 /* Localizable.strings in Resources */,
+				B2262E6A2BE51EBF00DD4920 /* Custom.strings in Resources */,
 				BD6817D422CA3DB00086D71C /* HowToSlide.xib in Resources */,
 				BD6651D52289AA4300BC1773 /* LaunchScreen.storyboard in Resources */,
 				BD6651D22289AA4300BC1773 /* Assets.xcassets in Resources */,
 				BD6651D02289AA4200BC1773 /* Main.storyboard in Resources */,
-				BD0FA11D22FD7B8300780C6A /* Custom.xcassets in Resources */,
-				BDE80D8A230C1D8800A26D33 /* Custom.strings in Resources */,
-				BDE80D86230C1C6000A26D33 /* Localizable.strings in Resources */,
-				BD7DB3EA2316D6FB00E5CF25 /* Config.plist in Resources */,
-				BDA1CCAA2303FE5F00A09040 /* Colors.plist in Resources */,
-				BD6817CE22C4F31C0086D71C /* api_key.pem in Resources */,
-				BD7DB3EC2316D73F00E5CF25 /* Custom.strings in Resources */,
 				BDE80D97230D985700A26D33 /* InfoPlist.strings in Resources */,
-				BDA1CC9A2303EBDC00A09040 /* api_key.pem in Resources */,
-				BDA1CCA22303F12C00A09040 /* Custom.xcassets in Resources */,
-				BD6817E322CCABC90086D71C /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +846,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B2262E652BE51EBE00DD4920 /* Custom.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2262E642BE51EBE00DD4920 /* de */,
+			);
+			name = Custom.strings;
+			sourceTree = "<group>";
+		};
+		B2262E682BE51EBE00DD4920 /* Custom.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2262E672BE51EBE00DD4920 /* en */,
+			);
+			name = Custom.strings;
+			sourceTree = "<group>";
+		};
 		BD6651CE2289AA4200BC1773 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -954,8 +990,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 41;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
 					"mandanten/*/*/*",
@@ -971,10 +1008,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.13.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "VAR activeTAN debug";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "VAR activeTAN debug";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -987,7 +1025,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
+				DEVELOPMENT_TEAM = FA842N8S4U;
 				INFOPLIST_FILE = activeTANTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1008,8 +1046,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
+				DEVELOPMENT_TEAM = FA842N8S4U;
 				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1091,8 +1130,9 @@
 				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 41;
 				DEVELOPMENT_TEAM = Q7N8HY55JG;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q7N8HY55JG;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
 					"mandanten/*/*/*",
@@ -1108,10 +1148,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.13.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.varengold.activeTAN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = activeTAN;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = activeTAN;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1147,6 +1188,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN47Z93R96;
 				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1290,9 +1332,9 @@
 				APP_GROUP = "group.de.efdis-online.banking4shared";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-banking-and-emailinit.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 41;
 				DEVELOPMENT_TEAM = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
@@ -1309,10 +1351,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.13.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "activeTAN Prod Debug";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1328,8 +1370,9 @@
 				CODE_SIGN_ENTITLEMENTS = "activeTAN/with-banking-and-emailinit.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 41;
 				DEVELOPMENT_TEAM = FA842N8S4U;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = FA842N8S4U;
 				EXCLUDED_SOURCE_FILE_NAMES = (
 					"mandanten/*/*",
 					"mandanten/*/*/*",
@@ -1340,15 +1383,21 @@
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
 					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
 				);
+				"INCLUDED_SOURCE_FILE_NAMES[arch=*]" = (
+					"mandanten/$(CONFIGURATION_MANDANT)/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*",
+					"mandanten/$(CONFIGURATION_MANDANT)/*/*/*",
+				);
 				INFOPLIST_FILE = activeTAN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.13.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.efdis-online.activeTAN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "EFDIS Provisioning Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "EFDIS Provisioning Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1361,7 +1410,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZN47Z93R96;
+				DEVELOPMENT_TEAM = FA842N8S4U;
 				INFOPLIST_FILE = activeTANTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1406,6 +1455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN47Z93R96;
 				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1427,6 +1477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZN47Z93R96;
 				INFOPLIST_FILE = activeTANUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

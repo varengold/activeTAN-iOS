@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:activeTAN/mandanten/CPB/en.lproj/Custom.strings">
+   </FileRef>
+   <FileRef
+      location = "group:activeTAN/mandanten/CPB/de.lproj/Custom.strings">
+   </FileRef>
+   <FileRef
       location = "group:activeTAN.xcodeproj">
    </FileRef>
    <FileRef

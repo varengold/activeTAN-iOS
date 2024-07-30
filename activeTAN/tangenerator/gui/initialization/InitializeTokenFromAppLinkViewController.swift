@@ -25,9 +25,18 @@ class InitializeTokenFromAppLinkViewController : UIViewController {
     
     var backendId : Int?
     
+    var initializeTokenContainer : InitializeTokenContainerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let qrCodeData = Data(base64Encoded:base64QrCode!) {
+            
+            if let navigationController = self.navigationController as? InitializeTokenContainerController {
+                initializeTokenContainer = navigationController
+            } else{
+                finish()
+                return
+            }
             do{
                 try QrCodeHandler.init(self).handleResult(binary: qrCodeData.bytes)
             } catch {
@@ -41,9 +50,11 @@ class InitializeTokenFromAppLinkViewController : UIViewController {
     
     private func startInitialization(hhdkm : [UInt8]){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
         
         let controller = storyboard.instantiateViewController(withIdentifier: "InitializeTokenStep1") as! InitializeTokenStep1ViewController
         controller.rawLetterKeyMaterial = hhdkm
+        controller.initializeTokenContainer = initializeTokenContainer
         controller.initializeTokenContainer.backendId = backendId!
         controller.showBackendName = (backendId != 0)
         controller.navigationItem.leftBarButtonItem = UIBarButtonItem(title: Utils.localizedString("gen_cancel"), style: .done, target: self, action: #selector(redirectToInitView))

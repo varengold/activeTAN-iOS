@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZXingObjC'
-  s.version = '3.6.7'
+  s.version = '3.6.9'
   s.summary = 'An Objective-C Port of the ZXing barcode framework.'
   s.homepage = 'https://github.com/zxingify/zxingify-objc'
   s.author = 'zxingify'
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
 
   s.ios.deployment_target = '11.0'
-  s.osx.deployment_target = '10.8'
+  s.osx.deployment_target = '10.15'
 
   s.ios.frameworks = 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'CoreVideo', 'ImageIO', 'QuartzCore'
   s.osx.frameworks = 'AVFoundation', 'CoreMedia', 'QuartzCore'
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'All' do |ss|
     ss.source_files = 'ZXingObjC/**/*.{h,m}'
+    ss.exclude_files = 'ZXingObjC/include/**/*.h'
   end
 
   s.subspec 'Core' do |ss|
